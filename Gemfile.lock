@@ -55,6 +55,16 @@ GIT
       spree_core (= 2.0.3)
 
 GIT
+  remote: git://github.com/spree/spree_comments.git
+  revision: 7add222f109b8dfac9efc7ec0f791b622feaf89a
+  specs:
+    spree_comments (2.0.0)
+      acts_as_commentable (= 3.0.1)
+      spree_api
+      spree_backend
+      spree_core (>= 2.0.1)
+
+GIT
   remote: https://github.com/spree/spree_auth_devise.git
   revision: 5826881e474341132fe90b706b2001ccdf8660e5
   branch: 2-0-stable
@@ -117,6 +127,7 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    acts_as_commentable (3.0.1)
     acts_as_list (0.2.0)
       activerecord (>= 3.0)
     akami (1.2.0)
@@ -188,7 +199,7 @@ GEM
       i18n (~> 0.6.0)
     multi_json (1.7.7)
     multi_xml (0.5.4)
-    mysql (2.9.1)
+    mysql2 (0.3.11)
     nokogiri (1.5.10)
     nori (1.1.5)
     orm_adapter (0.4.0)
@@ -281,10 +292,11 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
-  mysql
+  mysql2
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   spree!
   spree_auth_devise!
+  spree_comments!
   spree_gateway!
   uglifier (>= 1.0.3)
