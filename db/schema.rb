@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130701094627) do
+ActiveRecord::Schema.define(:version => 20130702033515) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -288,6 +288,13 @@ ActiveRecord::Schema.define(:version => 20130701094627) do
   end
 
   add_index "spree_payments", ["order_id"], :name => "index_spree_payments_on_order_id"
+
+  create_table "spree_paypal_accounts", :force => true do |t|
+    t.string "email"
+    t.string "payer_id"
+    t.string "payer_country"
+    t.string "payer_status"
+  end
 
   create_table "spree_preferences", :force => true do |t|
     t.text     "value"

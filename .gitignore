@@ -22,4 +22,4 @@ rerun.txt
 pickle-email-*.html
 *.swp
 .idea/*
-
+lib/spree_alipay-master/*

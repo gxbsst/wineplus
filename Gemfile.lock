@@ -65,6 +65,16 @@ GIT
       spree_core (>= 2.0.1)
 
 GIT
+  remote: git://github.com/spree/spree_paypal_express.git
+  revision: 8a332d6ea2905e21739574eff635e309669dbc02
+  branch: 2-0-stable
+  specs:
+    spree_paypal_express (1.2.0)
+      spree_backend (~> 2.0.0)
+      spree_core (~> 2.0.0)
+      spree_frontend (~> 2.0.0)
+
+GIT
   remote: https://github.com/spree/spree_auth_devise.git
   revision: 5826881e474341132fe90b706b2001ccdf8660e5
   branch: 2-0-stable
@@ -113,6 +123,7 @@ GEM
       json (>= 1.5.1)
       money
       nokogiri (< 1.6.0)
+    activemerchant_patch_for_china (0.2.0)
     activemodel (3.2.13)
       activesupport (= 3.2.13)
       builder (~> 3.0.0)
@@ -142,12 +153,17 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.0.1)
+    better_errors (0.2.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
+    binding_of_caller (0.6.8)
     builder (3.0.4)
     cancan (1.6.8)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
       climate_control (>= 0.0.3, < 1.0)
+    coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -194,6 +210,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.1)
     mime-types (1.23)
     money (5.1.1)
       i18n (~> 0.6.0)
@@ -212,6 +229,10 @@ GEM
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
+    pry (0.9.12)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     rabl (0.8.4)
       activesupport (>= 2.3.14)
     rack (1.4.5)
@@ -243,6 +264,7 @@ GEM
       polyamorous (~> 0.5.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    ruby-hmac (0.4.0)
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -258,6 +280,7 @@ GEM
       wasabi (~> 2.5.0)
     select2-rails (3.2.1)
       thor (~> 0.14)
+    slop (3.4.4)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -290,13 +313,19 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemerchant_patch_for_china
+  better_errors (= 0.2.0)
+  binding_of_caller
   coffee-rails (~> 3.2.1)
   jquery-rails
   mysql2
+  pry
   rails (= 3.2.13)
+  ruby-hmac
   sass-rails (~> 3.2.3)
   spree!
   spree_auth_devise!
   spree_comments!
   spree_gateway!
+  spree_paypal_express!
   uglifier (>= 1.0.3)
