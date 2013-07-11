@@ -6,25 +6,10 @@
 <%= csrf_meta_tags %>
 <%= stylesheet_link_tag 'store/all', :media => 'screen' %>
 <%= javascript_include_tag 'store/all' %>
-<%#= javascript_include_tag 'jquery.min', 'work', 'responsiveslides.min.js' %>
+<%= javascript_include_tag 'jquery.min', 'work', 'responsiveslides.min.js' %>
 <%= stylesheet_link_tag 'style.css'  %>
 <script>
 // You can also use "$(window).load(function() {"
-$(function () {
-  $("#slider4").responsiveSlides({
-    auto: true,
-    pager: false,
-    nav: true,
-    speed: 500,
-    namespace: "callbacks",
-    before: function () {
-      $('.events').append("<li>before event fired.</li>");
-    },
-    after: function () {
-      $('.events').append("<li>after event fired.</li>");
-    }
-  });
 
-});
 </script>
 <%= yield :head %>
