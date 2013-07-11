@@ -1,5 +1,102 @@
-<header id="header" class="row" data-hook>
-  <figure id="logo" class="columns six" data-hook><%= logo %></figure>
-  <%= render :partial => 'spree/shared/nav_bar' %>
-  <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
-</header>
+<%#= current_spree_user.email %>
+<div class="top">
+  <div class="top_link">
+    <div class="tl_con">
+      <div class="tlc_left"> <span><a href="#">Bar</a></span> <span><a href="#">Education</a></span> </div>
+      <div class="tlc_right">
+        <% if !current_spree_user %>
+          <div class="tr_login">
+            <%= link_to 'REGISTER', signup_path %>  |
+            <%= link_to 'LOGIN', login_path %>  |
+          </div>
+        <% else %>
+          <div class="tr_welcome">
+            Logged in as: <%= current_spree_user.email %>
+            <%= link_to 'LOGOUT', logout_path %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="top_bottom">
+    <div class="tb_logo">
+      <%= image_tag "logo.gif", :size => '153x62' %>
+    </div>
+    <div class="tb_right">
+      <div class="tbr_nl">
+        <div class="tnl_input"> <span class="ti_kk">
+              <input type="text" class="input1" />
+            </span> <span><a href="#">SEND</a></span>
+        </div>
+        <div class="tnl_text">SIGN UP TO OUR NEWSLETTER</div>
+      </div>
+
+      <%= render :partial => 'spree/shared/search' %>
+
+    </div>
+  </div>
+</div>
+<div class="menu_bg">
+  <div class="col960">
+    <ul id="navul" class="cl">
+      <li class="navhome">
+        <a href="#" target="_blank" class="m1">
+          <%= image_tag "menu_pic1.gif", :size => '16x14' %>
+        </a>
+      </li>
+      <li><a href="#" class="m2">RED</a>
+        <ul>
+          <li><a href="#">Cabernet Sauvignon</a></li>
+          <li><a href="#">Grenache</a></li>
+          <li><a href="#">Merlot</a></li>
+          <li><a href="#">Pinot Noir</a></li>
+          <li><a href="#">Sangiovese</a></li>
+          <li><a href="#">Syrah/Shiraz</a></li>
+          <li><a href="#">Other</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="m3">WHITE</a>
+        <ul>
+          <li><a href="#">Chardonnay</a></li>
+          <li><a href="#">Pinot Gris</a></li>
+          <li><a href="#">Riesling</a></li>
+          <li><a href="#">Sauvignon Blanc</a></li>
+          <li><a href="#">Rose</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="m4">SPARKLING</a>
+        <ul>
+          <li><a href="#">Cabernet Sauvignon</a></li>
+          <li><a href="#">Grenache</a></li>
+          <li><a href="#">Merlot</a></li>
+          <li><a href="#">Pinot Noir</a></li>
+          <li><a href="#">Sangiovese</a></li>
+          <li><a href="#">Syrah/Shiraz</a></li>
+          <li><a href="#">Other</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="m5">EXPLORE</a>
+        <ul>
+          <li><a href="#">Chardonnay</a></li>
+          <li><a href="#">Pinot Gris</a></li>
+          <li><a href="#">Riesling</a></li>
+          <li><a href="#">Sauvignon Blanc</a></li>
+          <li><a href="#">Rose</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="m6">ACCESSORLES</a>
+        <ul>
+          <li><a href="#">Chardonnay</a></li>
+          <li><a href="#">Pinot Gris</a></li>
+          <li><a href="#">Riesling</a></li>
+          <li><a href="#">Sauvignon Blanc</a></li>
+          <li><a href="#">Rose</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="sc_con">
+      <div class="scc_left"><span class="scl_1">CART</span><span class="scl_2">0</span></div>
+      <div class="scc_btn"><a href="#">SETTLEMENT</a></div>
+    </div>
+  </div>
+</div>

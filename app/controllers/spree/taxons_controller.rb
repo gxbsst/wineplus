@@ -8,7 +8,7 @@ module Spree
     def show
       @taxon = Taxon.find_by_permalink!(params[:id])
       return unless @taxon
-
+      binding.pry
       @searcher = Spree::Config.searcher_class.new(params.merge(:taxon => @taxon.id))
       @searcher.current_user = try_spree_current_user
       @searcher.current_currency = current_currency

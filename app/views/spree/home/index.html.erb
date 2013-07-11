@@ -1,10 +1,73 @@
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
+<div class="banner">
+  <div class="callbacks_container">
+    <ul class="rslides" id="slider4">
+      <li> <%= image_tag 'banner.jpg', :size => '980x335' %></li>
+      <li> <%= image_tag 'banner2.jpg', :size => '980x335' %></li>
+      <li> <%= image_tag 'banner3.jpg', :size => '980x335' %></li>
+    </ul>
   </div>
-<% end %>
-
-<div data-hook="homepage_products">
-  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
 </div>
 
+<div class="home_con1">
+  <div class="hcc_con">
+    <div class="red_tilte"><span class="big_title">RED WINE</span><span class="more"><a href="#">MORE >></a></span></div>
+    <ul class="red_list">
+      <% @reds.each do |product| %>
+        <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+          <dl class="pc_top">
+            <dt><%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %></dt>
+            <dd>
+              <%= link_to small_image(product, :itemprop => "image", :size => '217x242'), product, :itemprop => 'url' %>
+            </dd>
+          </dl>
+          <div class="pc_bottom">
+            <div class="pcb_left"><%= display_price(product) %></div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="hcc_bottom"><img src="images/bg_bottom.gif" width="982" height="4" /></div>
+</div>
+<div class="home_con1">
+  <div class="hcc_con">
+    <div class="red_tilte"><span class="big_title">WHITE WINE</span><span class="more"><a href="#">MORE >></a></span></div>
+    <ul class="red_list">
+      <% @whites.each do |product| %>
+        <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+          <dl class="pc_top">
+            <dt><%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %></dt>
+            <dd>
+              <%= link_to small_image(product, :itemprop => "image", :size => '217x242'), product, :itemprop => 'url' %>
+            </dd>
+          </dl>
+          <div class="pc_bottom">
+            <div class="pcb_left"><%= display_price(product) %></div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="hcc_bottom"><img src="images/bg_bottom.gif" width="982" height="4" /></div>
+</div>
+<div class="home_con1">
+  <div class="hcc_con">
+    <div class="red_tilte"><span class="big_title">SPARKLING WINE</span><span class="more"><a href="#">MORE >></a></span></div>
+    <ul class="red_list">
+      <% @sparklings.each do |product| %>
+        <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+          <dl class="pc_top">
+            <dt><%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %></dt>
+            <dd>
+              <%= link_to small_image(product, :itemprop => "image", :size => '217x242'), product, :itemprop => 'url' %>
+            </dd>
+          </dl>
+          <div class="pc_bottom">
+            <div class="pcb_left"><%= display_price(product) %></div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="hcc_bottom"><img src="images/bg_bottom.gif" width="982" height="4" /></div>
+</div>

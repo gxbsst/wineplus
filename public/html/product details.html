@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Untitled Document</title>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/work.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="js/responsiveslides.min.js"></script>
+  <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+  </script>
+  </head>
+
+  <body>
+<div class="top">
+    <div class="top_link">
+    <div class="tl_con">
+        <div class="tlc_left"> <span><a href="#">Bar</a></span> <span><a href="#">Education</a></span> </div>
+        <div class="tlc_right">
+        <div class="tr_welcome">Hello, welcome to wine+ ! </div>
+        <div class="tr_login"><a href="#">REGISTER</a> | <a href="#">LOG IN</a></div>
+      </div>
+      </div>
+  </div>
+    <div class="top_bottom">
+    <div class="tb_logo"><img src="images/logo.gif" width="153" height="62" /></div>
+    <div class="tb_right">
+        <div class="tbr_nl">
+        <div class="tnl_input"> <span class="ti_kk">
+          <input type="text" class="input1" />
+          </span> <span><a href="#">SEND</a></span> </div>
+        <div class="tnl_text">SIGN UP TO OUR NEWSLETTER</div>
+      </div>
+        <div class="tbr_search"> <span><a href="#">SEARCH</a></span> <span class="ts_kk">
+          <input type="text" class="input2" />
+          </span> </div>
+      </div>
+  </div>
+  </div>
+<div class="menu_bg">
+    <div class="col960">
+    <ul id="navul" class="cl">
+        <li class="navhome"><a href="#" target="_blank" class="m1"><img src="images/menu_pic1.gif" width="16" height="14" /></a></li>
+        <li><a href="#" class="m2 current2">RED</a>
+        <ul>
+            <li><a href="#">Cabernet Sauvignon</a></li>
+            <li><a href="#">Grenache</a></li>
+            <li><a href="#">Merlot</a></li>
+            <li><a href="#">Pinot Noir</a></li>
+            <li><a href="#">Sangiovese</a></li>
+            <li><a href="#">Syrah/Shiraz</a></li>
+            <li><a href="#">Other</a></li>
+          </ul>
+      </li>
+        <li><a href="#" class="m3">WHITE</a>
+        <ul>
+            <li><a href="#">Chardonnay</a></li>
+            <li><a href="#">Pinot Gris</a></li>
+            <li><a href="#">Riesling</a></li>
+            <li><a href="#">Sauvignon Blanc</a></li>
+            <li><a href="#">Rose</a></li>
+          </ul>
+      </li>
+        <li><a href="#" class="m4">SPARKLING</a>
+        <ul>
+            <li><a href="#">Cabernet Sauvignon</a></li>
+            <li><a href="#">Grenache</a></li>
+            <li><a href="#">Merlot</a></li>
+            <li><a href="#">Pinot Noir</a></li>
+            <li><a href="#">Sangiovese</a></li>
+            <li><a href="#">Syrah/Shiraz</a></li>
+            <li><a href="#">Other</a></li>
+          </ul>
+      </li>
+        <li><a href="#" class="m5">EXPLORE</a>
+        <ul>
+            <li><a href="#">Chardonnay</a></li>
+            <li><a href="#">Pinot Gris</a></li>
+            <li><a href="#">Riesling</a></li>
+            <li><a href="#">Sauvignon Blanc</a></li>
+            <li><a href="#">Rose</a></li>
+          </ul>
+      </li>
+        <li><a href="#" class="m6">ACCESSORLES</a>
+        <ul>
+            <li><a href="#">Chardonnay</a></li>
+            <li><a href="#">Pinot Gris</a></li>
+            <li><a href="#">Riesling</a></li>
+            <li><a href="#">Sauvignon Blanc</a></li>
+            <li><a href="#">Rose</a></li>
+          </ul>
+      </li>
+      </ul>
+    <div class="sc_con">
+        <div class="scc_left"><span class="scl_1">CART</span><span class="scl_2">0</span></div>
+        <div class="scc_btn"><a href="#">SETTLEMENT</a></div>
+      </div>
+  </div>
+  </div>
+<div class="con_width">
+    <div class="page_current"> <span>YOUR CURRENT LOCATION：</span> <span><a href="#">HOME</a> > </span> <span class="pc_con">RED</span> </div>
+    <div class="wine_choose">
+    <div class="wch_bg">
+        <ul class="wch_left">
+        <li>TYPE:</li>
+        <li>STYLE:</li>
+        <li>PRICE:</li>
+        <li>REGION:</li>
+        <li class="whl_last">RATING:</li>
+      </ul>
+        <ul class="wch_right">
+        <li><a href="#">CABERNET</a> <a href="#">HAMPGNE</a> <a href="#">OTHE</a> <a href="#" class="wr_current">PINOTGRGLO</a> <a href="#">PROMOTIONS </a> <a href="#">RED</a> <a href="#">SOMMELIER’S  SELECTION</a> <a href="#">SPIRTS  WHITE</a></li>
+        <li><a href="#">BIG&BOLD </a> <a href="#">FRUITY&SMOOTH </a> <a href="#">LIGHT
+          &FRESH </a> <a href="#">LIGHT&FRUITY </a> <a href="#">SMOOTH&EARTHY </a> <a href="#">SWEET&FRUITY </a> </li>
+        <li><a href="#">1-100</a> <a href="#">100-200</a> <a href="#" class="wr_current">200-300</a> <a href="#">300-400</a> <a href="#">400-600</a> <a href="#">600-1000</a> <a href="#">1000+</a></li>
+        <li><a href="#">CHINA</a> <a href="#">NEW WORLD WINES</a> <a href="#">OLD WORLD WINES</a></li>
+        <li class="whr_last"><a href="#">80-85</a> <a href="#">85-90</a> <a href="#">90-95</a> <a href="#" class="wr_current">95-100</a></li>
+      </ul>
+      </div>
+  </div>
+    <div class="rw_list">
+    <div class="rl_left">
+        <div class="rlt_tilte">HOT LIST</div>
+        <ul class="rlt_con">
+        <li>
+            <div class="rtc_img"><img src="images/red_pic3.jpg" width="124" height="140" /></div>
+            <div class="rtc_name">Ruffino Orvieto Classico DOC, 2011, ItalyC</div>
+            <div class="rtc_sz"><span class="rts_1">¥355</span><span class="rts_2"><a href="#">ADD TO CART</a></span></div>
+          </li>
+        <li>
+            <div class="rtc_img"><img src="images/red_pic3.jpg" width="124" height="140" /></div>
+            <div class="rtc_name">Ruffino Orvieto Classico DOC, 2011, ItalyC</div>
+            <div class="rtc_sz"><span class="rts_1">¥355</span><span class="rts_2"><a href="#">ADD TO CART</a></span></div>
+          </li>
+        <li>
+            <div class="rtc_img"><img src="images/red_pic3.jpg" width="124" height="140" /></div>
+            <div class="rtc_name">Ruffino Orvieto Classico DOC, 2011, ItalyC</div>
+            <div class="rtc_sz"><span class="rts_1">¥355</span><span class="rts_2"><a href="#">ADD TO CART</a></span></div>
+          </li>
+        <li>
+            <div class="rtc_img"><img src="images/red_pic3.jpg" width="124" height="140" /></div>
+            <div class="rtc_name">Ruffino Orvieto Classico DOC, 2011, ItalyC</div>
+            <div class="rtc_sz"><span class="rts_1">¥355</span><span class="rts_2"><a href="#">ADD TO CART</a></span></div>
+          </li>
+      </ul>
+        <div class="rlt_bottom"></div>
+      </div>
+    <div class="pd_right">
+        <div class="pd_con">
+        <div class="pdc_con">
+            <div class="pcx_img"><img src="images/pd_pic1.jpg" width="250" height="279" /></div>
+            <div class="pcx_right">
+            <dl class="pr_sm">
+                <dt>Nicolas Feuillatte Grand Cru Pinot Noir 2002, Champagne, Grand Cru </dt>
+                <dd>Article number：1001</dd>
+                <dd>Category： Sparkling. Tag: Sparkling.</dd>
+                <dd><span>Price：</span><span class="price_1">¥980</span></dd>
+              </dl>
+            <div class="pr_gm">
+                <div class="prm_text">Purchase quantity:</div>
+                <div class="prm_sz"> <span class="psz_1"><img src="images/pd_pic3.gif" width="15" height="15" /></span> <span class="psz_2">
+                  <input name="1" type="text" class="input3" id="1" value="1" />
+                  </span> <span class="psz_1"><img src="images/pd_pic4.gif" width="15" height="15" /></span> </div>
+                <div class="prm_btn"><a href="#">ADD TO CART</a></div>
+              </div>
+          </div>
+          </div>
+        <div class="rlt_bottom"></div>
+      </div>
+        <script> 
+	<!-- 	/*tab切换脚本*/ 
+	function setTab(name,cursel,n){ 
+	
+		for(i=1;i<=n;i++){ 
+			var menu=document.getElementById(name+i); 
+			var con=document.getElementById("tab_"+name+"_"+i); 
+			menu.className=i==cursel?"current":""; 
+			con.style.display=i==cursel?"block":"none"; 
+			} 
+	} 
+	//--> 
+	</script>
+        <div class="pdr_con">
+        <div id="tab2"> 
+            
+            <!--切换标题begin-->
+            <div class="tabTitle2"> <a href="javascript:void(0)" id="one1" onmouseover="setTab('one',1,3)" class="current">Description</a> <a href="javascript:void(0)" id="one2" onmouseover="setTab('one',2,3)">Other information</a> <a href="javascript:void(0)" id="one3" onmouseover="setTab('one',3,3)">Evaluation (1)</a>
+            <div class="clear"></div>
+          </div>
+            <!--切换标题end-->
+            <div class="contentBox2"> 
+            <!--第一个标签内容-->
+            <div class="tabContentList2" id="tab_one_1"> Brut Premier embodies the Louis Roederer house style, gracefully blending the old and new. Made from reserve wines, it allies the freshness of youth the roundness and vinosity of mature wine. This is structured, expansive Champagne with a smooth attack and a modern, powerful style with no loss of finesse.<br/>
+                <br/>
+                Brut Premier embodies the Louis Roederer house style, gracefully blending the old and new. Made from reserve wines, it allies the freshness of youth the roundness and vinosity of mature wine. This is structured, expansive Champagne with a smooth attack and a modern, powerful style with no loss of finesse.<br/>
+                <br/>
+                Brut Premier embodies the Louis Roederer house style, gracefully blending the old and new. Made from reserve wines, it allies the freshness of youth the roundness and vinosity of mature wine. This is structured, expansive Champagne with a smooth attack and a modern, powerful style with no loss of finesse. </div>
+            <!--第二个标签内容-->
+            <div class="tabContentList" id="tab_one_2" style="display:none;" >
+                <table  border="0" cellspacing="0" cellpadding="0" class="pdt_list">
+                <tr>
+                    <td class="ptl_left">Vintage</td>
+                    <td class="ptl_right">NV</td>
+                  </tr>
+                <tr>
+                    <td class="ptl_left">Region</td>
+                    <td class="ptl_right">Champagne</td>
+                  </tr>
+                <tr>
+                    <td class="ptl_left">Capacity</td>
+                    <td class="ptl_right">750</td>
+                  </tr>
+                <tr>
+                    <td class="ptl_left">Variety</td>
+                    <td class="ptl_right">Pinot Noir/40% Chardonnay/40% Pinot Meunier/20%</td>
+                  </tr>
+              </table>
+              </div>
+            
+            <!--第三个标签内容-->
+            <div class="tabContentList" id="tab_one_3" style="display:none;" >
+                <div class="eva_top">
+                <div class="evt_ne">
+                    <div class="en_name"> <span class="enn_text">Name:</span> <span class="enn_kk">
+                      <input type="text" class="input4" />
+                      </span> </div>
+                    <div class="en_email"> <span class="enn_text">Email:</span> <span class="enn_kk">
+                      <input type="text" class="input4" />
+                      </span> </div>
+                  </div>
+                <div class="evt_wz"> <span class="ew_text">Your evaluation:</span> <span class="ew_kk">
+                  <textarea name="" cols="" rows="" class="input5" ></textarea>
+                  </span> </div>
+                <div class="evt_btn"><a href="#">SUBMIT</a></div>
+              </div>
+                <div class="eva_bottom">
+                <ul class="rtb_list">
+                    <li>
+                    <div class="rtl_img"><img src="images/pd_pic7.gif" width="60" height="60" /></div>
+                    <div class="rtl_text">
+                        <div class="rtt_top"> <span class="rp_name">maoxiaohua@me.com </span> <span class="rp_date">2013-6-18</span> </div>
+                        <div class="rtt_bottom">djsdjfdlsjfldsjf</div>
+                        <div class="rtt_line"></div>
+                      </div>
+                  </li>
+                    <li>
+                    <div class="rtl_img"><img src="images/pd_pic7.gif" width="60" height="60" /></div>
+                    <div class="rtl_text">
+                        <div class="rtt_top"> <span class="rp_name">maoxiaohua@me.com </span> <span class="rp_date">2013-6-18</span> </div>
+                        <div class="rtt_bottom">sfdsfdsfsdfdsff</div>
+                        <div class="rtt_line"></div>
+                      </div>
+                  </li>
+                    <li>
+                    <div class="rtl_img"><img src="images/pd_pic7.gif" width="60" height="60" /></div>
+                    <div class="rtl_text">
+                        <div class="rtt_top"> <span class="rp_name">maoxiaohua@me.com </span> <span class="rp_date">2013-6-18</span> </div>
+                        <div class="rtt_bottom">jiojoijpjpjpj</div>
+                        <div class="rtt_line"></div>
+                      </div>
+                  </li>
+                  </ul>
+              </div>
+              </div>
+          </div>
+          </div>
+      </div>
+        <div class="rlt_bottom"></div>
+      </div>
+  </div>
+  </div>
+<div class="footer_bg">
+    <div class="footer">
+    <div class="footer_left">Copyright © 2013 WinePlus Cellar | 沪ICP备12011981号-12</div>
+    <div class="footer_right"><a href="#">About us</a> | <a href="#">Privacy Policy</a> | <a href="#">Shipping Policies</a> | <a href="#">Shopping Information</a> | <a href="#">FAQ</a> | <a href="#">Contact Us</a> </div>
+  </div>
+  </div>
+</body>
+</html>

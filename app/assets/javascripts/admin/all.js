@@ -6,10 +6,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-<% if options[:lib_name] == 'spree' %>
 //= require admin/spree_backend
-<% else %>
-//= require admin/<%= options[:lib_name].gsub("/", "_") %>
-<% end %>
 //= require_tree .
-//= require admin/spree_alipay
