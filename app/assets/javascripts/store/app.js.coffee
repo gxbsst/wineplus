@@ -58,11 +58,13 @@ jQuery ->
         address = new window.app.Models.Address()
         address.set(data)
         @collection.add(address)
+        address.save()
       else
-        address = @collection.findWhere({id: parseInt(data.id)})
+        debugger
+        address = @collection.get(parseInt(data.id))
         address.set(data)
+        address.save
 
-      address.save()
       @hideAddressForm()
       $(@el).hide()
       $(@el).closest('.address_outer').find('.current_address').html(address.fullAddress())
