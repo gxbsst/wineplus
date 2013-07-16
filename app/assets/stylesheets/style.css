@@ -1202,3 +1202,8 @@ ul.rtb_list li {
 	border-bottom:1px solid #ddd;
 	margin-left:10px;
 }
+
+
+#checkout_form_payment {
+    display: none;
+}

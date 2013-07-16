@@ -22,35 +22,74 @@ module Spree
 
     # Updates the order and advances to the next state (when possible.)
     def update
-      if @order.update_attributes(object_params)
+
+      # ADDRESS
+      if params['state'] == 'address'
+        current_spree_user.remove_address_current
+        address = find_or_init_address(params)
+        address.user_id = current_spree_user.id
+        address.is_current = true
+        address.save
+
+        @order.ship_address_id = address.id
+        @order.bill_address_id = address.id
+        @order.save
+
         fire_event('spree.checkout.update')
-        return if after_update_attributes
-
-        unless @order.next
-          flash[:error] = Spree.t(:payment_processing_failed)
-          redirect_to checkout_state_path(@order.state) and return
-        end
-
-        if @order.completed?
-          session[:order_id] = nil
-          flash.notice = Spree.t(:order_processed_successfully)
-          flash[:commerce_tracking] = "nothing special"
-          redirect_to completion_route
-        else
-          redirect_to checkout_state_path(@order.state)
-        end
-      else
-        render :edit
+        render :json => address.to_json
       end
+
+      #if @order.update_attributes(object_params)
+      #
+      #  fire_event('spree.checkout.update')
+      #  return if after_update_attributes
+      #
+      #  unless @order.next
+      #    flash[:error] = Spree.t(:payment_processing_failed)
+      #    redirect_to checkout_state_path(@order.state) and return
+      #  end
+      #
+      #  if @order.completed?
+      #    session[:order_id] = nil
+      #    flash.notice = Spree.t(:order_processed_successfully)
+      #    flash[:commerce_tracking] = "nothing special"
+      #    redirect_to completion_route
+      #  else
+      #    redirect_to checkout_state_path(@order.state)
+      #  end
+      #else
+      #  render :edit
+      #end
+    end
+
+    def edit
+      @order = current_order(true)
+      associate_user
+      @ship_add_addressess = current_spree_user.addresses
+      @order.bill_address ||= Spree::Address.default
+      @order.ship_address ||= Spree::Address.default
+      # before_delivery
+      @order.payments.destroy_all if request.put?
     end
 
     private
+
+      def find_or_init_address(params)
+        if params[:id].present?
+          address = Spree::Address.find(params[:id])
+          address.attributes = params[:checkout]
+          address
+        else
+          Spree::Address.new(params[:checkout])
+        end
+      end
+
       def ensure_valid_state
         unless skip_state_validation?
           if (params[:state] && !@order.has_checkout_step?(params[:state])) ||
              (!params[:state] && !@order.has_checkout_step?(@order.state))
             @order.state = 'cart'
-            redirect_to checkout_state_path(@order.checkout_steps.first)
+            #redirect_to checkout_state_path(@order.checkout_steps.first)
           end
         end
       end

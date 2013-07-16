@@ -1,13 +1,7 @@
-if Spree.user_class
-  Spree.user_class.class_eval do
-    def generate_spree_api_key!
-      self.spree_api_key = SecureRandom.hex(24)
-      save!
-    end
+Spree::User.class_eval do
+  has_many :addresses, class_name: 'Spree::Address'
 
-    def clear_spree_api_key!
-      self.spree_api_key = nil
-      save!
-    end
+  def remove_address_current
+    addresses.each {|a| a.update_attribute(:is_current, false)}
   end
 end

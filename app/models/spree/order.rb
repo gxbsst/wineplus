@@ -70,7 +70,7 @@ module Spree
     # Needs to happen before save_permalink is called
     before_validation :set_currency
     before_validation :generate_order_number, on: :create
-    before_validation :clone_billing_address, if: :use_billing?
+    before_validation :clone_billing_address#, if: :use_billing?
     attr_accessor :use_billing
 
     before_create :link_by_email

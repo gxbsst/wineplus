@@ -7,4 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require store/spree_frontend
+//= require 'store/underscore'
+//= require 'store/backbone-min'
+//= require 'store/backbone.syphon.min'
 //= require_tree .

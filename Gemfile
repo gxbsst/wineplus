@@ -25,4 +25,6 @@ gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express
 
 gem 'ruby-hmac'
 gem 'activemerchant_patch_for_china'
+
+#gem 'spree_one_page_checkout', :path => 'lib/spree_one_page_checkout-master'
 #gem 'spree_alipay', :path => 'lib/spree_alipay-master'

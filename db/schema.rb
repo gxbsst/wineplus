@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702033515) do
+ActiveRecord::Schema.define(:version => 20130716032252) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(:version => 20130702033515) do
     t.integer  "country_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.boolean  "is_current"
+    t.integer  "user_id"
   end
 
   add_index "spree_addresses", ["firstname"], :name => "index_addresses_on_firstname"
@@ -709,6 +711,15 @@ ActiveRecord::Schema.define(:version => 20130702033515) do
     t.integer  "zone_members_count", :default => 0
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
+  end
+
+  create_table "user_addresses", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "address_id"
+    t.integer  "status"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.boolean  "is_current"
   end
 
 end

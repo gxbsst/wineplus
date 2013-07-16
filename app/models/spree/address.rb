@@ -5,7 +5,9 @@ module Spree
 
     has_many :shipments
 
-    validates :firstname, :lastname, :address1, :city, :zipcode, :country, presence: true
+    has_one :user_address, class_name: ::UserAddress
+
+    validates :firstname, :lastname, :address1, :city, :zipcode,  presence: true
     validates :phone, presence: true, if: :require_phone?
 
     validate :state_validate
@@ -13,10 +15,12 @@ module Spree
     attr_accessible :firstname, :lastname, :address1, :address2,
                     :city, :zipcode, :country_id, :state_id,
                     :country, :state, :phone, :state_name,
-                    :company, :alternative_phone
+                    :company, :alternative_phone, :is_current, :user_id
 
     alias_attribute :first_name, :firstname
     alias_attribute :last_name, :lastname
+
+    scope :current, where(is_current: true)
 
     # Disconnected since there's no code to display error messages yet OR matching client-side validation
     def phone_validate

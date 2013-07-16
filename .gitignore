@@ -23,3 +23,4 @@ pickle-email-*.html
 *.swp
 .idea/*
 lib/spree_alipay-master/*
+lib/spree_one_page_checkout-master/*

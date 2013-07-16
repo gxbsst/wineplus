@@ -1,28 +1,89 @@
-<div id="checkout" data-hook>  
-  <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
-  
-  <div class="row" data-hook="checkout_header">
-    <h1 class="columns three alpha" data-hook="checkout_title"><%= Spree.t(:checkout) %></h1>
-    <div class="columns thirteen omega" data-hook="checkout_progress"><%= checkout_progress %></div>
-  </div>
-  
-  <div class="row" data-hook="checkout_content">
-    <div class="columns <%= if @order.state != 'confirm' then 'alpha twelve' else 'alpha omega sixteen' end %>" data-hook="checkout_form_wrapper">
-      <%= form_for @order, :url => update_checkout_path(@order.state), :html => { :id => "checkout_form_#{@order.state}" } do |form| %>
-        <% unless @order.email? %>
-          <p class="field" style='clear: both'>
-            <%= form.label :email %><br />
-            <%= form.text_field :email %>
-          </p>
+<div class="address_outer" data-address='<%= @ship_add_addressess.to_json(only: [:id, :is_current, :firstname, :lastname, :address1, :zipcode, :phone, :city ]) %>' >
+
+  <h2 id="shipping_address">Shipping Address <a class="Edit" href="#">edit</a></h2>
+  <% if current = @ship_add_addressess.current.try(:first) %>
+  <div class="current_address"> <%= full_address(current) %> </div>
+  <% end %>
+  <script type="text/template" id="line_address">
+      <td>
+        <input  name="order[ship_address_attributes][is_current]" type="radio" value= 1>
+      </td>
+      <td><@= address1 @></td>
+      <td><a class="delete" href="#">Delete</a> <a class="edit" href="#methods">Edit</a></td>
+  </script>
+  <%= form_for @order, :url => update_checkout_path('address'), :html => { :id => "checkout_form_payment" } do |form| %>
+    <table>
+      <tr>
+        <td class="new_address"><%= radio_button_tag 'order[ship_address_attributes][is_current]', 1  %></td>
+        <td>New Address</td>
+      </tr>
+    </table>
+    <div class="columns omega eight address_input" data-hook="shipping_fieldset_wrapper" style="display: none">
+      <fieldset id="shipping" data-hook>
+        <%= form.fields_for :ship_address do |ship_form| %>
+          <legend align="center"><%= t(:shipping_address) %></legend>
+          <%= render :partial => 'spree/address/form', :locals => {:form => ship_form, :address_type => 'shipping', :address => @order.ship_address} %>
         <% end %>
-        <%= render @order.state, :form => form %>
-      <% end %>
-    </div>    
-    <% if @order.state != 'confirm' %>
-      <div id="checkout-summary" data-hook="checkout_summary_box" class="columns omega four">
-        <%= render :partial => 'summary', :locals => { :order => @order } %>
-      </div>
+      </fieldset>
+    </div>
+    <div class="button">
+      <%= submit_tag "Confirm", :id => 'submit' %>
+    </div>
+  <% end %>
+</div>
+<!--address_outer end-->
+
+<%= form_for @order, :url => update_checkout_path('shipping'), :html => { :id => "checkout_form_payment" } do |form| %>
+
+  <div class='columns eight omega' data-hook='delivery_fieldset_wrapper' id="shipping_method_wrapper" >
+    <legend align="center"><%= t(:shipping_method) %></legend>
+    <div id='methods'>
+      <p class='field radios'>
+      </p>
+    </div>
+    <% if Spree::Config[:shipping_instructions] && @order.rate_hash.present? %>
+      <p id='minstrs' data-hook="">
+      <%= form.label :special_instructions, t(:shipping_instructions) %>
+      <br>
+      <%= form.text_area :special_instructions, :cols => 40, :rows => 7 %>
     <% end %>
   </div>
+<% end %>
 
-</div>
+<%= form_for @order, :url => update_checkout_path('payment'), :html => { :id => "checkout_form_payment" } do |form| %>
+
+  <div class='omega eight columns'>
+    <fieldset id="payment" class="variant-info" "data-hook">
+    <legend align="center"><%= t(:payment_information) %></legend>
+    <div data-hook="checkout_payment_step">
+    <% @order.available_payment_methods.each do |method| %>
+      <p>
+        <label>
+          <%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id %>
+          <%= t(method.name, :scope => :payment_methods, :default => method.name) %>
+        </label>
+      </p>
+    <% end %>
+    <ul id="payment-methods" "data-hook">
+    <% @order.available_payment_methods.each do |method| %>
+      <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
+        <fieldset>
+          <%= render :partial => "spree/checkout/payment/#{method.method_type}", :locals => { :payment_method => method } %>
+        </fieldset>
+      </li>
+    <% end %>
+    </ul>
+    <br style="clear:both;">
+    <div data-hook="coupon_code_field" data-hook></div>
+  </div>
+  </fieldset>
+  </div>
+
+  <br class="space" />
+  <div class="form-buttons" "data-hook"="buttons">
+  <%= submit_tag t(:checkout), :class => 'btn one-page-checkout-button', 'data-hook' => 'one_page_checout_button' %>
+  <script>
+    // disableSaveOnClick();
+  </script>
+  </div>
+<% end %>
