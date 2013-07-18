@@ -61,13 +61,13 @@ Spree.ready ($) ->
         stateInput.removeClass('hidden')
         stateSelect.removeClass('required')
 
-    ($ 'p#bcountry select').change ->
-      updateState 'b'
+    # ($ 'p#bcountry select').change ->
+    #   updateState 'b'
 
-    ($ 'p#scountry select').change ->
-      updateState 's'
+    # ($ 'p#scountry select').change ->
+    #   updateState 's'
 
-    updateState 'b'
+    # updateState 'b'
 
     order_use_billing = ($ 'input#order_use_billing')
     order_use_billing.change ->
@@ -80,7 +80,7 @@ Spree.ready ($) ->
       else
         ($ '#shipping .inner').show()
         ($ '#shipping .inner input, #shipping .inner select').prop 'disabled', false
-        updateState('s')
+        # updateState('s')
     
     update_shipping_form_state order_use_billing
 

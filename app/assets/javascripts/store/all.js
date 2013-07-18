@@ -10,4 +10,6 @@
 //= require 'store/underscore'
 //= require 'store/backbone-min'
 //= require 'store/backbone.syphon.min'
+//= require 'work'
+//= require 'responsiveslides.min'
 //= require_tree .

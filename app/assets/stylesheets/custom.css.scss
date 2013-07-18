@@ -1,0 +1,113 @@
+input[type="submit"], input[type="button"],
+input[type="reset"], button, a.button {
+	background-color: #b80000;
+	background-image: none;
+	text-shadow: none;
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: "Ubuntu", sans-serif;
+	padding: 6px 10px 5px;
+	vertical-align: top;
+	border-radius: 0px;
+	border: 0;
+}
+
+span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
+	font-weight: bold;
+	color: #b80000;
+}
+
+
+.orders_con {
+	h2 {
+		border-bottom: 1px solid #CCC;
+	}
+}
+
+.address_outer, .deliver_outer, .payment_outer {
+	margin: 0 0 20px 0;
+}
+
+.address_outer {
+	table.address_list {
+		tr {
+			border: 0;
+		}
+		width: 100%;
+		td {
+			text-align: left;
+		}
+		.td1 {
+			width: 1%;
+		}
+		.td2 {
+			width:13%;
+		}
+		.td3 {
+			width: 20%;
+		}
+		.td4 {
+			width: 10%;
+		}
+		.td5 {
+			width: 10%;
+		}
+	}
+	.button {
+		margin: 10px 0 0 10px;
+	}
+
+	table.name, table.address {
+		tbody tr {
+			border: 0;
+		}
+		p {
+			padding: 0;
+			margin: 0;
+			margin-before: 0;
+			margin-after: 0;
+		}
+	}
+
+	table.address {
+		.td3 input[type='text'] {
+			width: 100px
+		}
+
+		.td5 input[type='text'] {
+			width: 100px
+		}
+	}
+}
+
+.deliver_outer {
+	form {
+		margin-top: 10px
+	}
+	.stock-contents {
+		thead {
+			background: none;
+		}
+	}
+	ul.shipping-methods {
+		background: none;
+		li {
+			margin: 8px 0 0 0;
+			span {
+				margin: 0 5px;
+			}
+		}
+	}
+}
+
+.payment_outer {
+	p {
+		padding: 0;
+		margin: 0;
+	}
+	.columns {
+		margin: 10px 0 0 0;
+	}
+}
+

@@ -3,6 +3,18 @@
       <%= form.fields_for :shipments do |ship_form| %>
 
         <div class="shipment">
+          
+          <ul class="field radios shipping-methods">
+            <% ship_form.object.shipping_rates.frontend.each do |rate| %>
+              <li class="shipping-method">
+                <label>
+                  <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
+                  <span class="rate-name"><%= rate.name %></span>
+                  <span class="rate-cost"><%= rate.display_cost %></span>
+                </label>
+              </li>
+            <% end %>
+          </ul>
 
           <table class="stock-contents" data-hook="stock-contents">
             <colgroup>
@@ -28,18 +40,6 @@
               <% end %>
             </tbody>
           </table>
-
-          <ul class="field radios shipping-methods">
-            <% ship_form.object.shipping_rates.frontend.each do |rate| %>
-              <li class="shipping-method">
-                <label>
-                  <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
-                  <span class="rate-name"><%= rate.name %></span>
-                  <span class="rate-cost"><%= rate.display_cost %></span>
-                </label>
-              </li>
-            <% end %>
-          </ul>
         </div>
 
       <% end %>

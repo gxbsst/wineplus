@@ -8,6 +8,8 @@
 <% else %>
  *= require store/spree_frontend
 <% end %>
+ *= require style
+ *= require custom
  *= require_self
  *= require_tree .
 */

@@ -70,7 +70,7 @@ jQuery ->
 
     addOne: (model) ->
       addressView = new AddressView({model: model})
-      @.$el.find('table').prepend(addressView.render().$el)
+      @.$el.find('table.address_list').prepend(addressView.render().$el)
 
     emptyValue:->
       @.$el.find('.address_input').find('input[type=text]').each(@empty)
