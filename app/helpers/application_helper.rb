@@ -64,4 +64,8 @@ module ApplicationHelper
   def full_address(address)
     "#{address.firstname}#{address.lastname} #{address.address1} #{address.city}"
   end
+
+  def custom_display_price(product_or_variant)
+    product_or_variant.price_in(current_currency).display_price
+  end
 end

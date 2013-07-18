@@ -210,19 +210,19 @@ input.input2 {
 	padding:12px 0px 0px 25px;
 }
 #navul li a.m2 {
-	background:url(../images/menu_pic2.gif) no-repeat 90px 17px;
+	background:url(menu_pic2.gif) no-repeat 90px 17px;
 }
 #navul li a.m3 {
-	background:url(../images/menu_pic2.gif) no-repeat 100px 17px;
+	background:url(menu_pic2.gif) no-repeat 100px 17px;
 }
 #navul li a.m4 {
-	background:url(../images/menu_pic2.gif) no-repeat 115px 17px;
+	background:url(menu_pic2.gif) no-repeat 115px 17px;
 }
 #navul li a.m5 {
-	background:url(../images/menu_pic2.gif) no-repeat 107px 17px;
+	background:url(menu_pic2.gif) no-repeat 107px 17px;
 }
 #navul li a.m6 {
-	background:url(../images/menu_pic2.gif) no-repeat 115px 17px;
+	background:url(menu_pic2.gif) no-repeat 115px 17px;
 	text-align:left;
 	padding-left:8px;
 }
@@ -300,7 +300,7 @@ input.input2 {
 	height:40px;
 }
 span.scl_1 {
-	background:url(../images/home_pic3.gif) no-repeat 15px 11px;
+	background:url(home_pic3.gif) no-repeat 15px 11px;
 	padding-left:45px;
 	padding-right:8px;
 }
@@ -368,7 +368,7 @@ span.scl_1 {
 	text-decoration: none;
 	height: 61px;
 	width: 38px;
-	background: transparent url(../images/themes.gif) no-repeat left top;
+	background: transparent url(themes.gif) no-repeat left top;
 	margin-top: -45px;
 }
 .callbacks_nav:active {
@@ -393,7 +393,7 @@ span.scl_1 {
 }
 .home_con1 {
 	width:982px;
-	background:url(../images/bg_con.gif) repeat-y;
+	background:url(bg_con.gif) repeat-y;
 	border-top:1px solid #ddd;
 	overflow:hidden;
 	margin-bottom:17px;
@@ -661,7 +661,7 @@ ul.red_list li {
 	margin-right:10px;
 }
 .rl_bottom span.rlb_2 {
-	background:url(../images/home_pic10.gif) repeat-x;
+	background:url(home_pic10.gif) repeat-x;
 	padding:0px 5px;
 }
 .footer_bg {
@@ -707,7 +707,7 @@ ul.red_list li {
 .wch_bg {
 	overflow:hidden;
 	height:233px;
-	background:url(../images/bg_yd.gif) repeat-x bottom;
+	background:url(bg_yd.gif) repeat-x bottom;
 }
 ul.wch_left {
 	display:block;
@@ -721,7 +721,7 @@ ul.wch_left li {
 	display:block;
 	width:90px;
 	height:45px;
-	background:url(../images/red_pic1.jpg) no-repeat;
+	background:url(red_pic1.jpg) no-repeat;
 	text-align:center;
 	line-height:45px;
 	font-size:14px;
@@ -738,7 +738,7 @@ ul.wch_right {
 	width:888px;
 	border-top:1px solid #ddd;
 	padding-right:3px;
-	background:url(../images/bg_yy.gif) repeat-y right;
+	background:url(bg_yy.gif) repeat-y right;
 }
 ul.wch_right li {
 	display:block;
@@ -774,12 +774,12 @@ ul.wch_right li a.wr_current {
 	width:182px;
 	margin-right:18px;
 	padding-right:3px;
-	background: url(../images/bg_yy.gif) repeat-y right;
+	background: url(bg_yy.gif) repeat-y right;
 	border-left:1px solid #ddd;
 }
 .rlt_tilte {
 	height:23px;
-	background:url(../images/red_pic2.gif) repeat-x;
+	background:url(red_pic2.gif) repeat-x;
 	border-top:1px solid #ddd;
 	font-size:14px;
 	font-weight:bold;
@@ -833,20 +833,20 @@ ul.rlt_con li {
 	padding-top:6px;
 }
 .rlt_bottom {
-	background:url(../images/bg_yd.gif) repeat-x;
+	background:url(bg_yd.gif) repeat-x;
 	height:4px;
 }
 .rl_right {
 	float:left;
 	padding-right:3px;
-	background: url(../images/bg_yy.gif) repeat-y right;
+	background: url(bg_yy.gif) repeat-y right;
 	border-left:1px solid #ddd;
 	width:774px;
 }
 .rlr_title {
 	border-top:2px solid #b80000;
 	height:33px;
-	background:url(../images/red_pic4.gif) repeat-x;
+	background:url(red_pic4.gif) repeat-x;
 	line-height:33px;
 	padding-left:15px;
 	font-size:14px;
@@ -912,13 +912,13 @@ ul.rlr_con li span.rlc_btn a:hover {
 }
 .rlr_page a.pre_1 {
 	width:70px;
-	background:url(../images/red_pic5.gif) no-repeat 5px 5px;
+	background:url(red_pic5.gif) no-repeat 5px 5px;
 	text-align:left;
 	padding-left:15px;
 }
 .rlr_page a.next_1 {
 	width:60px;
-	background:url(../images/red_pic6.gif) no-repeat 70px 5px;
+	background:url(red_pic6.gif) no-repeat 70px 5px;
 	text-align:left;
 	padding-left:25px;
 }
@@ -940,7 +940,7 @@ ul.rlr_con li span.rlc_btn a:hover {
 }
 .pdc_con {
 	overflow:hidden;
-	background:url(../images/bg_yy.gif) repeat-y right;
+	background:url(bg_yy.gif) repeat-y right;
 	border-top:1px solid #ddd;
 	border-left:1px solid #ddd;
 	width:747px;
@@ -1035,7 +1035,7 @@ input.input3 {
 }
 .pdr_con {
 	width:777px;
-	background:url(../images/bg_yy.gif) repeat-y right;
+	background:url(bg_yy.gif) repeat-y right;
 	border-left:1px solid #ddd;
 }
 #tab2 {
@@ -1044,7 +1044,7 @@ input.input3 {
 .tabTitle2 {
 	width:774;
 	height:37px;
-	background:url(../images/pd_pic5.gif) repeat-x;
+	background:url(pd_pic5.gif) repeat-x;
 }
 .tabTitle2 a {
 	display:block;
@@ -1060,11 +1060,11 @@ input.input3 {
 }
 .tabTitle2 a.current {
 	color:#b80000;
-	background:url(../images/pd_pic6.gif) repeat-x;
+	background:url(pd_pic6.gif) repeat-x;
 }
 .tabTitle2 a:hover {
 	color:#b80000;
-	background:url(../images/pd_pic6.gif) repeat-x;
+	background:url(pd_pic6.gif) repeat-x;
 }
 .contentBox2 {
 	padding:30px;
@@ -1178,11 +1178,11 @@ ul.rtb_list li {
 }
 .rtl_text {
 	float:left;
-	background:url(../images/pd_pic9.gif) repeat-y;
+	background:url(pd_pic9.gif) repeat-y;
 	width:616px;
 }
 .rtt_top {
-	background:url(../images/pd_pic8.gif) no-repeat;
+	background:url(pd_pic8.gif) no-repeat;
 	overflow:hidden;
 	height:38px;
 	padding-left:35px;
@@ -1212,13 +1212,13 @@ ul.rtb_list li {
 }
 .shc_top {
 	width:980px;
-	background:#fff url(../images/bg_yy.gif) repeat-y right;
+	background:#fff url(bg_yy.gif) repeat-y right;
 	padding-bottom:50px;
 	border-left:1px solid #ddd;
 	padding-right:2px;
 }
 .rlt_bottom2 {
-	background:url(../images/bg_yd.gif) repeat-x;
+	background:url(bg_yd.gif) repeat-x;
 	height:4px;
 	margin-right:3px;
 }
@@ -1365,7 +1365,7 @@ input.input6 {
 	line-height:34px;
 	font-size:14px;
 	padding:0px 35px 0px 30px;
-	background:#707070 url(../images/sc_pic2.gif) no-repeat 105px 11px;
+	background:#707070 url(sc_pic2.gif) no-repeat 105px 11px;
 	color:#fff;
 	font-weight:bold;
 }
@@ -1378,7 +1378,7 @@ input.input6 {
 	line-height:34px;
 	font-size:14px;
 	padding:0px 19px 0px 13px;
-	background:#b80000 url(../images/sc_pic3.gif) no-repeat 107px 11px;
+	background:#b80000 url(sc_pic3.gif) no-repeat 107px 11px;
 	color:#fff;
 	font-weight:bold;
 }
@@ -1815,7 +1815,7 @@ span.coc_sz {
 /*用户中心*/
 .usl_tilte {
 	height:23px;
-	background:#b80000 url(../images/user_pic2.jpg) no-repeat;
+	background:#b80000 url(user_pic2.jpg) no-repeat;
 	border-top:1px solid #ddd;
 	font-size:14px;
 	font-weight:bold;
@@ -1836,19 +1836,19 @@ ul.usr_list li {
 }
 ul.usr_list li a {
 	display:block;
-	background:url(../images/user_pic4.gif) no-repeat 12px 14px;
+	background:url(user_pic4.gif) no-repeat 12px 14px;
 	padding-left:30px;
 	padding-top:12px;
 }
 ul.usr_list li a:hover {
-	background:url(../images/user_pic3.gif) no-repeat 12px 14px;
+	background:url(user_pic3.gif) no-repeat 12px 14px;
 	color:#b80000;
 }
 ul.usr_list li a.current4 {
-	background:url(../images/user_pic3.gif) no-repeat 12px 14px;
+	background:url(user_pic3.gif) no-repeat 12px 14px;
 	color:#b80000;
 }
-/*.rlr_title {	border-top:2px solid #b80000;	height:33px;	background:url(../images/red_pic4.gif) repeat-x;	line-height:33px;	padding-left:15px;	font-size:14px;	font-weight:bold;}*/
+/*.rlr_title {	border-top:2px solid #b80000;	height:33px;	background:url(red_pic4.gif) repeat-x;	line-height:33px;	padding-left:15px;	font-size:14px;	font-weight:bold;}*/
 .usr_title {
 	border-top:2px solid #b80000;
 }
@@ -2199,13 +2199,13 @@ ul.dsa_con li span.dcn_1 {
 	width:200px;
 	margin-right:18px;
 	padding-right:3px;
-	background: url(../images/bg_yy.gif) repeat-y right;
+	background: url(bg_yy.gif) repeat-y right;
 	border-left:1px solid #ddd;
 }
 .abu_right {
 	float:left;
 	padding-right:3px;
-	background: url(../images/bg_yy.gif) repeat-y right;
+	background: url(bg_yy.gif) repeat-y right;
 	border-left:1px solid #ddd;
 	width:754px;
 }
@@ -2223,7 +2223,7 @@ ul.dsa_con li span.dcn_1 {
 	background:#fff;
 }
 .aul_tilte {
-	background:url(../images/about_pic1.gif) no-repeat;
+	background:url(about_pic1.gif) no-repeat;
 	height:6px;
 }
 ul.aul_list {
@@ -2243,11 +2243,11 @@ ul.aul_list li a {
 	line-height:35px;
 }
 ul.aul_list li a:hover {
-	background:url(../images/about_pic2.gif) repeat-x;
+	background:url(about_pic2.gif) repeat-x;
 	color:#fff;
 }
 ul.aul_list li a.current4 {
-	background:url(../images/about_pic2.gif) repeat-x;
+	background:url(about_pic2.gif) repeat-x;
 	color:#fff;
 }
 

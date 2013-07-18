@@ -2,7 +2,10 @@
 <div class="top">
   <div class="top_link">
     <div class="tl_con">
-      <div class="tlc_left"> <span><a href="#">Bar</a></span> <span><a href="#">Education</a></span> </div>
+      <div class="tlc_left"> 
+        <span><a href="#">Bar</a></span> 
+        <span><a href="#">Education</a></span>
+      </div>
       <div class="tlc_right">
         <% if !current_spree_user %>
           <div class="tr_login">
@@ -23,6 +26,7 @@
       <%= image_tag "logo.gif", :size => '153x62' %>
     </div>
     <div class="tb_right">
+      <!--
       <div class="tbr_nl">
         <div class="tnl_input"> <span class="ti_kk">
               <input type="text" class="input1" />
@@ -30,6 +34,7 @@
         </div>
         <div class="tnl_text">SIGN UP TO OUR NEWSLETTER</div>
       </div>
+    -->
 
       <%= render :partial => 'spree/shared/search' %>
 
@@ -40,7 +45,7 @@
   <div class="col960">
     <ul id="navul" class="cl">
       <li class="navhome">
-        <a href="#" target="_blank" class="m1">
+        <a href="/"class="m1">
           <%= image_tag "menu_pic1.gif", :size => '16x14' %>
         </a>
       </li>
