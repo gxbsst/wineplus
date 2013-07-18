@@ -1,3 +1,36 @@
+// GLOGAL
+.column.alpha, .columns.alpha {
+	// margin-right: auto;
+	margin-left: 18px;
+	margin-right: 0;
+}
+
+.tbr_search {
+	margin: 20px 0 0 0;
+}
+.sc_con {
+	width: 130px;
+	right: 0;
+	left: auto;
+	.scc_left {
+		float: none;
+
+		span {
+			display: inline;
+			float: none;
+		}
+		a {
+			color: #FFF;
+		}
+	}
+	ul {
+		background: none;
+		li {
+			background: url('home_pic3.gif') 15px center no-repeat;
+			padding: 0 0 0 40px;
+		}
+	}
+}
 input[type="submit"], input[type="button"],
 input[type="reset"], button, a.button {
 	background-color: #b80000;
@@ -18,6 +51,8 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	color: #b80000;
 }
 
+
+// CHECKOUT PAGE
 
 .orders_con {
 	h2 {
@@ -110,4 +145,62 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 		margin: 10px 0 0 0;
 	}
 }
+
+// TAXONS PAGE
+.taxons_outer {
+
+	.wch_bg {
+		height: auto;
+	}
+	table.taxons {
+		text-transform: uppercase;
+		background: #EEE;
+		border-collapse: inherit;
+		border-spacing: 1px;
+		tr {
+			background:#FFF;
+			border: 0;
+		}
+		td {
+			padding: 10px;
+			ul {
+				padding: 0;
+				margin: 0;
+				background: none;
+				li {
+					
+					&.current {
+						a {
+							color: #FFF;
+							background: #b80000;	
+						}
+					}
+					display: inline;
+					a {
+						display: block;
+						float: left;
+						padding: 8px;
+					}
+				}
+			}
+			input[type='submit'] {
+				margin: 10px 0;
+			}
+		}
+		td.td1 {
+			text-align: center;
+			width: 30px;
+			// background: url(red_pic1.jpg) left top no-repeat;
+			background: #b80000;
+			color:#FFF;
+			vertical-align: middle;
+			font-weight: bold;
+		}
+	}
+	.rl_right {
+		float: none;
+		width: auto;
+	}
+}
+
 
