@@ -70,7 +70,7 @@ module Spree
     # Needs to happen before save_permalink is called
     before_validation :set_currency
     before_validation :generate_order_number, on: :create
-    before_validation :clone_billing_address#, if: :use_billing?
+    before_validation :clone_billing_address, if: :use_billing?
     attr_accessor :use_billing
 
     before_create :link_by_email
@@ -244,10 +244,10 @@ module Spree
     end
 
     def clone_billing_address
-      if bill_address and self.ship_address.nil?
-        self.ship_address = bill_address.clone
+      if ship_address and self.bill_address.nil?
+        self.bill_address = ship_address.clone
       else
-        self.ship_address.attributes = bill_address.attributes.except('id', 'updated_at', 'created_at')
+        self.bill_address.attributes = ship_address.attributes.except('id', 'updated_at', 'created_at')
       end
       true
     end
@@ -569,7 +569,7 @@ module Spree
       end
 
       def use_billing?
-        @use_billing == true || @use_billing == 'true' || @use_billing == '1'
+        @use_billing == true || @use_billing == 'true' || @use_billing == '1' || ship_address.present?
       end
 
       def set_currency

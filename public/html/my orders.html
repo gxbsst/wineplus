@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Untitled Document</title>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/work.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="js/responsiveslides.min.js"></script>
+  <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+  </script>
+  </head>
+
+  <body>
+<div class="top">
+    <div class="top_link">
+    <div class="tl_con">
+        <div class="tlc_left"> <span><a href="#">Bar</a></span> <span><a href="#">Education</a></span> </div>
+        <div class="tlc_right">
+        <div class="tr_welcome">Hello, welcome to wine+ ! </div>
+        <div class="tr_login"><a href="#">REGISTER</a> | <a href="#">LOG IN</a></div>
+      </div>
+      </div>
+  </div>
+    <div class="top_bottom">
+    <div class="tb_logo"><img src="images/logo.gif" width="153" height="62" /></div>
+    <div class="tb_right">
+        <div class="tbr_nl">
+        <div class="tnl_input"> <span class="ti_kk">
+          <input type="text" class="input1" />
+          </span> <span><a href="#">SEND</a></span> </div>
+        <div class="tnl_text">SIGN UP TO OUR NEWSLETTER</div>
+      </div>
+        <div class="tbr_search"> <span><a href="#">SEARCH</a></span> <span class="ts_kk">
+          <input type="text" class="input2" />
+          </span> </div>
+      </div>
+  </div>
+  </div>
+<div class="menu_bg">
+    <div class="col960">
+    <ul id="navul" class="cl">
+        <li class="navhome"><a href="#" target="_blank" class="m1"><img src="images/menu_pic1.gif" width="16" height="14" /></a></li>
+        <li><a href="#" class="m2 current2">RED</a>
+        <ul>
+            <li><a href="#">Cabernet Sauvignon</a></li>
+            <li><a href="#">Grenache</a></li>
+            <li><a href="#">Merlot</a></li>
+            <li><a href="#">Pinot Noir</a></li>
+            <li><a href="#">Sangiovese</a></li>
+            <li><a href="#">Syrah/Shiraz</a></li>
+            <li><a href="#">Other</a></li>
+          </ul>
+      </li>
+        <li><a href="#" class="m3">WHITE</a>
+        <ul>
+            <li><a href="#">Chardonnay</a></li>
+            <li><a href="#">Pinot Gris</a></li>
+            <li><a href="#">Riesling</a></li>
+            <li><a href="#">Sauvignon Blanc</a></li>
+            <li><a href="#">Rose</a></li>
+          </ul>
+      </li>
+        <li><a href="#" class="m4">SPARKLING</a>
+        <ul>
+            <li><a href="#">Cabernet Sauvignon</a></li>
+            <li><a href="#">Grenache</a></li>
+            <li><a href="#">Merlot</a></li>
+            <li><a href="#">Pinot Noir</a></li>
+            <li><a href="#">Sangiovese</a></li>
+            <li><a href="#">Syrah/Shiraz</a></li>
+            <li><a href="#">Other</a></li>
+          </ul>
+      </li>
+        <li><a href="#" class="m5">EXPLORE</a>
+        <ul>
+            <li><a href="#">Chardonnay</a></li>
+            <li><a href="#">Pinot Gris</a></li>
+            <li><a href="#">Riesling</a></li>
+            <li><a href="#">Sauvignon Blanc</a></li>
+            <li><a href="#">Rose</a></li>
+          </ul>
+      </li>
+        <li><a href="#" class="m6">ACCESSORLES</a>
+        <ul>
+            <li><a href="#">Chardonnay</a></li>
+            <li><a href="#">Pinot Gris</a></li>
+            <li><a href="#">Riesling</a></li>
+            <li><a href="#">Sauvignon Blanc</a></li>
+            <li><a href="#">Rose</a></li>
+          </ul>
+      </li>
+      </ul>
+    <div class="sc_con">
+        <div class="scc_left"><span class="scl_1">CART</span><span class="scl_2">0</span></div>
+        <div class="scc_btn"><a href="#">SETTLEMENT</a></div>
+      </div>
+  </div>
+  </div>
+<div class="con_width">
+    <div class="page_current"> <span>YOUR CURRENT LOCATION：</span> <span><a href="#">HOME</a> > </span> <span class="pc_con">MY ORDERS</span></div>
+    <div class="rw_list">
+    <div class="rl_left">
+        <div class="usl_tilte">USER INFORMATION</div>
+        <ul class="usr_list">
+        <li><a href="#">ACCOUNT SETTINGS</a></li>
+        <li><a href="#">CHANGE PASSWORD</a></li>
+        <li><a href="#">DELIVERY ADDRESS</a></li>
+        <li><a href="#" class="current4">MY ORDERS</a></li>
+      </ul>
+        <div class="rlt_bottom"></div>
+      </div>
+    <div class="rl_right">
+        <div class="mos_title">MY ORDERS</div>
+        <div class="usn_con">
+        <div class="usc_bottom">
+            <div class="ucb_top"> <span class="uct_1">NUMBER</span> <span class="uct_2">PRODUCTS</span> <span class="uct_3">CONSIGNEE</span> <span class="uct_1">PRICE</span> <span class="uct_4">DATE</span> <span class="uct_4">STATE</span> <span class="uct_5">OPERATION</span> </div>
+            <ul class="ucb_list">
+            <li> <span class="ucl_number">620242238</span> <span class="ucl_img">
+              <div class="ui_ccn"><img src="images/sc_pic1.jpg" width="52" height="60" /></div>
+              </span> <span class="ucl_name">SHANNON</span> <span class="ucl_price">¥980</span> <span class="ucl_date">2013-07-11</span> <span class="ucl_state">SUCCESS</span> <span class="ucl_operation"><a href="#">DETAILS</a></span> </li>
+            <li> <span class="ucl_number">620242238</span> <span class="ucl_img">
+              <div class="ui_ccn"><img src="images/sc_pic1.jpg" width="52" height="60" /></div>
+              </span> <span class="ucl_name">SHANNON</span> <span class="ucl_price">¥980</span> <span class="ucl_date">2013-07-11</span> <span class="ucl_state">CANCEL</span> <span class="ucl_operation"><a href="#">DETAILS</a></span> </li>
+            <li> <span class="ucl_number">620242238</span> <span class="ucl_img">
+              <div class="ui_ccn"><img src="images/sc_pic1.jpg" width="52" height="60" /></div>
+              </span> <span class="ucl_name">SHANNON</span> <span class="ucl_price">¥980</span> <span class="ucl_date">2013-07-11</span> <span class="ucl_state">SUCCESS</span> <span class="ucl_operation"><a href="#">DETAILS</a></span> </li>
+            <li> <span class="ucl_number">620242238</span> <span class="ucl_img">
+              <div class="ui_ccn"><img src="images/sc_pic1.jpg" width="52" height="60" /></div>
+              </span> <span class="ucl_name">SHANNON</span> <span class="ucl_price">¥980</span> <span class="ucl_date">2013-07-11</span> <span class="ucl_state">SUCCESS</span> <span class="ucl_operation"><a href="#">DETAILS</a></span> </li>
+            <li> <span class="ucl_number">620242238</span> <span class="ucl_img">
+              <div class="ui_ccn"><img src="images/sc_pic1.jpg" width="52" height="60" /></div>
+              </span> <span class="ucl_name">SHANNON</span> <span class="ucl_price">¥980</span> <span class="ucl_date">2013-07-11</span> <span class="ucl_state">SUCCESS</span> <span class="ucl_operation"><a href="#">DETAILS</a></span> </li>
+          </ul>
+          </div>
+      </div>
+        <div class="rlt_bottom"> </div>
+      </div>
+  </div>
+  </div>
+<div class="footer_bg">
+    <div class="footer">
+    <div class="footer_left">Copyright © 2013 WinePlus Cellar | 沪ICP备12011981号-12</div>
+    <div class="footer_right"><a href="#">About us</a> | <a href="#">Privacy Policy</a> | <a href="#">Shipping Policies</a> | <a href="#">Shopping Information</a> | <a href="#">FAQ</a> | <a href="#">Contact Us</a> </div>
+  </div>
+  </div>
+</body>
+</html>

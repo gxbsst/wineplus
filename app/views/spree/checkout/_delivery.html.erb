@@ -1,14 +1,8 @@
-<fieldset id='shipping_method' data-hook>
-  <legend align="center"><%= Spree.t(:delivery) %></legend>
   <div class="inner" data-hook="shipping_method_inner">
     <div id="methods">
       <%= form.fields_for :shipments do |ship_form| %>
 
         <div class="shipment">
-          <h3 class="stock-location" data-hook="stock-location">
-            <%= Spree.t(:package_from) %>
-            <strong class="stock-location-name" data-hook="stock-location-name"><%= ship_form.object.stock_location.name %></strong>
-          </h3>
 
           <table class="stock-contents" data-hook="stock-contents">
             <colgroup>
@@ -35,7 +29,6 @@
             </tbody>
           </table>
 
-          <h5 class="stock-shipping-method-title"><%= Spree.t(:shipping_method) %></h5>
           <ul class="field radios shipping-methods">
             <% ship_form.object.shipping_rates.frontend.each do |rate| %>
               <li class="shipping-method">
@@ -91,10 +84,9 @@
       </p>
     <% end %>
   </div>
-</fieldset>
 
 <br />
 
 <div class="form-buttons" data-hook="buttons">
-  <%= submit_tag Spree.t(:save_and_continue), :class => 'continue button primary' %>
+  <%= submit_tag 'Confirm', :class => 'continue button primary' %>
 </div>

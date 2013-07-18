@@ -20,14 +20,34 @@ module Spree
       end
 
       if @order.update_attributes(params[:order])
-        return if after_update_attributes
         @order.line_items = @order.line_items.select {|li| li.quantity > 0 }
+        @order.create_proposed_shipments if @order.shipments.any?
+        return if after_update_attributes
+
         fire_event('spree.order.contents_changed')
+
+        # init Order address if current address exist
+        current_address = current_spree_user.current_ship_address
+        if current_address
+          @order.init_address(current_address)
+          @order.next
+          fire_event('spree.checkout.update')
+        end
+
+        # init Order Shipment Method if before Shipment Method exist
+        current_shipment = current_spree_user.current_shipment_method
+        if current_shipment
+          @order.init_shipment_mehtod(current_shipment)
+          @order.next
+          fire_event('spree.checkout.update')
+        end
+
         respond_with(@order) do |format|
           format.html do
             if params.has_key?(:checkout)
               @order.next_transition.run_callbacks if @order.cart?
-              redirect_to checkout_state_path(@order.checkout_steps.first)
+              # redirect_to checkout_state_path(@order.checkout_steps.first)
+              redirect_to checkout_state_path(@order.state)
             else
               redirect_to cart_path
             end
@@ -37,7 +57,6 @@ module Spree
         respond_with(@order)
       end
     end
-
 
     # Shows the current incomplete order from the session
     def edit
@@ -49,6 +68,8 @@ module Spree
     def populate
       populator = Spree::OrderPopulator.new(current_order(true), current_currency)
       if populator.populate(params.slice(:products, :variants, :quantity))
+        current_order.create_proposed_shipments if current_order.shipments.any?
+
         fire_event('spree.cart.add')
         fire_event('spree.order.contents_changed')
         respond_with(@order) do |format|

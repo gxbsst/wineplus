@@ -164,7 +164,6 @@ ActiveRecord::Schema.define(:version => 20130716032252) do
   end
 
   create_table "spree_inventory_units", :force => true do |t|
-    t.integer  "lock_version",            :default => 0
     t.string   "state"
     t.integer  "variant_id"
     t.integer  "order_id"
@@ -541,8 +540,8 @@ ActiveRecord::Schema.define(:version => 20130716032252) do
 
   create_table "spree_stock_locations", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
     t.string   "address1"
     t.string   "address2"
     t.string   "city"
@@ -551,7 +550,9 @@ ActiveRecord::Schema.define(:version => 20130716032252) do
     t.integer  "country_id"
     t.string   "zipcode"
     t.string   "phone"
-    t.boolean  "active",     :default => true
+    t.boolean  "active",                 :default => true
+    t.boolean  "backorderable_default",  :default => true
+    t.boolean  "propagate_all_variants", :default => true
   end
 
   create_table "spree_stock_movements", :force => true do |t|
@@ -598,6 +599,7 @@ ActiveRecord::Schema.define(:version => 20130716032252) do
     t.datetime "updated_at",                                                          :null => false
     t.string   "name"
     t.boolean  "show_rate_in_label",                               :default => true
+    t.datetime "deleted_at"
   end
 
   create_table "spree_taxonomies", :force => true do |t|

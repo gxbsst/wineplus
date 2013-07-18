@@ -24,19 +24,35 @@ module Spree
     def update
 
       # ADDRESS
-      if params['state'] == 'address'
+      if params[:state] == 'address'
+        params[:order][:ship_address_attributes][:user_id] = current_spree_user.id
         current_spree_user.remove_address_current
-        address = find_or_init_address(params)
-        address.user_id = current_spree_user.id
-        address.is_current = true
-        address.save
-
-        @order.ship_address_id = address.id
-        @order.bill_address_id = address.id
-        @order.save
-
+        @order.update_attributes(object_params)
         fire_event('spree.checkout.update')
-        render :json => address.to_json
+        @order.next
+        redirect_to checkout_state_path(@order.state)
+      elsif params[:state] == 'delivery'  || params[:state] == 'payment'
+        if @order.update_attributes(object_params)
+
+          fire_event('spree.checkout.update')
+          return if after_update_attributes
+
+          unless @order.next
+            flash[:error] = Spree.t(:payment_processing_failed)
+            redirect_to checkout_state_path(@order.state) and return
+          end
+          if @order.completed?
+            session[:order_id] = nil
+            flash.notice = Spree.t(:order_processed_successfully)
+            flash[:commerce_tracking] = "nothing special"
+            redirect_to completion_route
+          else
+            redirect_to checkout_state_path(@order.state)
+          end
+        else
+          render :edit
+        end
+
       end
 
       #if @order.update_attributes(object_params)
@@ -68,8 +84,11 @@ module Spree
       @ship_add_addressess = current_spree_user.addresses
       @order.bill_address ||= Spree::Address.default
       @order.ship_address ||= Spree::Address.default
-      # before_delivery
+      before_delivery
       @order.payments.destroy_all if request.put?
+
+      @shipping_methods = Spree::ShippingMethod.all
+
     end
 
     private
@@ -89,7 +108,7 @@ module Spree
           if (params[:state] && !@order.has_checkout_step?(params[:state])) ||
              (!params[:state] && !@order.has_checkout_step?(@order.state))
             @order.state = 'cart'
-            #redirect_to checkout_state_path(@order.checkout_steps.first)
+            redirect_to checkout_state_path(@order.checkout_steps.first)
           end
         end
       end
@@ -101,11 +120,12 @@ module Spree
       end
 
       def load_order
+
         @order = current_order
         redirect_to spree.cart_path and return unless @order
 
         if params[:state]
-          redirect_to checkout_state_path(@order.state) if @order.can_go_to_state?(params[:state]) && !skip_state_validation?
+          #redirect_to checkout_state_path(@order.state) if @order.can_go_to_state?(params[:state]) && !skip_state_validation?
           @order.state = params[:state]
         end
         setup_for_current_state
@@ -113,6 +133,7 @@ module Spree
 
       def ensure_checkout_allowed
         unless @order.checkout_allowed?
+
           redirect_to spree.cart_path
         end
       end
@@ -166,7 +187,6 @@ module Spree
 
       def before_delivery
         return if params[:order].present?
-
         packages = @order.shipments.map { |s| s.to_package }
         @differentiator = Spree::Stock::Differentiator.new(@order, packages)
       end
@@ -175,7 +195,7 @@ module Spree
         packages = @order.shipments.map { |s| s.to_package }
         @differentiator = Spree::Stock::Differentiator.new(@order, packages)
         @differentiator.missing.each do |variant, quantity|
-          @order.contents.remove(variant, quantity)
+          #@order.contents.remove(variant, quantity)
         end
       end
 

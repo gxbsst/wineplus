@@ -24,7 +24,12 @@
     <%= form.text_field :city, :class => 'required' %>
   </p>
 
+  <select class="required valid" id="order_ship_address_attributes_country_id" name="order[ship_address_attributes][country_id]"><option value="119">china</option>
+    </select>
 
+  <select class="required valid" id="order_ship_address_attributes_state_id" name="order[ship_address_attributes][state_id]">
+    <option value="55">shanghai</option>
+    </select>
   <p class="field" id=<%="#{address_id}zipcode" %>>
     <%= form.label :zipcode, Spree.t(:zip) %><span class="required">*</span><br />
     <%= form.text_field :zipcode, :class => 'required' %>

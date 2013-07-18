@@ -1,9 +1,11 @@
 <div class="address_outer" data-address='<%= @ship_add_addressess.to_json(only: [:id, :is_current, :firstname, :lastname, :address1, :zipcode, :phone, :city ]) %>' >
 
   <h2 id="shipping_address">Shipping Address <a class="Edit" href="#">edit</a></h2>
-  <% if current = @ship_add_addressess.current.try(:first) %>
-  <div class="current_address"> <%= full_address(current) %> </div>
-  <% end %>
+  <div class="current_address">
+    <% if current = @ship_add_addressess.current.try(:first) %>
+      <%= full_address(current) %>
+    <% end %>
+  </div>
   <script type="text/template" id="line_address">
       <td>
         <input  name="order[ship_address_attributes][is_current]" type="radio" value= 1>
@@ -11,7 +13,8 @@
       <td><@= address1 @></td>
       <td><a class="delete" href="#">Delete</a> <a class="edit" href="#methods">Edit</a></td>
   </script>
-  <%= form_for @order, :url => update_checkout_path('address'), :html => { :id => "checkout_form_payment" } do |form| %>
+    <% form_class_name = @order.state == 'address' ? 'show_form' : 'hide_form' %>
+    <%= form_for @order, :url => update_checkout_path('address'), :html => { :id => "checkout_form_address", :class => form_class_name } do |form| %>
     <table>
       <tr>
         <td class="new_address"><%= radio_button_tag 'order[ship_address_attributes][is_current]', 1  %></td>
@@ -33,24 +36,20 @@
 </div>
 <!--address_outer end-->
 
-<%= form_for @order, :url => update_checkout_path('shipping'), :html => { :id => "checkout_form_payment" } do |form| %>
+<div class="deliver_outer" >
+  <h2 id="shipping_method">Shipping Method <a class="Edit" href="#">edit</a></h2>
+  <% form_class_name2 = @order.state == 'delivery' ? 'show_form' : 'hide_form' %>
 
-  <div class='columns eight omega' data-hook='delivery_fieldset_wrapper' id="shipping_method_wrapper" >
-    <legend align="center"><%= t(:shipping_method) %></legend>
-    <div id='methods'>
-      <p class='field radios'>
-      </p>
-    </div>
-    <% if Spree::Config[:shipping_instructions] && @order.rate_hash.present? %>
-      <p id='minstrs' data-hook="">
-      <%= form.label :special_instructions, t(:shipping_instructions) %>
-      <br>
-      <%= form.text_area :special_instructions, :cols => 40, :rows => 7 %>
-    <% end %>
-  </div>
-<% end %>
+  <%= form_for @order, :url => update_checkout_path('delivery'), :html => { :id => "checkout_form_shipping", :class => "shipping_method #{form_class_name2}" } do |form| %>
 
-<%= form_for @order, :url => update_checkout_path('payment'), :html => { :id => "checkout_form_payment" } do |form| %>
+  <%= render 'spree/checkout/delivery', :form => form  %>
+
+  <% end %>
+</div>
+
+<% form_class_name3 = @order.state == 'delivery' ? 'show_form' : 'hid2e_form' %>
+
+<%= form_for @order, :url => update_checkout_path('payment'), :html => { :id => "checkout_form_payment", :class => "shipping_payment #{form_class_name3}" } do |form| %>
 
   <div class='omega eight columns'>
     <fieldset id="payment" class="variant-info" "data-hook">
@@ -59,17 +58,15 @@
     <% @order.available_payment_methods.each do |method| %>
       <p>
         <label>
-          <%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id %>
+          <%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, true %>
           <%= t(method.name, :scope => :payment_methods, :default => method.name) %>
         </label>
       </p>
     <% end %>
-    <ul id="payment-methods" "data-hook">
+    <ul id="payment-methods">
     <% @order.available_payment_methods.each do |method| %>
       <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
-        <fieldset>
           <%= render :partial => "spree/checkout/payment/#{method.method_type}", :locals => { :payment_method => method } %>
-        </fieldset>
       </li>
     <% end %>
     </ul>
@@ -79,11 +76,15 @@
   </fieldset>
   </div>
 
+  <% if @order.state != 'confirm' %>
+    <div id="checkout-summary" data-hook="checkout_summary_box" class="columns omega four">
+      <%= render :partial => 'summary', :locals => { :order => @order } %>
+    </div>
+  <% end %>
+
   <br class="space" />
-  <div class="form-buttons" "data-hook"="buttons">
-  <%= submit_tag t(:checkout), :class => 'btn one-page-checkout-button', 'data-hook' => 'one_page_checout_button' %>
-  <script>
-    // disableSaveOnClick();
-  </script>
+  <div class="form-buttons" data-hook="buttons">
+  <%= submit_tag 'checkout', :class => 'btn one-page-checkout-button' %>
+
   </div>
 <% end %>

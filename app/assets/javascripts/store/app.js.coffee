@@ -36,34 +36,33 @@ jQuery ->
   @app.Collection.Addresses  = Addresses
 
   class AddressesView extends Backbone.View
-    'el': '.edit_order'
+    'el': '#checkout_form_address'
 
     initialize:->
       _.bindAll(@, 'render')
       @collection.on('add', @addOne, @)
 
     events:
-      'click .new_address input': 'showAddressForm',
-      'submit': 'saveAddress'
+      'click .new_address input': 'showAddressForm'
+#      'submit': 'saveAddress'
 
     render: ->
       @collection.each(@addOne, @)
       @
 
     saveAddress:(e)->
-      e.preventDefault()
+#      e.preventDefault()
 
       data = Backbone.Syphon.serialize(@).order.ship_address_attributes
-      if data.id == ''
+      if data.id == '' || typeof(data.id) == 'undefined'
         address = new window.app.Models.Address()
         address.set(data)
         @collection.add(address)
         address.save()
       else
-        debugger
         address = @collection.get(parseInt(data.id))
         address.set(data)
-        address.save
+        address.save()
 
       @hideAddressForm()
       $(@el).hide()
@@ -108,7 +107,7 @@ jQuery ->
       @
 
     addressInput:->
-      @.$el.closest('.edit_order').find('.address_input')
+      @.$el.closest('#checkout_form_address').find('.address_input')
     hideFormInput:(e)->
       @fillData()
       @addressInput().hide()
@@ -141,4 +140,20 @@ jQuery ->
   addresses = new app.Collection.Addresses(newCollect)
   addressesView = new app.Views.Addresses({collection:addresses})
   addressesView.render()
+
+  # Address END
+  class ShippingMethodTitleView extends Backbone.View
+    'el': '#shipping_method'
+    'events':
+      'click a': 'showForm'
+
+    initialize: ->
+      _.bindAll(@, 'render')
+
+    showForm: (e)->
+      @.$el.closest('div.deliver_outer').find('form').show()
+
+  @app.Views.ShippingMethodTitle  = ShippingMethodTitleView
+
+  new @app.Views.ShippingMethodTitle
 

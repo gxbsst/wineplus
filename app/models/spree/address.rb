@@ -10,7 +10,7 @@ module Spree
     validates :firstname, :lastname, :address1, :city, :zipcode,  presence: true
     validates :phone, presence: true, if: :require_phone?
 
-    validate :state_validate
+    #validate :state_validate
 
     attr_accessible :firstname, :lastname, :address1, :address2,
                     :city, :zipcode, :country_id, :state_id,
@@ -31,6 +31,7 @@ module Spree
     end
 
     def self.default
+      return current.first if current.present?
       country = Spree::Country.find(Spree::Config[:default_country_id]) rescue Spree::Country.first
       new({ country: country }, without_protection: true)
     end
