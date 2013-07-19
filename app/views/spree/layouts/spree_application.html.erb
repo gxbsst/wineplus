@@ -10,10 +10,9 @@
   <% else %>
   <div class="shc_con">
   <% end %>
+
     <div class="page_current"> 
-      <span>YOUR CURRENT LOCATION：</span>
-      <span><a href="#">HOME</a> &gt; </span> 
-      <span class="pc_con">ORDERS</span> 
+      <%= breadcrumbs(@taxon) %>
     </div>
 
     <%= yield %>

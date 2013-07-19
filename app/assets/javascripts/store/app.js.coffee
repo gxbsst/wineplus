@@ -132,6 +132,7 @@ jQuery ->
       @addressInput().find('#order_ship_address_attributes_phone').val(@model.get('phone'))
       @addressInput().find('#order_ship_address_attributes_id').val(@model.get('id'))
 
+
   @app.Views.Address  = AddressView
 
   new @app.Views.ShippingTitle
@@ -143,7 +144,7 @@ jQuery ->
 
   # Address END
   class ShippingMethodTitleView extends Backbone.View
-    'el': '#shipping_method'
+    'el': '#shipping_method_title'
     'events':
       'click a': 'showForm'
 

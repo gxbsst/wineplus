@@ -7,7 +7,7 @@ module ApplicationHelper
         css_class = (current_taxon && current_taxon.self_and_ancestors.include?(taxon)) ? 'current' : nil
         content_tag :li, class: css_class do
           link_to(taxon.name, seo_url(taxon)) +
-              taxons_tree(taxon, current_taxon, max_level - 1)
+          taxons_tree(taxon, current_taxon, max_level - 1)
         end
       end.join("\n").html_safe
     end
@@ -32,7 +32,7 @@ module ApplicationHelper
         css_class = (current_taxon && current_taxon.self_and_ancestors.include?(taxon)) ? 'current' : nil
         content_tag :li, class: css_class do
           link_to(taxon.name, seo_url(taxon)) +
-              taxons_tree(taxon, current_taxon, 0)
+          taxons_tree(taxon, current_taxon, 0)
         end
       end.join("\n").html_safe
     end
@@ -54,7 +54,7 @@ module ApplicationHelper
       text = "#{text}: (#{Spree.t('empty')})"
       css_class = 'empty'
     else
-      text = "#{text}: (#{current_order.item_count})  <span class='amount'>#{current_order.display_total.to_html}</span>".html_safe
+      text = "#{text}: (#{current_order.item_count})  <span class='amount'>#{current_order.display_total}</span>".html_safe
       css_class = 'full'
     end
 
@@ -62,7 +62,20 @@ module ApplicationHelper
   end
 
   def full_address(address)
-    "#{address.firstname}#{address.lastname} #{address.address1} #{address.city}"
+    "#{address.firstname}#{address.lastname}, #{address.address1},    #{address.city}, #{address.state}, #{address.country}"
+  end
+
+  def ship_mehtod_to_text(shipments)
+    ship_methods = []
+    shipping_rates =  shipments.collect(&:shipping_rates).flatten
+    unless shipping_rates.blank?
+      shipping_rates.inject({}) do |h, i|
+        h[:method_name] = i.shipping_method.name
+        h[:cost] = i.cost.to_f
+        ship_methods << h
+      end
+    end
+    ship_methods
   end
 
   def custom_display_price(product_or_variant)

@@ -1,6 +1,6 @@
 <% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
 <div class="tbr_search">
-  <span><a href="#">SEARCH</a></span>
+  <span><a href="#"></a></span>
           <span class="ts_kk">
             <%= form_tag spree.products_path, :method => :get do %>
   <%#= select_tag :taxon,
@@ -8,7 +8,7 @@
                                         @taxons.map {|t| [t.name, t.id]},
                                     @taxon ? @taxon.id : params[:taxon]) %>
               <%= text_field_tag :keywords, params[:keywords], :placeholder => Spree.t(:search), :class => 'input2' %>
-              <%#= submit_tag Spree.t(:search), :name => nil %>
+              <%= submit_tag 'SEARCH', :name => nil, :class => 'search_button' %>
 <% end %>
           </span>
 </div>

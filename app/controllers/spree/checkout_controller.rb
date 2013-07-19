@@ -27,7 +27,19 @@ module Spree
       if params[:state] == 'address'
         params[:order][:ship_address_attributes][:user_id] = current_spree_user.id
         current_spree_user.remove_address_current
-        @order.update_attributes(object_params)
+        if params[:order][:ship_address_attributes][:id].present?
+          # @order.update_attributes(object_params)
+          ship_address = Spree::Address.find(object_params[:ship_address_attributes][:id])
+          ship_address.update_attributes(object_params[:ship_address_attributes])
+          @order.ship_address = ship_address
+          @order.clone_billing_address
+          @order.save!
+        else
+          @order.build_ship_address(params[:order][:ship_address_attributes])
+          @order.clone_billing_address
+          @order.save!
+        end
+
         fire_event('spree.checkout.update')
         @order.next
         redirect_to checkout_state_path(@order.state)
@@ -81,13 +93,13 @@ module Spree
     def edit
       @order = current_order(true)
       associate_user
-      @ship_add_addressess = current_spree_user.addresses
+      @ship_add_addressess = current_spree_user.ship_address
       @order.bill_address ||= Spree::Address.default
       @order.ship_address ||= Spree::Address.default
       before_delivery
       @order.payments.destroy_all if request.put?
 
-      @shipping_methods = Spree::ShippingMethod.all
+      @shipping_methods = @order.shipments.collect(&:shipping_method).compact
 
     end
 

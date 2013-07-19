@@ -15,7 +15,7 @@ module Spree
     attr_accessible :firstname, :lastname, :address1, :address2,
                     :city, :zipcode, :country_id, :state_id,
                     :country, :state, :phone, :state_name,
-                    :company, :alternative_phone, :is_current, :user_id
+                    :company, :alternative_phone, :is_current, :user_id, :is_ship_address
 
     alias_attribute :first_name, :firstname
     alias_attribute :last_name, :lastname
@@ -61,7 +61,7 @@ module Spree
     end
 
     def clone
-      self.class.new(self.attributes.except('id', 'updated_at', 'created_at'))
+      self.class.new(self.attributes.except('id', 'updated_at', 'created_at', 'is_ship_address'))
     end
 
     def ==(other_address)

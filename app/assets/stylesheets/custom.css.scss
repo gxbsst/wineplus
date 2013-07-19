@@ -1,4 +1,10 @@
 // GLOGAL
+.hide_form {
+	display: none;
+}
+.show_form {
+	display: block;
+}
 .column.alpha, .columns.alpha {
 	// margin-right: auto;
 	margin-left: 18px;
@@ -34,6 +40,7 @@ table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
 	}
 	ul {
 		background: none;
+		// padding-top: 10px;
 		li {
 			background: url('home_pic3.gif') 15px center no-repeat;
 			padding: 0 0 0 40px;
@@ -55,10 +62,26 @@ input[type="reset"], button, a.button {
 	border: 0;
 }
 
-span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total, .ship_total {
+span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total, .ship_total, .ship_total {
 	font-weight: bold;
 	color: #b80000;
 	font-size: 20px;
+}
+.tbr_search {
+	position: relative;
+	.input2 {
+		position: absolute;
+		// left: 0;
+	}
+	.search_button {
+		position: absolute;
+		top: 1px;
+		right: 6px;
+		height: 43px;
+	}
+	span a {
+		background: none;
+	}
 }
 
 
@@ -67,6 +90,15 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 .orders_con {
 	h2 {
 		border-bottom: 1px solid #CCC;
+		position: relative;
+		a.edit {
+			color: #b80000;
+			margin-left: 10px;
+			font-weight: normal;
+			// position:absolute;
+			// right: 0;
+			font-size: 14px;
+		}
 	}
 }
 
@@ -153,6 +185,9 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	}
 	.columns {
 		margin: 10px 0 0 0;
+	}
+	#payment-methods {
+		background: none;
 	}
 }
 
@@ -292,4 +327,6 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	}
 	
 }
+
+
 

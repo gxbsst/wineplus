@@ -247,7 +247,7 @@ module Spree
       if ship_address and self.bill_address.nil?
         self.bill_address = ship_address.clone
       else
-        self.bill_address.attributes = ship_address.attributes.except('id', 'updated_at', 'created_at')
+        self.bill_address.attributes = ship_address.attributes.except('id', 'updated_at', 'created_at', 'is_ship_address')
       end
       true
     end
