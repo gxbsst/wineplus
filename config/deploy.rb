@@ -6,9 +6,9 @@ set :application, "wineplus-store"
 
 set :branch, "master"
 server "192.168.11.31", :web, :app, :db, primary: true
-set :repository,  "git@git.sidways.lab:ruby/outsourcing/wineplus-store"
+ set :repository,  "git://github.com/gxbsst/wineplus.git"
 set :user, "rails"
-set :deploy_to, "/srv/rails/wineplus-store"
+set :deploy_to, "/srv/rails/wineplus-store1"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -42,7 +42,7 @@ namespace :deploy do
   task :setup_config, roles: :app do
     # sudo "ln -nfs #{current_path}/config/apache.conf /etc/apache2/sites-available/#{application}"
     run "mkdir -p #{shared_path}/config"
-    put File.read("config/database.yml.mysql"), "#{shared_path}/config/database.yml"
+    put File.read("config/database.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."
     # photos
   end
