@@ -1,7 +1,10 @@
 Spree::Order.class_eval do
 
 	def init_address(current_ship_address)
-		update_attributes(address_params(current_ship_address))
+		# update_attributes(address_params(current_ship_address))
+		self.ship_address = current_ship_address
+		self.bill_address = current_ship_address.clone
+		self
 	end
 
 	def init_shipment_mehtod(shipment_mehtod)

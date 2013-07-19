@@ -69,10 +69,11 @@ module ApplicationHelper
     ship_methods = []
     shipping_rates =  shipments.collect(&:shipping_rates).flatten
     unless shipping_rates.blank?
-      shipping_rates.inject({}) do |h, i|
+      shipping_rates.select{|i| i.selected}.inject({}) do |h, i|
         h[:method_name] = i.shipping_method.name
         h[:cost] = i.cost.to_f
         ship_methods << h
+        h = {}
       end
     end
     ship_methods

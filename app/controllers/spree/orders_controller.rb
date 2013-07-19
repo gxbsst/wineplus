@@ -27,12 +27,13 @@ module Spree
         fire_event('spree.order.contents_changed')
 
         # init Order address if current address exist
-        current_address = current_spree_user.current_ship_address
-        if current_address
-          @order.init_address(current_address)
-          @order.next
-          fire_event('spree.checkout.update')
-        end
+        if current_spree_user
+          current_address = current_spree_user.current_ship_address
+          if current_address
+             @order.init_address(current_address).save
+            @order.next
+            fire_event('spree.checkout.update')
+          end
 
         # init Order Shipment Method if before Shipment Method exist
         current_shipment = current_spree_user.current_shipment_method
@@ -41,6 +42,7 @@ module Spree
           @order.next
           fire_event('spree.checkout.update')
         end
+      end
 
         respond_with(@order) do |format|
           format.html do
