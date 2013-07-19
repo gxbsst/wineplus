@@ -34,6 +34,8 @@
   </div>
   <div class="hcc_bottom"><img src="images/bg_bottom.gif" width="982" height="4" /></div>
 </div>
+
+
 <div class="home_con1">
   <div class="hcc_con">
     <div class="red_tilte">
@@ -41,45 +43,52 @@
       <span class="more"><%= link_to "MORE >>", link_to_taxon('White') %></span>
     </div>
     <ul class="red_list">
+
       <% @whites.each do |product| %>
-        <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
-          <dl class="pc_top">
-            <dt><%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %></dt>
-            <dd>
-              <%= link_to small_image(product, :itemprop => "image", :size => '217x242'), product, :itemprop => 'url' %>
-            </dd>
-          </dl>
-          <div class="pc_bottom">
-            <div class="pcb_left"><%= display_price(product) %></div>
-          </div>
-        </li>
-      <% end %>
+      <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+        <div class="rl_img">
+         <%= link_to small_image(product, :itemprop => "image", :size => '170x192'), product, :itemprop => 'url' %>
+       </div>
+       <div class="rl_name">
+        <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
+      </div>
+      <div class="rl_bottom">
+        <span class="rlb_1"> <%= custom_display_price(product) %></span>
+        <!-- <span class="rlb_2">RMB 435.00</span> -->
+      </div>
+    </li>
+    <% end %>
     </ul>
   </div>
   <div class="hcc_bottom"><img src="images/bg_bottom.gif" width="982" height="4" /></div>
 </div>
+
 <div class="home_con1">
   <div class="hcc_con">
     <div class="red_tilte">
       <span class="big_title">SPARKLING WINE</span>
-      <span class="more"><%= link_to "MORE >>", link_to_taxon('White') %></span>
-
+      <span class="more"><%= link_to "MORE >>", link_to_taxon('Sparkling') %></span>
     </div>
     <ul class="red_list">
+
       <% @sparklings.each do |product| %>
-        <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
-          <dl class="pc_top">
-            <dt><%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %></dt>
-            <dd>
-              <%= link_to small_image(product, :itemprop => "image", :size => '217x242'), product, :itemprop => 'url' %>
-            </dd>
-          </dl>
-          <div class="pc_bottom">
-            <div class="pcb_left"><%= display_price(product) %></div>
-          </div>
-        </li>
-      <% end %>
+      <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+        <div class="rl_img">
+         <%= link_to small_image(product, :itemprop => "image", :size => '170x192'), product, :itemprop => 'url' %>
+       </div>
+       <div class="rl_name">
+        <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
+      </div>
+      <div class="rl_bottom">
+        <span class="rlb_1"> <%= custom_display_price(product) %></span>
+        <!-- <span class="rlb_2">RMB 435.00</span> -->
+      </div>
+    </li>
+    <% end %>
     </ul>
   </div>
   <div class="hcc_bottom"><img src="images/bg_bottom.gif" width="982" height="4" /></div>
 </div>
+
+
+
