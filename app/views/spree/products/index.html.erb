@@ -1,13 +1,76 @@
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <% if "spree/products" == params[:controller] && @taxon %>
-      <%= render :partial => 'spree/shared/filters' %>
-    <% else %>
-      <%= render :partial => 'spree/shared/taxonomies' %>
-    <% end %>
-  </div>
-<% end %>
+<div class="taxons_outer">
 
+  <div class="con_width">
+    <div class="wine_choose">
+      <div class="wch_bg">
+        <table width=100% class="taxons" >
+         <tr class="tr1">
+           <td class="td1">STYLE</td>
+           <td class="td2">
+             <%= style_tree %>
+           </td>
+         </tr>
+         <tr class="tr2">
+          <td class="td1">REGION</td>
+          <td class="td2">
+            <%= region_tree %>
+          </td>
+        </tr>
+        <tr class="tr3">
+          <td class="td1">VARIETY</td>
+          <td class="td2">
+            <%= variety_tree %>
+          </td>
+        </tr>
+        
+      </table>
+    </div>
+  </div>
+
+  <div class="rw_list">
+    <div class="rl_right">
+      
+
+      <%
+      paginated_products = @searcher.retrieve_products if params.key?(:keywords)
+      paginated_products ||= @products
+      %>
+      <% if @products.empty? %>
+      <%= Spree.t(:no_products_found) %>
+      <% elsif params.key?(:keywords) %>
+      <h6 class="search-results-title"><%= Spree.t(:search_results, :keywords => h(params[:keywords])) %></h6>
+      <% end %>
+
+      <% if @products.any? %>
+      <ul class="rlr_con">
+        <% @products.each do |product| %>
+        <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+          <span class="rlc_img">
+           <%= link_to small_image(product, :itemprop => "image", :size => '170x192'), product, :itemprop => 'url' %>
+         </span>
+         <span class="rlc_name"> <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %></span>
+         <span class="rlc_sz"><%= custom_display_price(product) %></span>
+       </li>
+       <% end %>
+
+     </ul>
+     <% end %>
+     <div class="rlr_page">
+      <% if paginated_products.respond_to?(:num_pages) %>
+      <%= paginate paginated_products %>
+      <% end %>
+    </div>
+    <div class="rlt_bottom"></div>
+  </div>
+</div>
+</div>
+
+
+<!-- end .taxons_outer -->
+</div>
+
+
+<!-- 
 
 <% if params[:keywords] %>
 
@@ -24,4 +87,4 @@
   <div data-hook="homepage_products">
     <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
   </div>
-<% end %>
+<% end %> -->

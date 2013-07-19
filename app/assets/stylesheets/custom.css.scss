@@ -5,11 +5,21 @@
 .show_form {
 	display: block;
 }
-.column.alpha, .columns.alpha {
-	// margin-right: auto;
-	margin-left: 18px;
-	margin-right: 0;
+.notfound_outer, .empty_cart_outer {
+	padding: 50px 0 0 0;
+	font-size: 30px;
+	text-align:  center;
 }
+// .column.alpha, .columns.alpha {
+// 	// margin-right: auto;
+// 	margin-left: 18px;
+// 	margin-right: 0;
+// }
+
+#breadcrumbs li a {
+	color: #b80000;
+}
+
 table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
 	background: #FFF;
 }
@@ -245,6 +255,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	.rl_right {
 		float: none;
 		width: auto;
+		background: #FFF;
 	}
 }
 
