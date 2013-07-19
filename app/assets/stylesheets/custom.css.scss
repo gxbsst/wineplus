@@ -5,6 +5,12 @@
 	margin-right: 0;
 }
 
+::selection {
+	background: #b80000;
+	color: white;
+	text-shadow: none;
+}
+
 .tbr_search {
 	margin: 20px 0 0 0;
 }
@@ -203,4 +209,52 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	}
 }
 
+// PRODUCT DETAIL
+#product-details {
+	float: none;
+	width: auto;
+	.pd_right {
+		.pcx_img {
+			border: 0;
+			ul {
+				background: #FFF;
+			}
+		}
+		.pcx_right {
+			width: 565px;
+		}
+
+		#cart-form {
+			margin-top: 20px;
+			.column.alpha, .columns.alpha {
+				margin-left: 0;
+			}	
+		}
+		#taxon-crumbs {
+			margin: 10px 0 0 0;
+			ul {
+				background: #FFF;
+			}
+		}
+	}
+	.pd_con {
+		width: auto;
+		.pdc_con {
+			width: auto;
+		}
+	}
+	.pdr_con {
+		width: auto;
+	}
+	#tab2 {
+		width: auto;
+		h2 {
+			padding: 5px 8px ;
+			color: #000;
+			background: #FFF;
+			border-bottom: 3px solid #b80000;
+		}
+	}
+
+}
 
