@@ -14,7 +14,8 @@
           </div>
         <% else %>
           <div class="tr_welcome">
-            Logged in as: <%= current_spree_user.email %>
+            Logged in as: 
+            <a href="/account"><%= current_spree_user.email %></a>
             <%= link_to 'LOGOUT', logout_path %>
           </div>
         <% end %>
