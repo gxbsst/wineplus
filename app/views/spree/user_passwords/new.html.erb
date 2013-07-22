@@ -1,17 +1,23 @@
-<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @spree_user } %>
+<div class="shc_top">
+  <div class="sht_line"></div>
+  <div class="repassword_outer">
 
-<div id="forgot-password">
-  <h6><%= Spree.t(:forgot_password) %></h6>
+  <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @spree_user } %>
 
-  <p><%= Spree.t(:instructions_to_reset_password) %></p>
+  <div id="forgot-password">
+    <h6><%= Spree.t(:forgot_password) %></h6>
 
-  <%= form_for Spree::User.new, :as => :spree_user, :url => spree.reset_password_path do |f| %>
+    <p><%= Spree.t(:instructions_to_reset_password) %></p>
+
+    <%= form_for Spree::User.new, :as => :spree_user, :url => spree.reset_password_path do |f| %>
     <p>
       <%= f.label :email, Spree.t(:email) %><br />
-      <%= f.email_field :email %>
+      <%= f.email_field :email, :class => :input7 %>
     </p>
     <p>
       <%= f.submit Spree.t(:reset_password), :class => 'button primary' %>
     </p>
-  <% end %>
+    <% end %>
+  </div>
+  </div>
 </div>

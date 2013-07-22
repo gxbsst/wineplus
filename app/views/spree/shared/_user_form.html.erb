@@ -1,16 +1,22 @@
 <p>
-  <%= f.label :email, Spree.t(:email) %><br />
-  <%= f.email_field :email, :class => 'title' %>
+  <span class="lou_1">
+    <%= f.label :email, Spree.t(:email) %> *<br />
+  </span>
+  <%= f.email_field :email, :class => 'title input7' %>
 </p>
 <div id="password-credentials">
   <p>
-    <%= f.label :password, Spree.t(:password) %><br />
-    <%= f.password_field :password, :class => 'title' %>
+    <span class="lou_1">
+      <%= f.label :password, Spree.t(:password) %> *<br />
+    </span>
+    <%= f.password_field :password, :class => 'title input7' %>
   </p>
 
   <p>
-    <%= f.label :password_confirmation, Spree.t(:confirm_password) %><br />
-    <%= f.password_field :password_confirmation, :class => 'title' %>
+    <span class="lou_1">
+      <%= f.label :password_confirmation, Spree.t(:confirm_password) %> *<br />
+    </span>
+    <%= f.password_field :password_confirmation, :class => 'title input7' %>
   </p>
 </div>
 
