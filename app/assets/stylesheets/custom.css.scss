@@ -16,6 +16,10 @@
 // 	margin-right: 0;
 // }
 
+#billing, #shipping, #shipping_method, #payment, #order_details, #order_summary {
+	border: 0;
+}
+
 #breadcrumbs li a {
 	color: #b80000;
 }
@@ -348,6 +352,10 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 
 }
 .repassword_outer {
+	padding: 10px;
+}
+
+#default .outer {
 	padding: 10px;
 }
 

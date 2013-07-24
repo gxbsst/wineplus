@@ -1,7 +1,7 @@
 class Spree::UsersController < Spree::StoreController
   ssl_required
-  skip_before_filter :set_current_order, :only => :show
-  prepend_before_filter :load_object, :only => [:show, :edit, :update]
+  skip_before_filter :set_current_order, :only => [:show, :orders]
+  prepend_before_filter :load_object, :only => [:show, :edit, :update, :orders]
   prepend_before_filter :authorize_actions, :only => :new
 
   include Spree::Core::ControllerHelpers
@@ -24,6 +24,10 @@ class Spree::UsersController < Spree::StoreController
     end
   end
 
+  def orders
+    @orders = @user.orders.complete.order('completed_at desc')
+  end
+
   def update
     if @user.update_attributes(params[:user])
       if params[:user][:password].present?
@@ -35,6 +39,10 @@ class Spree::UsersController < Spree::StoreController
     else
       render :edit
     end
+  end
+
+  def unauthorized
+    redirect_to login_path
   end
 
   private

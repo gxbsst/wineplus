@@ -1,3 +1,4 @@
+
 <div class="con_width">
   <div class="rw_list">
     <div class="rl_left">
@@ -5,22 +6,13 @@
       <!-- end .rl_left -->
     </div>
     <div class="rl_right">
-      <div class="mos_title">DASHBOARD</div>
+      <div class="mos_title">MY ORDERS</div>
       <div class="ast_con">
-
-      <h1><%= accurate_title %></h1>
-
-      <div data-hook="account_summary" class="account-summary">
-        <dl id="user-info">
-          <dt><%= Spree.t(:email) %></dt>
-          <dd><%= @user.email %> (<%= link_to Spree.t(:edit), spree.edit_account_path %>)</dd>
-        </dl>
-      </div>
 
       <div data-hook="account_my_orders" class="account-my-orders">
 
         <h3><%= Spree.t(:my_orders) %></h3>
-        <%= render 'spree/users/order_list' %>
+        <%= render 'spree/users/order_list' %>        
         <br />
       </div>
          <!-- end ast_con -->

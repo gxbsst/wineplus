@@ -1,10 +1,35 @@
-<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
+<div class="con_width">
+	<div class="rw_list">
+		<div class="rl_left">
+			<%= render 'spree/users/sidebar' %>
+			<!-- end .rl_left -->
+		</div>
+		<div class="rl_right">
+			<div class="mos_title">ACCOUNT SETTINGS</div>
+			<div class="ast_con">
+				<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
+				<%= form_for @user, :url => spree.user_path(@user), :method => :put do |f| %>
+				<%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
+				<p>
+					<%= f.submit Spree.t(:update), :class => 'button primary' %>
+				</p>
+				<% end %>
+				<!-- end ast_con -->
+			</div>
+			<div class="rlt_bottom"> </div>
+			<!-- end .rl_right -->
+		</div>
 
-<h1><%= Spree.t(:editing_user) %></h1>
+		<!-- end .rw_list -->
+	</div>
+	<!-- end .con_width -->
+</div>
 
-<%= form_for @user, :url => spree.user_path(@user), :method => :put do |f| %>
-  <%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
-  <p>
-    <%= f.submit Spree.t(:update), :class => 'button primary' %>
-  </p>
-<% end %>
+
+
+
+
+
+
+
+
