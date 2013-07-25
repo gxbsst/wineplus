@@ -1,8 +1,15 @@
 Wineplus::Application.routes.draw do
 
   post 'checkout/update/:state', to: "spree/checkout#update"
-  match 'account/orders' => 'spree/users#orders', as: 'user_orders'
-  get 'account/orders', :to => 'spree/users#orders'
+  # match 'account/orders' => 'spree/users#orders', as: 'user_orders'
+  get 'account/orders', :to => 'spree/users#orders', as: 'user_orders'
+
+  # STATIC
+  statics = %w(about_us contact_us faqs)
+  statics.each do |i|
+    match "/#{i}", :to => "statics##{i}"
+  end
+
 
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
