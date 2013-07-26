@@ -14,3 +14,4 @@ end
 Spree.user_class = "Spree::LegacyUser"
 Spree::Config[:display_currency] = false
 Spree::Config[:allow_guest_checkout] = false
+Spree::Config[:currency] = 'CNY'
