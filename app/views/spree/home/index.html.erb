@@ -17,12 +17,12 @@
     <ul class="red_list">
 
       <% @reds.each do |product| %>
-      <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+      <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://www.wineplus.me/products">
         <div class="rl_img">
          <%= link_to small_image(product, :itemprop => "image", :size => '170x192'), product, :itemprop => 'url' %>
        </div>
        <div class="rl_name">
-        <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
+        <%= link_to truncate(product.name_with_vintage, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name_with_vintage %>
       </div>
       <div class="rl_bottom">
         <span class="rlb_1"> <%= custom_display_price(product) %></span>
@@ -50,7 +50,7 @@
          <%= link_to small_image(product, :itemprop => "image", :size => '170x192'), product, :itemprop => 'url' %>
        </div>
        <div class="rl_name">
-        <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
+        <%= link_to truncate(product.name_with_vintage, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name_with_vintage %>
       </div>
       <div class="rl_bottom">
         <span class="rlb_1"> <%= custom_display_price(product) %></span>
@@ -77,7 +77,7 @@
          <%= link_to small_image(product, :itemprop => "image", :size => '170x192'), product, :itemprop => 'url' %>
        </div>
        <div class="rl_name">
-        <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
+        <%= link_to truncate(product.name_with_vintage, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name_with_vintage %>
       </div>
       <div class="rl_bottom">
         <span class="rlb_1"> <%= custom_display_price(product) %></span>

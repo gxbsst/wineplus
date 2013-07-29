@@ -36,7 +36,12 @@ module Spree
 
     private
       def accurate_title
-        @product ? @product.name : super
+        @product ? "#{@product.property(:vintage)} #{@product.name}" : super
+
+      end
+
+      def accurate_title_with_vintage
+         # @product ? @product.name : super
       end
 
       def load_product

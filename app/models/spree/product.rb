@@ -206,6 +206,14 @@ module Spree
       end
     end
 
+    def name_with_vintage
+      if self.property(:vintage).present?
+        "#{property(:vintage)} #{name}"
+      else
+        name
+      end
+    end
+
     private
 
       # Builds variants from a hash of option types & values

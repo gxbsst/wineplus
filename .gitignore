@@ -26,3 +26,4 @@ lib/spree_alipay-master/*
 lib/spree_one_page_checkout-master/*
 lib/tasks/datas/images
 public/spree/*
+.tags

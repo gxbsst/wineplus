@@ -53,7 +53,7 @@
           <span class="rlc_img">
            <%= link_to small_image(product, :itemprop => "image", :size => '170x192'), product, :itemprop => 'url' %>
          </span>
-         <span class="rlc_name"> <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %></span>
+         <span class="rlc_name"> <%= link_to truncate(product.name_with_vintage, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name_with_vintage %></span>
          <span class="rlc_sz"><%= custom_display_price(product) %></span>
        </li>
        <% end %>

@@ -833,20 +833,22 @@ ul.rlt_con li {
 	padding-top:6px;
 }
 .rlt_bottom {
-	background:url(bg_yd.gif) repeat-x;
+	/*background:url(bg_yd.gif) repeat-x;*/
 	height:4px;
 }
 .rl_right {
 	float:left;
-	padding-right:3px;
-	background: url(bg_yy.gif) repeat-y right;
-	border-left:1px solid #ddd;
+	/*padding-right:3px;*/
+	/*background: url(bg_yy.gif) repeat-y right;*/
+	/*border-left:1px solid #ddd;*/
 	width:774px;
 }
 .rlr_title {
-	border-top:2px solid #b80000;
+	/*border-top:2px solid #b80000;*/
+	border-bottom:2px solid #b80000;
 	height:33px;
-	background:url(red_pic4.gif) repeat-x;
+	/*background:url(red_pic4.gif) repeat-x;*/
+	/*background: #444;*/
 	line-height:33px;
 	padding-left:15px;
 	font-size:14px;
@@ -898,11 +900,11 @@ ul.rlr_con li span.rlc_btn a:hover {
 	overflow:hidden;
 	text-align:right;
 	padding-bottom:43px;
-	padding-right:30px;
+	padding-left:30px;
 }
-.rlr_page a {
+.rlr_page span {
 	display:block;
-	float:right;
+	float:left;
 	width:18px;
 	height:18px;
 	border:1px solid #ddd;
@@ -910,6 +912,7 @@ ul.rlr_con li span.rlc_btn a:hover {
 	line-height:18px;
 	margin-right:8px;
 }
+
 .rlr_page a.pre_1 {
 	width:70px;
 	background:url(red_pic5.gif) no-repeat 5px 5px;
@@ -923,7 +926,7 @@ ul.rlr_con li span.rlc_btn a:hover {
 	padding-left:25px;
 }
 .rlr_page a:hover {
-	border:1px solid #b80000;
+	/*border:1px solid #b80000;*/
 }
 .rlr_page a.current3 {
 	border:1px solid #b80000;
@@ -940,9 +943,10 @@ ul.rlr_con li span.rlc_btn a:hover {
 }
 .pdc_con {
 	overflow:hidden;
-	background:url(bg_yy.gif) repeat-y right;
-	border-top:1px solid #ddd;
+	/*background:url(bg_yy.gif) repeat-y right;*/
+	/*border-top:1px solid #ddd;
 	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;*/
 	width:747px;
 	padding:15px;
 }
@@ -1036,7 +1040,7 @@ input.input3 {
 .pdr_con {
 	width:777px;
 	background:url(bg_yy.gif) repeat-y right;
-	border-left:1px solid #ddd;
+	/*border-left:1px solid #ddd;*/
 }
 #tab2 {
 	width:774px;
@@ -1212,9 +1216,10 @@ ul.rtb_list li {
 }
 .shc_top {
 	width:980px;
-	background:#fff url(bg_yy.gif) repeat-y right;
+	/*background:#fff url(bg_yy.gif) repeat-y right;*/
+	background:#fff;
 	padding-bottom:50px;
-	border-left:1px solid #ddd;
+	/*border-left:1px solid #ddd;*/
 	padding-right:2px;
 }
 .rlt_bottom2 {
@@ -1224,7 +1229,7 @@ ul.rtb_list li {
 }
 .sht_line {
 	height:2px;
-	border-top:2px solid #b80000;
+	/*border-top:2px solid #b80000;*/
 }
 .sht_title {
 	height:40px;

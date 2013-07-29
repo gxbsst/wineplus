@@ -10,18 +10,52 @@
 	font-size: 30px;
 	text-align:  center;
 }
+h6.product-section-title {
+	margin: 20px 0 3px 0;
+	border-bottom: 1px solid #CCC;
+}
+#similar_items_by_taxon li {
+	margin: 5px 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 // .column.alpha, .columns.alpha {
 // 	// margin-right: auto;
-// 	margin-left: 18px;
-// 	margin-right: 0;
+// 	// margin-left: 18px;
+// 	// margin-right: 0;
+// 	margin: 0px 15px 50px 0px;
 // }
-
+// .column.omega, .columns.omega {
+// 	margin: 0px 15px 50px 0px;
+// }
 #billing, #shipping, #shipping_method, #payment, #order_details, #order_summary {
 	border: 0;
+}
+ul.rlr_con li span.rlc_img {
+	border: none;
+}
+#product-images #main-image {
+	border: none;
+}
+.taxon-title, #breadcrumbs li a {
+	text-transform: capitalize;
+}
+.rlr_page span.next, .rlr_page span.last, .rlr_page span.prev, .rlr_page span.first {
+	width: 45px;
 }
 
 #breadcrumbs li a {
 	color: #b80000;
+}
+ul.rlr_con li {
+	height: 272px;
+}
+ul.red_list li {
+	height: 272px;
 }
 
 table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
@@ -69,17 +103,19 @@ input[type="reset"], button, a.button {
 	color: white;
 	font-weight: bold;
 	font-size: 12px;
-	font-family: "Ubuntu", sans-serif;
+	// font-family: "Ubuntu", sans-serif;
 	padding: 6px 10px 5px;
 	vertical-align: top;
 	border-radius: 0px;
 	border: 0;
+	text-transform: capitalize;
 }
 
 span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total, .ship_total, .ship_total {
-	font-weight: bold;
+	font-weight: normal;
 	color: #b80000;
 	font-size: 20px;
+	text-align: center;
 }
 .tbr_search {
 	position: relative;
@@ -103,7 +139,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 
 .orders_con {
 	h2 {
-		border-bottom: 1px solid #CCC;
+		border-bottom: 2px solid #B80000;
 		position: relative;
 		a.edit {
 			color: #b80000;
@@ -239,6 +275,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 						display: block;
 						float: left;
 						padding: 8px;
+						text-transform: capitalize;
 					}
 				}
 			}
@@ -276,6 +313,20 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 		}
 		.pcx_right {
 			width: 565px;
+			text-transform: capitalize;
+			table#product-properties {
+				border: none;
+				tr {
+					border-bottom: none;
+					.property_name {
+						width: 40px;
+					}
+					.property_value {
+						// width: 100px;
+						text-align: left;
+					}
+				}
+			}
 		}
 
 		#cart-form {
@@ -306,7 +357,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 			padding: 5px 8px ;
 			color: #000;
 			background: #FFF;
-			border-bottom: 3px solid #b80000;
+			border-bottom: 2px solid #b80000;
 		}
 	}
 
@@ -317,6 +368,8 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 #cart {
 	h1 {
 		padding: 5px 8px;
+		
+		border-bottom: 2px solid #b80000;
 	}
 	#clear_cart_link {
 		margin-left: 8px;

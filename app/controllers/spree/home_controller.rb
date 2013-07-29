@@ -9,13 +9,13 @@ module Spree
       @sparkling = Taxon.find_by_permalink!('style/white')
 
       @red_searcher = Spree::Config.searcher_class.new(params.merge(:taxon => @red.id))
-      @reds = @red_searcher.retrieve_products.limit(5)
+      @reds = @red_searcher.retrieve_products.limit(10)
 
       @whites_searcher = Spree::Config.searcher_class.new(params.merge(:taxon => @white.id))
-      @whites = @whites_searcher.retrieve_products
+      @whites = @whites_searcher.retrieve_products.limit(10)
 
       @sparkling_searcher = Spree::Config.searcher_class.new(params.merge(:taxon => @sparkling.id))
-      @sparklings = @sparkling_searcher.retrieve_products
+      @sparklings = @sparkling_searcher.retrieve_products.limit(10)
 
       #@searcher = Spree::Config.searcher_class.new(params)
       #@searcher.current_user = try_spree_current_user

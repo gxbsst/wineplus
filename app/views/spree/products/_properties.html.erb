@@ -5,8 +5,14 @@
       <% @product_properties.each do |product_property| %>
         <% css_class = cycle('even', 'odd', :name => "properties") %>
         <tr class="<%= css_class %>">
-          <td><strong><%= product_property.property.presentation %></strong></td>
-          <td><%= product_property.value %></td>
+          <td class="property_name"><strong><%= product_property.property.presentation %>:</strong></td>
+          <td class="property_value">
+            <% if product_property.value %>
+            <%= product_property.value %>
+            <% else %>
+            None
+            <% end %>
+          </td>
         </tr>
       <% end %>
       <% reset_cycle('properties') %>
