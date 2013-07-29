@@ -17,7 +17,7 @@ class Spree::UsersController < Spree::StoreController
       if current_order
         session[:guest_token] = nil
       end
-
+      # send_email
       redirect_back_or_default(root_url)
     else
       render :new

@@ -28,7 +28,8 @@ module ApplicationHelper
     root_taxon = Spree::Taxon.find_by_name('variety')
     current_taxon =  @taxon
     content_tag :ul, class: 'taxons-list' do
-      root_taxon.children.limit(10).map do |taxon|
+
+      root_taxon.children.limit(40).map do |taxon|
         css_class = (current_taxon && current_taxon.self_and_ancestors.include?(taxon)) ? 'current' : nil
         content_tag :li, class: css_class do
           link_to(taxon.name, seo_url(taxon)) +

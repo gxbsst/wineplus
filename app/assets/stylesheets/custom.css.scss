@@ -1,3 +1,5 @@
+@import 'store/variables';
+
 // GLOGAL
 .hide_form {
 	display: none;
@@ -5,6 +7,27 @@
 .show_form {
 	display: block;
 }
+.tr_welcome, .tr_login  {
+	float: none;
+	text-align: right;
+	font-size: $header_navigation_font_size;
+	 a {
+		color: $link_text_color + 2;
+		&.logout {
+			margin-left: 15px;
+		}
+	}
+
+}
+#add-to-cart-button {
+	margin-left: -9px;
+	padding-top: 10px;
+}
+.page.current {
+	color: #FFF;
+	background: $link_text_color;
+}
+
 .notfound_outer, .empty_cart_outer {
 	padding: 50px 0 0 0;
 	font-size: 30px;
@@ -49,7 +72,7 @@ ul.rlr_con li span.rlc_img {
 }
 
 #breadcrumbs li a {
-	color: #b80000;
+	color: $link_text_color;
 }
 ul.rlr_con li {
 	height: 272px;
@@ -63,7 +86,7 @@ table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
 }
 
 ::selection {
-	background: #b80000;
+	background: $link_text_color;
 	color: white;
 	text-shadow: none;
 }
@@ -88,23 +111,23 @@ table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
 	}
 	ul {
 		background: none;
-		// padding-top: 10px;
+		padding-top: 16px;
 		li {
-			background: url('home_pic3.gif') 15px center no-repeat;
-			padding: 0 0 0 40px;
+			background: url('home_pic3.gif') 8px center no-repeat;
+			padding: 0 0 0 30px;
 		}
 	}
 }
 input[type="submit"], input[type="button"],
 input[type="reset"], button, a.button {
-	background-color: #b80000;
+	background-color: $link_text_color;
 	background-image: none;
 	text-shadow: none;
 	color: white;
 	font-weight: bold;
 	font-size: 12px;
 	// font-family: "Ubuntu", sans-serif;
-	padding: 6px 10px 5px;
+	padding: 8px 10px;
 	vertical-align: top;
 	border-radius: 0px;
 	border: 0;
@@ -113,7 +136,7 @@ input[type="reset"], button, a.button {
 
 span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total, .ship_total, .ship_total {
 	font-weight: normal;
-	color: #b80000;
+	color: $link_text_color;
 	font-size: 20px;
 	text-align: center;
 }
@@ -125,7 +148,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	}
 	.search_button {
 		position: absolute;
-		top: 1px;
+		top: 0;
 		right: 6px;
 		height: 43px;
 	}
@@ -139,10 +162,10 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 
 .orders_con {
 	h2 {
-		border-bottom: 2px solid #B80000;
+		border-bottom: 2px solid $link_text_color;
 		position: relative;
 		a.edit {
-			color: #b80000;
+			color: $link_text_color;
 			margin-left: 10px;
 			font-weight: normal;
 			// position:absolute;
@@ -267,7 +290,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 					&.current {
 						a {
 							color: #FFF;
-							background: #b80000;	
+							background: $link_text_color;	
 						}
 					}
 					display: inline;
@@ -287,7 +310,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 			text-align: center;
 			width: 30px;
 			// background: url(red_pic1.jpg) left top no-repeat;
-			background: #b80000;
+			background: $link_text_color;
 			color:#FFF;
 			vertical-align: middle;
 			font-weight: bold;
@@ -357,7 +380,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 			padding: 5px 8px ;
 			color: #000;
 			background: #FFF;
-			border-bottom: 2px solid #b80000;
+			border-bottom: 2px solid $link_text_color;
 		}
 	}
 
@@ -369,7 +392,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	h1 {
 		padding: 5px 8px;
 		
-		border-bottom: 2px solid #b80000;
+		border-bottom: 2px solid $link_text_color;
 	}
 	#clear_cart_link {
 		margin-left: 8px;

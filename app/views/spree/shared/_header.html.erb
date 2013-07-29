@@ -9,14 +9,14 @@
       <div class="tlc_right">
         <% if !current_spree_user %>
           <div class="tr_login">
-            <%= link_to 'REGISTER', signup_path %>  |
-            <%= link_to 'LOGIN', login_path %>  |
+            <%= link_to 'Register', signup_path %>  |
+            <%= link_to 'Login', login_path %>  |
           </div>
         <% else %>
           <div class="tr_welcome">
-            Logged in as: 
+            Welcome,
             <a href="/account"><%= current_spree_user.email %></a>
-            <%= link_to 'LOGOUT', logout_path %>
+            <%= link_to 'Logout', logout_path, :class => :logout %>
           </div>
         <% end %>
       </div>

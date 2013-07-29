@@ -40,12 +40,12 @@ region_taxon_with_products = CSV.open(filename, :headers => true).inject({}) do 
   region_taxon_with_products.merge(region_taxon_with_products)
 end
 
-
-
 region_taxon_with_products.each do |k,v|
   taxon = Spree::Taxon.find_by_permalink(k)
-  taxon.products = v[:products]
-  taxon.save
+  if taxon
+    taxon.products = v[:products]
+    taxon.save
+  end
 end
 
 # STYLE
@@ -60,7 +60,6 @@ style_taxon_with_products = CSV.open(filename, :headers => true).inject({}) do |
   style_taxon_with_products[permalink][:products] << product if product
   style_taxon_with_products.merge(style_taxon_with_products)
 end
-
 
 style_taxon_with_products.each do |k,v|
   taxon = Spree::Taxon.find_by_permalink(k)
@@ -97,10 +96,6 @@ variety_taxon_with_products.each do |k,v|
     taxon.save
   end
 end
-
-
-
-
 
 # CSV.open(filename, :headers => true).each do |line|
 

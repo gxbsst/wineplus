@@ -159,9 +159,9 @@ input.input1 {
 }
 input.input2 {
 	width:360px;
-	height:27px;
+	height:22px;
 	background:#e6e6e6;
-	border:1px solid #6c6c6c;
+	/*border:1px solid #6c6c6c;*/
 	padding-left:5px;
 }
 .menu_bg {
@@ -295,7 +295,7 @@ input.input2 {
 .scc_left span {
 	display:block;
 	float:left;
-	line-height:40px;
+	/*line-height:40px;*/
 	color:#fff;
 	height:40px;
 }
@@ -774,8 +774,8 @@ ul.wch_right li a.wr_current {
 	width:182px;
 	margin-right:18px;
 	padding-right:3px;
-	background: url(bg_yy.gif) repeat-y right;
-	border-left:1px solid #ddd;
+	/*background: url(bg_yy.gif) repeat-y right;*/
+	/*border-left:1px solid #ddd;*/
 }
 .rlt_tilte {
 	height:23px;
@@ -2009,7 +2009,7 @@ ul.ucb_list li span.ucl_operation a {
 /*我的订单*/
 
 .mos_title {
-	border-top:2px solid #b80000;
+	border-bottom:2px solid #b80000;
 	height:30px;
 	background:#f7f5f2;
 	line-height:30px;

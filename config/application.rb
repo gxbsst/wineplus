@@ -81,5 +81,7 @@ module Wineplus
       ]
     end
 
+    # config.secure_connection_type = 'SSL'
+
   end
 end
