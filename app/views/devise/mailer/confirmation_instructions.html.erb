@@ -1,0 +1,6 @@
+<p>Welcome <%= @email %>!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><%= link_to 'Confirm my account', spree.spree_user_confirmation_path(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+
