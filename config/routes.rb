@@ -10,6 +10,7 @@ Wineplus::Application.routes.draw do
     match "/#{i}", :to => "statics##{i}"
   end
 
+  
 
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.

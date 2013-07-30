@@ -22,6 +22,7 @@ class Spree::UserRegistrationsController < Devise::RegistrationsController
   # POST /resource/sign_up
   def create
     @user = build_resource(params[:spree_user])
+    binding.pry
     if resource.save
       set_flash_message(:notice, :signed_up)
       sign_in(:spree_user, @user)
