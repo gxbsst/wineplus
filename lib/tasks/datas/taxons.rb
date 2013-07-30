@@ -26,7 +26,10 @@ def parse_variety(line)
   line[13].downcase.gsub(/(\d(.+)?(\%|％))|,|\//, "").split("\n")
 end
 
-filename = Rails.root.join('lib', 'tasks', 'datas/images', 'btl.csv')
+ActiveRecord::Base.connection.execute("TRUNCATE spree_products_taxons")
+
+
+filename = Rails.root.join('lib', 'tasks', 'datas', 'btl.csv')
 
 # REGION
 region_taxon_with_products = {}

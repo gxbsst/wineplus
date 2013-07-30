@@ -145,10 +145,10 @@ Spree::CheckoutController.class_eval do
       helper.service ActiveMerchant::Billing::Integrations::Alipay::Helper::TRADE_CREATE_BY_BUYER
     end
     helper.seller :email => alipay.preferred_email
-         # helper.notify_url url_for(:only_path => false, :action => 'alipay_notify')
-         # helper.return_url url_for(:only_path => false, :action => 'alipay_done')
-    helper.notify_url 'http://www.sidways.com/alipay_notify'
-    helper.return_url 'http://www.sidways.com/alipay_done'
+    # helper.notify_url url_for(:only_path => false, :action => 'alipay_notify')
+    # helper.return_url url_for(:only_path => false, :action => 'alipay_done')
+    helper.notify_url 'http://www.wineplus.me/alipay_checkout/done'
+    helper.return_url 'http://www.wineplus.me/alipay_checkout/notify'
     helper.body "order_detail_description"
     helper.charset "utf-8"
     helper.payment_type 1

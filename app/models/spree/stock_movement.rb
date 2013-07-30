@@ -5,7 +5,7 @@ module Spree
 
     attr_accessible :quantity, :stock_item, :stock_item_id, :originator, :action
 
-    after_create :update_stock_item_quantity
+    # after_create :update_stock_item_quantity
 
     validates :stock_item, presence: true
     validates :quantity, presence: true

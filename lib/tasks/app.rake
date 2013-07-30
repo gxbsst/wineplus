@@ -35,12 +35,12 @@ namespace :app do
 
   desc 'Init Products Data'
   task :init_products => :environment do
-    # load_sample("products") # DONE
-   load_sample("taxons") # DONE
-   # load_sample("product_properties") //DONE
-   # load_sample("prototypes") //DONE
-   # load_sample("stock") // NOT DONE
-   # load_sample("variants")
+   # load_sample("products") # DONE
+   # load_sample("taxons") # DONE
+    # load_sample("product_properties") #DONE
+   #load_sample("prototypes") #DONE
+   load_sample("stock") #NOT DONE
+    # load_sample("variants")
   # load_sample("assets")
   end
 
@@ -48,7 +48,7 @@ namespace :app do
   task :init => :environment do
     ActiveRecord::Base.connection.execute("TRUNCATE spree_taxonomies")
     ActiveRecord::Base.connection.execute("TRUNCATE spree_taxons")
-    filename = Rails.root.join('lib', 'tasks', 'datas/images', 'btl.csv')
+    filename = Rails.root.join('lib', 'tasks', 'datas', 'btl.csv')
     CSV.open(filename, :headers => true).each do |line|
 
       # # create region taxon

@@ -2,20 +2,31 @@
   <!-- <h6 class="product-section-title"><%= Spree.t('properties')%></h6> -->
   <table id="product-properties" class="table-display" data-hook>
     <tbody>
-      <% @product_properties.each do |product_property| %>
-        <% css_class = cycle('even', 'odd', :name => "properties") %>
-        <tr class="<%= css_class %>">
-          <td class="property_name"><strong><%= product_property.property.presentation %>:</strong></td>
-          <td class="property_value">
-            <% if product_property.value %>
-            <%= product_property.value %>
-            <% else %>
-            None
-            <% end %>
-          </td>
-        </tr>
+
+      <% if @product.property(:vintage).present? %>
+      <tr>
+        <td class="property_name">Vinage:</td>
+        <td class="property_value">
+          <%= @product.property(:vintage) %>
+        </td>
+      </tr>
       <% end %>
-      <% reset_cycle('properties') %>
+
+      <% if @product.property(:rating).present? %>
+      <tr>
+        <td class="property_name">Rating</td>
+        <td class="property_value">
+           <%= @product.property(:rating) %> 
+        </td>
+      </tr>
+      <% end %>
+      
+      <% if @product.property(:capacity).present? %>
+      <tr>
+        <td class="property_name">Capacity:</td>
+        <td class="property_value"> <%= @product.property(:capacity) %> </td>
+      </tr>
+      <% end %>
     </tbody>
   </table>
 <% end %>

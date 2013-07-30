@@ -20,21 +20,37 @@ products = {}
 # products[:apache_baseball_jersey] = Spree::Product.find_by_name!("Apache Baseball Jersey")
 
 
-def image(name)
-    path = Rails.root.join('lib','tasks', 'datas/images', name)
-    # return false if !File.exist?(path)
-    # path
+def image(sku)
+    attachments = []
+    image_directory = Rails.root.join('lib','tasks', 'datas/images')
+    path = image_directory.join("#{sku}.png")
+    if File.exist?(path)
+      attachments << {:attachment => File.open(path)}
+    end
+
+    (1..5).to_a.each do |i|
+
+      path2 = image_directory.join("#{sku}-#{i}.png")
+
+      if File.exist?(path2)
+        attachments << {:attachment => File.open(path2)}
+      end
+
+    end
+
+    attachments    
 end
 
-filename = Rails.root.join('lib', 'tasks', 'datas/images', 'btl.csv')
+
+filename = Rails.root.join('lib', 'tasks', 'datas', 'btl.csv')
 
 images = {}
 
 images = CSV.open(filename, :headers => true).inject({}) do |memo,line|
   if line[0].present? && line[0].downcase == 'on' && line[21].present? && line[20].present?
     product = Spree::Product.find_by_name(line[9])
-    if product.present? && File.exist?(image(line[20]))
-      memo[product.master] = [{:attachment => File.open(image(line[20]))}]
+    if product.present? && image(line[7]).present?
+      memo[product.master] = image(line[7])
       images.merge(memo)
     end    
   end
@@ -52,7 +68,6 @@ end
 # end
 images.each do |variant, attachments|
   attachments.each do |attachment|
-    # binding.pry
     variant.images.create!(attachment)
   end
 end

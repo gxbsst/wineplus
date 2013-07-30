@@ -1,7 +1,7 @@
 prototypes = [
   {
     :name => "Wine",
-    :properties => ["Vintage", "Capacity", "Rating"]
+    :properties => ["Vintage", "Capacity", "Rating", "NameZh", 'EnotecaPrice']
   }
  
 ]

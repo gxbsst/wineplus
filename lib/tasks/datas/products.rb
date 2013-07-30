@@ -5,7 +5,7 @@
 style = Spree::TaxCategory.find_by_name!("China")
 
 def wine_price(line)
-  line[21].gsub(/[CN¥,]/,'').strip.try(:to_f)  if line[21].present?
+  line[25].gsub(/[CN¥,]/,'').strip.try(:to_f)  if line[25].present?
 end
 
 
@@ -14,11 +14,14 @@ default_attrs = {
   :available_on => Time.zone.now
 }
 
-filename = Rails.root.join('lib', 'tasks', 'datas/images', 'btl.csv')
+ActiveRecord::Base.connection.execute("TRUNCATE spree_products")
+ActiveRecord::Base.connection.execute("TRUNCATE spree_variants")
+
+filename = Rails.root.join('lib', 'tasks', 'datas', 'btl.csv')
 products = []
 
 CSV.open(filename, :headers => true).each do |line|
-  if line[0].present? && line[0].downcase == 'on' && line[21].present?
+  if line[0].present? && line[0].downcase == 'on' && line[25].present?
     products << { name: line[9], tax_category: style, price: wine_price(line), sku: line[7]}
   end
 end
@@ -34,7 +37,6 @@ products.each do |product_attrs|
   # product.price = eur_price
   product.shipping_category = default_shipping_category
   puts product.name
-  # binding.pry
   product.master.cost_price = product.price
   product.master.sku = product_attrs[:sku]
   product.save!
