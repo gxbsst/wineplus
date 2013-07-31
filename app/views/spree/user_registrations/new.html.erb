@@ -9,7 +9,7 @@
 
       <% @body_id = 'login' %>
       <div id="existing-customer">
-        <div class="lol_tiltle"><%= Spree.t(:login_as_existing) %>:</div>
+        <div class="lol_tiltle">SIGN IN<%#= Spree.t(:login_as_existing) %></div>
         <div data-hook="login">
           <%= render :partial => 'spree/shared/login' %>
         </div>
@@ -18,7 +18,7 @@
     </div>
     <div class="loc_right">
 
-      <div class="lol_tiltle"><%= Spree.t(:new_customer) %>:</div>
+      <div class="lol_tiltle">SIGN UP<%#= Spree.t(:new_customer) %></div>
 
       <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
 

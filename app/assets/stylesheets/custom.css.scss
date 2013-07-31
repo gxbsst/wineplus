@@ -21,7 +21,7 @@
 }
 #add-to-cart-button {
 	margin-left: -9px;
-	padding-top: 10px;
+	padding-top: 8px;
 }
 .page.current {
 	color: #FFF;
@@ -124,10 +124,10 @@ input[type="reset"], button, a.button {
 	background-image: none;
 	text-shadow: none;
 	color: white;
-	font-weight: bold;
-	font-size: 12px;
+	font-weight: normal;
+	font-size: $button_font_size + 2;
 	// font-family: "Ubuntu", sans-serif;
-	padding: 8px 10px;
+	padding: 6px 14px;
 	vertical-align: top;
 	border-radius: 0px;
 	border: 0;
@@ -326,6 +326,28 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	}
 }
 
+#empty-cart {
+	margin-top: -81px;
+	table {
+		tr {
+			border: 0;
+		}
+	}
+	.td1 {
+		padding-left: 18px;
+	}
+	td {
+		padding: 5px 2px;
+	}
+	.td2  {
+		a {
+			display:block;
+			margin: 0;
+			line-height: 19px;
+		}
+	}
+}
+
 // PRODUCT DETAIL
 #product-details {
 	float: none;
@@ -438,4 +460,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	padding: 10px;
 }
 
+.lol_tiltle {
+	border-bottom: 1px solid $gray_border_color;
+}
 
