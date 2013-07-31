@@ -239,6 +239,9 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 		thead {
 			background: none;
 		}
+		tbody td {
+			text-align: center;
+		}
 	}
 	ul.shipping-methods {
 		background: none;

@@ -94,8 +94,8 @@ module Spree
       @order = current_order(true)
       associate_user
       @ship_add_addressess = current_spree_user.ship_address
-      @order.bill_address ||= Spree::Address.default
-      @order.ship_address ||= Spree::Address.default
+      @order.bill_address ||= current_spree_user.current_bill_address
+      @order.ship_address ||= current_spree_user.current_ship_address
       before_delivery
       @order.payments.destroy_all if request.put?
 
@@ -116,6 +116,7 @@ module Spree
       end
 
       def ensure_valid_state
+        
         unless skip_state_validation?
           if (params[:state] && !@order.has_checkout_step?(params[:state])) ||
              (!params[:state] && !@order.has_checkout_step?(@order.state))

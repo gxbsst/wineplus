@@ -8,8 +8,8 @@
       <h2 id="shipping_address">Shipping Address <a class="edit" href="javasript:void(0)">Edit</a></h2>
 
       <div class="current_address">
-        <% if current = current_spree_user.current_ship_address %>
-        <p><%= full_address(current) %></p>
+        <% unless current_spree_user.current_ship_address.new_record? %>
+        <p><%= full_address(current_spree_user.current_ship_address) %></p>
         <% end %>
       </div>
 

@@ -35,7 +35,7 @@ namespace :app do
 
   desc 'Init Products Data'
   task :init_products => :environment do
-   # load_sample("products") # DONE
+    # load_sample("products") # DONE
    # load_sample("taxons") # DONE
     # load_sample("product_properties") #DONE
    #load_sample("prototypes") #DONE

@@ -6,25 +6,13 @@
 # In order to initialize a setting do:
 # config.setting_name = 'new value'
 Spree.config do |config|
-  # Example:
-  # Uncomment to override the default site name.
-  # config.site_name = "Spree Demo Site"
-  # config.mail_host = 'www.wineplus.me'
-  # config.mail_domain = 'www.wineplus.me'
-  # config.secure_connection_type = 'SSL'
-      # preference :secure_connection_type, :string, :default => Core::MailSettings::SECURE_CONNECTION_TYPES[0]
- 
       config.override_actionmailer_config = false
-      # config.mail_host = 'mail.sidways.com'
-      # config.mail_domain = 'sidways.com'
-      # config.secure_connection_type = 'SSL'
-      # config.mail_auth_type = 'login'
-      # config.smtp_username = 'patrick_contact@sidways.com'
-      # config.smtp_password = '123456'
       config.enable_mail_delivery = true
       config.mails_from = "weston.wei@sidways.com"
       config.intercept_email = "weston.wei@sidways.com"
-    
+      config.shipping_instructions = false
+      # config.show_only_complete_orders_by_default = false
+      config.track_inventory_levels = true  
 end
 
 # Spree.user_class = "Spree::LegacyUser"

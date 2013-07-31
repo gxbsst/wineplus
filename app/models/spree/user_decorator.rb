@@ -20,7 +20,11 @@ Spree::User.class_eval do
   end
 
   def current_ship_address
-    ship_address.try(:current).try(:first)
+    ship_address.try(:current).try(:first) || Spree::Address.new()
+  end
+
+  def current_bill_address
+    bill_address.try(:current).try(:first) || Spree::Address.new()
   end
 
 end

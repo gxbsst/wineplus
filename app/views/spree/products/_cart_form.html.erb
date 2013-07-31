@@ -23,6 +23,7 @@
     <% end%>
 
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
+    
       <div data-hook="product_price" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
         
         <div id="product-price">
@@ -35,6 +36,12 @@
           </div>
         </div>
 
+        <% if @product.total_on_hand < 1 %>
+        <div id="product-price">
+          <br>
+          <div><span class="price selling" itemprop="price">Sorry, the stock is not enough.</span></div>
+        </div>
+         <% else %>
         <div class="add-to-cart">
           <%= number_field_tag (@product.variants_and_option_values.any? ? :quantity : "variants[#{@product.master.id}]"),
             1, :class => 'title', :min => 1 %>
@@ -43,6 +50,7 @@
           <% end %>
         </div>
       </div>
+      <% end %>
     <% else %>
         <div id="product-price">
           <br>

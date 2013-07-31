@@ -28,26 +28,26 @@ module Spree
 
         # init Order address if current address exist
         if current_spree_user
-          current_address = current_spree_user.current_ship_address
-          if current_address
+            current_address = current_spree_user.current_ship_address
+            if current_address
              @order.init_address(current_address).save
-            @order.next
-            fire_event('spree.checkout.update')
-          end
+             @order.next
+             fire_event('spree.checkout.update')
+            end
 
-        # init Order Shipment Method if before Shipment Method exist
-        current_shipment = current_spree_user.current_shipment_method
-        if current_shipment
-          @order.init_shipment_mehtod(current_shipment)
-          @order.next
-          fire_event('spree.checkout.update')
+            # init Order Shipment Method if before Shipment Method exist
+            current_shipment = current_spree_user.current_shipment_method
+            if current_shipment
+             @order.init_shipment_mehtod(current_shipment)
+             @order.next
+              fire_event('spree.checkout.update')
+            end
         end
-      end
 
-        respond_with(@order) do |format|
-          format.html do
-            if params.has_key?(:checkout)
-              @order.next_transition.run_callbacks if @order.cart?
+      respond_with(@order) do |format|
+        format.html do
+          if params.has_key?(:checkout)
+            @order.next_transition.run_callbacks if @order.cart?
               # redirect_to checkout_state_path(@order.checkout_steps.first)
               redirect_to checkout_state_path(@order.state)
             else

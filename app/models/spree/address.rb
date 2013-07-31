@@ -31,8 +31,7 @@ module Spree
     end
 
     def self.default
-      return current.first if current.present?
-      country = Spree::Country.find(Spree::Config[:default_country_id]) rescue Spree::Country.first
+      country = Spree::Country.find_by_ios('CN') rescue Spree::Country.first
       new({ country: country }, without_protection: true)
     end
 

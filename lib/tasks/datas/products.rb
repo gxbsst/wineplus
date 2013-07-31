@@ -5,7 +5,7 @@
 style = Spree::TaxCategory.find_by_name!("China")
 
 def wine_price(line)
-  line[25].gsub(/[CN¥,]/,'').strip.try(:to_f)  if line[25].present?
+  line[25].gsub(/[CN¥,]/,'').strip.try(:to_f).try(:round)  if line[25].present?
 end
 
 
@@ -27,7 +27,6 @@ CSV.open(filename, :headers => true).each do |line|
 end
 
 products.each do |product_attrs|
-  eur_price = product_attrs.delete(:eur_price)
   Spree::Config[:currency] = "CNY"
 
   default_shipping_category = Spree::ShippingCategory.find_by_name!("wine")
