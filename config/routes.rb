@@ -14,7 +14,7 @@ Wineplus::Application.routes.draw do
   
 
   # STATIC
-  statics = %w(about_us contact_us faqs)
+  statics = %w(about_us contact_us faqs privacy)
   statics.each do |i|
     match "/#{i}", :to => "statics##{i}"
   end

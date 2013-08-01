@@ -464,3 +464,17 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	border-bottom: 1px solid $gray_border_color;
 }
 
+.aur_con {
+	strong {
+	font-size: 18px;	
+	}
+	p {
+		font-size: 18px;	
+		margin-top: 5px;
+		padding-top: 0;
+		a {
+			color: $link_text_color;
+		}
+	}
+
+}

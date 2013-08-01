@@ -11,4 +11,8 @@ class StaticsController < Spree::StoreController
 	def faqs
 		
 	end
+
+	def privacy
+		
+	end
 end
