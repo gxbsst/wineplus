@@ -52,15 +52,6 @@ Wineplus::Application.routes.draw do
     # end
   end
 
-  resources :orders do
-    resource :checkout, :controller => 'checkout' do
-      member do
-        get :alipay_checkout_payment
-        get :alipay_done
-        post :alipay_notify
-      end
-    end
-  end
 
   # Add your extension routes here
   match '/alipay_checkout/done' => 'checkout#alipay_done', :as => :alipay_done
@@ -76,6 +67,17 @@ Wineplus::Application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, :at => '/'
+
+  resources :orders do
+    resource :checkout, :controller => 'checkout' do
+      member do
+        get :alipay_checkout_payment
+        get :alipay_done
+        post :alipay_notify
+      end
+    end
+  end
+  
           # The priority is based upon order of creation:
   # first created -> highest priority.
 

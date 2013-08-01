@@ -14,6 +14,11 @@ group :development do
   gem 'pry'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
+
 gem 'jquery-rails'
 
 gem 'spree', :github => "spree/spree", :branch => "2-0-stable"
