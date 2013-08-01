@@ -1,3 +1,4 @@
+# encoding: utf-8
 module Spree
   # This is somewhat contrary to standard REST convention since there is not
   # actually a Checkout object. There's enough distinct logic specific to
@@ -138,12 +139,13 @@ module Spree
         # render text: 'success'
         redirect_to completion_route
       else
-        # redirect_to edit_order_checkout_url(@order, :state => "payment")
+        redirect_to edit_order_checkout_url(@order, :state => "payment")
       end
     end
     
     # 支付完成通知
     def alipay_notify
+      Rails.logger.info(request.raw_post)
       notification = alipay_notifier(request.raw_post)
       order = retrieve_order(notification.out_trade_no)
 
@@ -385,8 +387,8 @@ module Spree
         helper.seller :email => alipay.preferred_email
         # helper.notify_url url_for(:only_path => false, :action => 'alipay_notify')
         # helper.return_url url_for(:only_path => false, :action => 'alipay_done')
-        helper.notify_url 'http://www.wineplus.me/alipay_checkout/done'
-        helper.return_url 'http://www.wineplus.me/alipay_checkout/notify'
+        helper.notify_url 'http://www.wineplus.me/alipay_checkout/notify'
+        helper.return_url 'http://www.wineplus.me/alipay_checkout/done'
         helper.body "order_detail_description"
         helper.charset "utf-8"
         helper.payment_type 1
