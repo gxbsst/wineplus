@@ -534,6 +534,10 @@ module Spree
       shipments
     end
 
+    def payment
+      payments.select{|i| i.state == 'checkout' }.try(:first)
+    end
+
     private
 
       def link_by_email
@@ -575,5 +579,7 @@ module Spree
       def set_currency
         self.currency = Spree::Config[:currency] if self[:currency].nil?
       end
+
+    
   end
 end

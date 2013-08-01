@@ -1,8 +1,17 @@
 Wineplus::Application.routes.draw do
 
+  # Add your extension routes here
+  match '/alipay_checkout/done' => 'spree/checkout#alipay_done', :as => :alipay_done
+  match '/alipay_checkout/notify' => 'spree/checkout#alipay_notify', :as => :alipay_notify
+  # get '/alipay_checkout/done/' => 'checkout#alipay_done', :as => :alipay_done
+  #  post '/alipay_checkout/done/' => 'checkout#alipay_done', :as => :alipay_done 
+
   post 'checkout/update/:state', to: "spree/checkout#update"
   # match 'account/orders' => 'spree/users#orders', as: 'user_orders'
   get 'account/orders', :to => 'spree/users#orders', as: 'user_orders'
+
+
+  
 
   # STATIC
   statics = %w(about_us contact_us faqs)
@@ -53,11 +62,6 @@ Wineplus::Application.routes.draw do
   end
 
 
-  # Add your extension routes here
-  match '/alipay_checkout/done' => 'checkout#alipay_done', :as => :alipay_done
-  match '/alipay_checkout/notify' => 'checkout#alipay_notify', :as => :alipay_notify
-  # get '/alipay_checkout/done/' => 'checkout#alipay_done', :as => :alipay_done
-  #  post '/alipay_checkout/done/' => 'checkout#alipay_done', :as => :alipay_done
 
   
 
