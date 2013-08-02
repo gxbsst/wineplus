@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Spree::UserMailer < Spree::BaseMailer
   def reset_password_instructions(user)
     @edit_password_reset_url = spree.edit_spree_user_password_url(:reset_password_token => user.reset_password_token)
@@ -8,7 +9,14 @@ class Spree::UserMailer < Spree::BaseMailer
   end
 
   def confirmation_instructions(user, bb)
-  	mail(:to => user.email, :form => 'weston.wei@sidways.com', :suject => "subject....")
+  	mail(:to => user.email, :form => 'no-reply@wineplus.me', :suject => "subject....")
+  end
+
+  def reset_password_instructions(user)
+    @edit_password_reset_url = spree.edit_spree_user_password_url(:reset_password_token => user.reset_password_token)
+
+    mail(:to => user.email, :from => from_address,
+        :subject => "Reset Your Wine⁺ Password")
   end
 
 end

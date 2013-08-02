@@ -1,0 +1,102 @@
+<html style="padding:0;margin: 0;">
+<head>
+	<title></title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+</head>
+<body style="padding: 0 30px; margin: 0;">
+	<table width="100%" style="padding:0;margin:0" bgcolor="#000" cellpadding='2' cellspacing="2">
+		<thead>
+			<tr >
+				<td>
+					<a href="http://www.iwine.me"><img src="http://www.wineplus.me/assets/logo.gif"></a>
+				</td>
+			</tr>
+		</thead>
+	</table>
+
+	<p>Thanks for your purchase!</p>
+
+	<table bgcolor="#CCC" width="100%" cellspacing="1" cellspacing="10">
+		<tr>
+			<th colspan="5" align="left"  style="padding: 5px">
+				<font color="#FFF">Order Summary:</font>
+			</th>
+		</tr>
+		<tr>
+			<th  bgcolor="#FFF">
+				Name
+			</th>
+			<th  bgcolor="#FFF">Capacity</th>
+			<th  bgcolor="#FFF">Unit Price</th>
+			<th  bgcolor="#FFF">Quantity</th>
+			<th  bgcolor="#FFF">Amount</th>
+		</tr>
+
+		<% @order.line_items.each do |item| %>
+		
+		<tr>
+			<td bgcolor="#FFF" width="20%" align="center">
+				<%= raw(item.variant.product.name) %>
+			</td>
+			<td bgcolor="#FFF" align="center">
+				<%= item.variant.product.property(:capacity) %> ML
+			</td>
+			<td bgcolor="#FFF" align="center">
+				<%= item.single_money %>
+			</td>
+			<td bgcolor="#FFF" align="center">
+				<%=item.quantity%>
+			</td>
+			<td bgcolor="#FFF" align="center">
+				<%= item.display_amount %>
+			</td>
+		</tr>
+		<% end %>
+	
+		</table>
+
+
+		<% @order.adjustments.eligible.each do |adjustment| %>
+		<p>
+			<strong><%= raw(adjustment.label) %></strong>:
+			<%= adjustment.display_amount %>
+		</p>
+		<% end %>
+
+		<p>
+			<strong>Order Total</strong>: <%= @order.display_total %>
+			
+		</p>
+
+
+		<table  width="100%" cellspacing="0" cellspacing="0">
+			<tr>
+				<th colspan="5" align="left">
+					<font>will be shipped soon to your address:</font>
+				</th>
+			</tr>
+			<tr>
+				<td  bgcolor="#FFF" align="left">
+					<%= @address.full_name %> &nbsp;&nbsp; <%= @address.phone %>  &nbsp;&nbsp; <%= @address.address1 %>			 
+				</td>
+				
+			</tr>
+		</table>
+
+
+		<p>We hope you enjoy the wines! </p>
+
+		<p>Feel Satisfied? Refer our website to your friends, please!</p>
+
+		<p>Sincerely yours,</p>
+
+		<p><strong>Wine Plus Cellar</strong><br>
+			Addr.: 2F, No.1 South Wu-Lu-Mu-Qi Road, Shanghai China 200031 <br>
+		Tel: +86-21-51702312 <br>
+		Fax: +86-21-51702316 <br>
+		Email: order@wineplus.me <br>
+		Follow us on Weixin: [微信二维码图片]</p>
+	</body>
+	</html>
+

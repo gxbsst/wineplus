@@ -2,10 +2,22 @@
 <div class="shc_top">
   <div class="sht_line"></div>
   <div class="login_con">
+    <% if flash[:alert] %>
+      <div class="flash errors"><%= flash[:alert] %></div>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <div class="flash notice"><%= flash[:notice] %></div>
+    <% end %>
+
+
+    <% if flash[:error] %>
+      <div class="flash error"><%= flash[:error] %></div>
+    <% end %>
+    <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
+
     <div class="loc_left">
-      <% if flash[:alert] %>
-        <div class="flash errors"><%= flash[:alert] %></div>
-      <% end %>
+     
 
       <% @body_id = 'login' %>
       <div id="existing-customer">
@@ -20,7 +32,7 @@
 
       <div class="lol_tiltle">SIGN UP<%#= Spree.t(:new_customer) %></div>
 
-      <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
+      
 
       <div id="new-customer">
 

@@ -350,8 +350,13 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 
 // PRODUCT DETAIL
 #product-details {
+
 	float: none;
 	width: auto;
+
+	#similar_items_by_taxon {
+		font-size: 14px;
+	}
 	.pd_right {
 		.pcx_img {
 			border: 0;
@@ -363,6 +368,7 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 			width: 565px;
 			text-transform: capitalize;
 			table#product-properties {
+				font-size: 14px;
 				border: none;
 				tr {
 					border-bottom: none;
@@ -477,4 +483,8 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 		}
 	}
 
+}
+.contentBox2 {
+	line-height: 170%;
+	font-size: 16px;
 }

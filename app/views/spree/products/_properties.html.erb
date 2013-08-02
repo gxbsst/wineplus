@@ -3,6 +3,23 @@
   <table id="product-properties" class="table-display" data-hook>
     <tbody>
 
+      <% if @product.style %>
+      <tr>
+        <td class="property_name">Style:</td>
+        <td class="property_value">
+          <%= @product.style.name %>
+        </td>
+      </tr>
+      <% end %>
+
+      <tr>
+        <td class="property_name">Region:</td>
+        <td class="property_value">
+          <%= @product.region_en %>
+        </td>
+      </tr>
+
+
       <% if @product.property(:vintage).present? %>
       <tr>
         <td class="property_name">Vinage:</td>
@@ -11,6 +28,8 @@
         </td>
       </tr>
       <% end %>
+
+   
 
       <% if @product.property(:rating).present? %>
       <tr>
@@ -24,7 +43,7 @@
       <% if @product.property(:capacity).present? %>
       <tr>
         <td class="property_name">Capacity:</td>
-        <td class="property_value"> <%= @product.property(:capacity) %> </td>
+        <td class="property_value"> <%= @product.property(:capacity) %> ML </td>
       </tr>
       <% end %>
     </tbody>

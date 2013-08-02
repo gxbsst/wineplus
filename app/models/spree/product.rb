@@ -27,6 +27,7 @@ module Spree
 
     has_many :classifications, dependent: :delete_all
     has_many :taxons, through: :classifications
+    belongs_to :style, class_name: "Spree::Taxon", foreign_key: 'style_id'
     has_and_belongs_to_many :promotion_rules, join_table: :spree_products_promotion_rules
 
     belongs_to :tax_category, class_name: 'Spree::TaxCategory'
@@ -76,7 +77,7 @@ module Spree
                     :meta_keywords, :price, :sku, :deleted_at, :prototype_id,
                     :option_values_hash, :weight, :height, :width, :depth,
                     :shipping_category_id, :tax_category_id, :product_properties_attributes,
-                    :variants_attributes, :taxon_ids, :option_type_ids, :cost_currency
+                    :variants_attributes, :taxon_ids, :option_type_ids, :cost_currency, :region_cn, :region_en, :style_id
 
     attr_accessible :cost_price if Variant.table_exists? && Variant.column_names.include?('cost_price')
 

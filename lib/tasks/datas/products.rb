@@ -9,6 +9,11 @@ def wine_price(line)
 end
 
 
+def join_region(line)
+  a = [line[3], line[4], line[5], line[6]].compact
+  a.join(" > ")
+end
+
 default_attrs = {
   :description => Faker::Lorem.paragraph,
   :available_on => Time.zone.now
@@ -22,7 +27,13 @@ products = []
 
 CSV.open(filename, :headers => true).each do |line|
   if line[0].present? && line[0].downcase == 'on' && line[25].present?
-    products << { name: line[9], tax_category: style, price: wine_price(line), sku: line[7]}
+    style_id = Spree::Taxon.find_by_name(line[2]).try(:id)
+    products << { name: line[9], 
+      tax_category: style, 
+      price: wine_price(line), 
+      sku: line[7], 
+      :style_id => style_id,
+      :description => line[19], :region_en => join_region(line)}
   end
 end
 
