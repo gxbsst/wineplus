@@ -1,5 +1,9 @@
 <% if image %> 
-  <%= image_tag image.attachment.url(:product), :itemprop => "image" %>
+  <%= image_tag image.attachment.url(:product), :itemprop => "image", 'data-zoom-image' => image.attachment(:original), :id => 'product_image'  %>
 <% else %>
-  <%= large_image(@product, :itemprop => "image", :size => '350x378') %>
+  <% if @product.images.first.present? %>
+  <%= product_image(@product, :itemprop => "image", :size => '350x378', 'data-zoom-image' => @product.images.first.attachment(:original), :id => 'product_image') %>
+  <% else %>
+  <%= product_image(@product, :itemprop => "image", :size => '350x378') %>
+  <% end %>
 <% end %>

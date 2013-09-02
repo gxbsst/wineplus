@@ -95,7 +95,7 @@ table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
 	margin: 20px 0 0 0;
 }
 .sc_con {
-	width: 130px;
+	width: 205px;
 	right: 0;
 	left: auto;
 	.scc_left {
@@ -115,7 +115,20 @@ table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
 		li {
 			background: url('home_pic3.gif') 8px center no-repeat;
 			padding: 0 0 0 30px;
+			position: relative;
+			a.checkout {
+				position: absolute;
+				right: 8px;
+				top: -11px;
+				display: block;
+				height: 20px;
+				background: #f6f6f6;
+				padding: 0px 8px;
+				padding-top: 10px;
+				color: #444;
+			}
 		}
+
 	}
 }
 input[type="submit"], input[type="button"],
@@ -482,6 +495,14 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 			color: $link_text_color;
 		}
 	}
+
+p.auc_title {
+font-size: 14px;
+font-weight: bold;
+margin: 0px;
+color: #b80000;
+margin-bottom: 5px;
+}
 
 }
 .contentBox2 {

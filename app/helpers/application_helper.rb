@@ -55,8 +55,9 @@ module ApplicationHelper
       text = "#{text}: (#{Spree.t('empty')})"
       css_class = 'empty'
     else
-      text = "#{text}: (#{current_order.item_count})  <span class='amount'>#{current_order.display_total}</span>".html_safe
+      text = "#{text}: (#{current_order.item_count})  <span class='amount'>#{current_order.display_total}</span> <a class='checkout' href='/cart'>Checkout</a>".html_safe
       css_class = 'full'
+
     end
 
     link_to text, spree.cart_path, :class => "cart-info #{css_class}"

@@ -2237,16 +2237,184 @@ ul.aul_list li {
 	border-bottom:1px solid #eee;
 }
 ul.aul_list li a {
+	font-weight:bold;
 	display:block;
 	padding-left:20px;
 	height:35px;
 	line-height:35px;
 }
 ul.aul_list li a:hover {
-	background:url(../images/about_pic2.gif) repeat-x;
+	background:#b80000;
+	/*background:url(../images/about_pic2.gif) repeat-x;*/
 	color:#fff;
 }
 ul.aul_list li a.current4 {
-	background:url(../images/about_pic2.gif) repeat-x;
+	background:#b80000;
+	/*background:url(../images/about_pic2.gif) repeat-x;*/
 	color:#fff;
 }
+
+.aur_con p{ display:block; padding:0px; margin:0px; margin-bottom:30px;  line-height:20px;}
+
+.aur_con p.auc_title {
+font-size: 14px;
+font-weight: bold;
+margin: 0px;
+color: #b80000;
+margin-bottom: 5px;
+}
+
+
+
+/*搜索*/
+
+.search_con {
+		padding-right:3px;
+	background: url(../images/bg_yy.gif) repeat-y right;
+	border-left:1px solid #ddd;
+	
+}
+
+.sec_title{border-top:2px solid #b80000;}
+.sec_con{ padding-bottom:200px; background:#fff;}
+.scn_text1{ text-align:center; font-size:15px; color:#b80000; padding:40px 0px 5px 0px;}
+.scn_text2{ text-align:center;}
+
+
+
+/*联系我们*/
+
+.cou_text p{ display:block; margin-bottom:30px;}
+.cou_text p.cut_1{ margin-bottom:5px; color:#b80000;}
+
+.cux_bt{ margin-bottom:20px; color:#b80000;}
+span.coc_2 {
+	line-height:24px;
+	width:155px;
+	
+}
+
+span.lou_4 {
+	width:500px;
+	margin-bottom:7px;
+}
+
+textarea.input13 {
+	width:480px;
+	height:170px;
+	background:#fff;
+	border:1px solid #ddd;
+}
+
+
+.cou_btn a {
+	display:block;
+	line-height:34px;
+	color:#fff;
+	font-weight:bold;
+	font-size:16px;
+	width:160px;
+	text-align:center;
+	background:#b80000;
+	margin-left:155px;
+	margin-bottom:20px;
+	
+}
+
+p a.acc_1{ color:#b80000; text-decoration:underline;}
+
+
+
+/*邮件*/
+.email_top{ height:140px; background:#000;}
+.email_logo{ width:980px; margin:0px auto; padding-left:30px; padding-top:30px;}
+.email_con{ border-top:2px solid #b80000; background:#fff; }
+.ecn_width{ width:980px; margin:0px auto; font-weight:bold;}
+.ewh_con1{ font-size:20px; text-align:center; margin-top:70px; margin-bottom:30px;}
+.ewh_con2{ width:480px; border:1px solid #eee; background:#f6f6f6; margin-left:250px; padding:15px 0px; }
+.ewh_con2 span { display:block; text-align:center;}
+.ewh_con2 span.ehc_1{ font-size:30px; color:#b80000; margin-bottom:5px; font-weight:normal;} 
+.ewh_con3{ margin-left:370px; margin-top:50px; padding-bottom:150px;}
+.ewh_con3 a{ display:block; background:#b80000; color:#fff; font-size:16px; line-height:44px; width:265px; text-align:center; }
+.email_footer{ width:980px; margin:0px auto; text-align:center; margin-top:15px; line-height:20px; color:#666; padding-bottom:70px;}
+
+.emc_con2{width:850px; margin:0px auto; margin-bottom:30px;}
+
+
+ul.ecc_list {
+	display:block;
+	border:1px solid #eee; 
+	background:#f6f6f6;
+	
+	
+}
+ul.ecc_list li {
+	display:block;
+	height:88px;
+	overflow:hidden;
+	border-bottom:1px solid #ebebeb;
+}
+
+ul.ecc_list li.elt_title{ color:#b80000;}
+
+ul.ecc_list li span {
+	display:block;
+	float:left;
+	line-height:62px;
+	border-right:1px solid #ebebeb;
+	padding:13px 0px 13px 0px;
+	text-align:center;
+}
+ul.ecc_list li span.ecl_1 {
+	width:320px;
+	 text-align:left; 
+	 padding-left:20px;
+}
+
+ul.ecc_list li span.ecl_2 {
+	width:120px;
+}
+ul.ecc_list li span.ecl_3 {
+	width:120px;
+	text-align:center;
+}
+ul.ecc_list li span.ecl_4 {
+	width:140px;
+	text-align:center;
+}
+ul.ecc_list li span.ecl_5 {
+	width:120px;
+	text-align:center;
+	border-right:none;
+}
+
+.emc_con3{width:840px; margin:0px auto;  padding-bottom:30px; border-bottom: 1px solid #dfdfdf;margin-bottom:30px;}
+.emo_top{ margin-bottom:10px;}
+.emo_bottom { line-height:30px;}
+.emo_bottom span.eob_1{ color:#777; padding-right:5px;}
+
+.emc_con4{width:840px; margin:0px auto;}
+.emn_1{ line-height:30px; margin-bottom:10px;}
+.emn_2{ font-size:16px; color:#b80000; margin-bottom:10px;}
+.emn_3{ line-height:20px;}
+.emn_4{ padding-bottom:80px; line-height:18px; margin-top:10px;}
+.emn_4 span{ line-height:58px; padding-right:5px;}
+
+
+.epd_con{ width:680px; margin:0px auto; padding-top:100px; padding-bottom:300px;}
+.epc_top{ font-size:14px; margin-bottom:12px;}
+.epc_link{ margin-bottom:20px;}
+.epc_link a{ display:block; font-size:18px; color:#b80000; text-decoration:underline; }
+.epc_xwz{ line-height:20px;}
+.epc_xwz a{ color:#b80000;}
+
+
+
+
+
+
+
+
+
+
+

@@ -9,7 +9,7 @@ module Spree
       # subject = (resend ? "[#{Spree.t(:resend).upcase}] " : '')
       # subject += "#{Spree::Config[:site_name]} #{Spree.t('order_mailer.confirm_email.subject')} ##{@order.number}"
       subject = "Thanks for your purchase! ##{@order.number}"
-      mail(to: @order.email, from: from_address, subject: subject)
+      mail(to: @order.email, bcc: 'weston.wei@sidways.com', from: from_address, subject: subject)
     end
 
     def cancel_email(order, resend = false)

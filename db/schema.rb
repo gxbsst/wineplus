@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130802101757) do
+ActiveRecord::Schema.define(:version => 20130902055755) do
+
+  create_table "grape_varieties", :force => true do |t|
+    t.integer  "product_id"
+    t.string   "name_zh"
+    t.string   "name_en"
+    t.string   "origin_name"
+    t.string   "percent"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "grape_varieties", ["name_en"], :name => "index_grape_varieties_on_name_en"
+  add_index "grape_varieties", ["name_zh"], :name => "index_grape_varieties_on_name_zh"
+  add_index "grape_varieties", ["origin_name"], :name => "index_grape_varieties_on_origin_name"
+  add_index "grape_varieties", ["product_id"], :name => "index_grape_varieties_on_product_id"
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"

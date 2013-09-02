@@ -12,10 +12,19 @@
       </tr>
       <% end %>
 
+      <% if @product.grape_varieties.present? %>
+        <tr>
+          <td class="property_name">Variety:</td>
+          <td class="property_value">
+            <%= raw varieties(@product.grape_varieties).html_safe %>
+          </td>
+        </tr>
+      <% end %>
+
       <tr>
         <td class="property_name">Region:</td>
         <td class="property_value">
-          <%= @product.region_en %>
+          <%= link_to_region(@product.region_en)  %>
         </td>
       </tr>
 
@@ -39,6 +48,7 @@
         </td>
       </tr>
       <% end %>
+
       
       <% if @product.property(:capacity).present? %>
       <tr>

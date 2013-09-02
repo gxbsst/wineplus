@@ -66,8 +66,8 @@ namespace :deploy do
 
   task :symlink_config, roles: :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    #   run "ln -nfs #{shared_path}/config/database.yml  /srv/rails/wineplus-store/releases/20121205032322/config/database.yml"
     run "ln -nfs #{shared_path}/system #{release_path}/public/system"
+    run "ln -nfs #{shared_path}/system/spree #{release_path}/public/spree"
   end
   after "deploy:finalize_update", "deploy:symlink_config"
 

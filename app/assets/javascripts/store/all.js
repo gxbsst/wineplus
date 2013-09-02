@@ -12,4 +12,5 @@
 //= require 'store/backbone.syphon.min'
 //= require 'work'
 //= require 'responsiveslides.min'
+//= require 'jquery.elevateZoom-3.0.3.min'
 //= require_tree .

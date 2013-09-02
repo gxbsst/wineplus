@@ -24,6 +24,7 @@ module Spree
     has_many :option_types, through: :product_option_types
     has_many :product_properties, dependent: :destroy
     has_many :properties, through: :product_properties
+    has_many :grape_varieties, :class_name => '::GrapeVariety'
 
     has_many :classifications, dependent: :delete_all
     has_many :taxons, through: :classifications
@@ -71,7 +72,7 @@ module Spree
     validates :name, :permalink, presence: true
     validates :price, presence: true, if: proc { Spree::Config[:require_master_price] }
 
-    attr_accessor :option_values_hash
+    attr_accessor :option_values_hash, :varieties
 
     attr_accessible :name, :description, :available_on, :permalink, :meta_description,
                     :meta_keywords, :price, :sku, :deleted_at, :prototype_id,

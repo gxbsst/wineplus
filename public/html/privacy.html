@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Untitled Document</title>
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -9,184 +10,251 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="js/responsiveslides.min.js"></script>
   <script>
-    // You can also use "$(window).load(function() {"
-    $(function () {
-        $("#slider4").responsiveSlides({
-        auto: true,
-        pager: false,
-        nav: true,
-        speed: 500,
-        namespace: "callbacks",
-        before: function () {
-          $('.events').append("<li>before event fired.</li>");
-        },
-        after: function () {
-          $('.events').append("<li>after event fired.</li>");
-        }
-      });
-
+  // You can also use "$(window).load(function() {"
+  $(function() {
+    $("#slider4").responsiveSlides({
+      auto: true,
+      pager: false,
+      nav: true,
+      speed: 500,
+      namespace: "callbacks",
+      before: function() {
+        $('.events').append("<li>before event fired.</li>");
+      },
+      after: function() {
+        $('.events').append("<li>after event fired.</li>");
+      }
     });
-  </script>
-  </head>
 
-  <body>
-<div class="top">
+  });
+  </script>
+</head>
+
+<body>
+  <div class="top">
     <div class="top_link">
-    <div class="tl_con">
-        <div class="tlc_left"> <span><a href="#">Bar</a></span> <span><a href="#">Education</a></span> </div>
+      <div class="tl_con">
+        <div class="tlc_left">
+          <span><a href="#">Bar</a>
+          </span>
+          <span><a href="#">Education</a>
+          </span>
+        </div>
         <div class="tlc_right">
-        <div class="tr_welcome">Hello, welcome to wine+ ! </div>
-        <div class="tr_login"><a href="#">REGISTER</a> | <a href="#">LOG IN</a></div>
+          <div class="tr_welcome">Hello, welcome to wine+ !</div>
+          <div class="tr_login"><a href="#">REGISTER</a> | <a href="#">LOG IN</a>
+          </div>
+        </div>
       </div>
-      </div>
-  </div>
+    </div>
     <div class="top_bottom">
-    <div class="tb_logo"><img src="images/logo.gif" width="153" height="62" /></div>
-    <div class="tb_right">
+      <div class="tb_logo">
+        <img src="images/logo.gif" width="153" height="62" />
+      </div>
+      <div class="tb_right">
         <div class="tbr_nl">
-        <div class="tnl_input"> <span class="ti_kk">
-          <input type="text" class="input1" />
-          </span> <span><a href="#">SEND</a></span> </div>
-        <div class="tnl_text">SIGN UP TO OUR NEWSLETTER</div>
+          <div class="tnl_input">
+            <span class="ti_kk">
+              <input type="text" class="input1" />
+            </span>
+            <span><a href="#">SEND</a>
+            </span>
+          </div>
+          <div class="tnl_text">SIGN UP TO OUR NEWSLETTER</div>
+        </div>
+        <div class="tbr_search">
+          <span><a href="#">SEARCH</a>
+          </span>
+          <span class="ts_kk">
+            <input type="text" class="input2" />
+          </span>
+        </div>
       </div>
-        <div class="tbr_search"> <span><a href="#">SEARCH</a></span> <span class="ts_kk">
-          <input type="text" class="input2" />
-          </span> </div>
-      </div>
+    </div>
   </div>
-  </div>
-<div class="menu_bg">
+  <div class="menu_bg">
     <div class="col960">
-    <ul id="navul" class="cl">
-        <li class="navhome"><a href="#" target="_blank" class="m1"><img src="images/menu_pic1.gif" width="16" height="14" /></a></li>
+      <ul id="navul" class="cl">
+        <li class="navhome">
+          <a href="#" target="_blank" class="m1">
+            <img src="images/menu_pic1.gif" width="16" height="14" />
+          </a>
+        </li>
         <li><a href="#" class="m2 current2">RED</a>
-        <ul>
-            <li><a href="#">Cabernet Sauvignon</a></li>
-            <li><a href="#">Grenache</a></li>
-            <li><a href="#">Merlot</a></li>
-            <li><a href="#">Pinot Noir</a></li>
-            <li><a href="#">Sangiovese</a></li>
-            <li><a href="#">Syrah/Shiraz</a></li>
-            <li><a href="#">Other</a></li>
+          <ul>
+            <li><a href="#">Cabernet Sauvignon</a>
+            </li>
+            <li><a href="#">Grenache</a>
+            </li>
+            <li><a href="#">Merlot</a>
+            </li>
+            <li><a href="#">Pinot Noir</a>
+            </li>
+            <li><a href="#">Sangiovese</a>
+            </li>
+            <li><a href="#">Syrah/Shiraz</a>
+            </li>
+            <li><a href="#">Other</a>
+            </li>
           </ul>
-      </li>
+        </li>
         <li><a href="#" class="m3">WHITE</a>
-        <ul>
-            <li><a href="#">Chardonnay</a></li>
-            <li><a href="#">Pinot Gris</a></li>
-            <li><a href="#">Riesling</a></li>
-            <li><a href="#">Sauvignon Blanc</a></li>
-            <li><a href="#">Rose</a></li>
+          <ul>
+            <li><a href="#">Chardonnay</a>
+            </li>
+            <li><a href="#">Pinot Gris</a>
+            </li>
+            <li><a href="#">Riesling</a>
+            </li>
+            <li><a href="#">Sauvignon Blanc</a>
+            </li>
+            <li><a href="#">Rose</a>
+            </li>
           </ul>
-      </li>
+        </li>
         <li><a href="#" class="m4">SPARKLING</a>
-        <ul>
-            <li><a href="#">Cabernet Sauvignon</a></li>
-            <li><a href="#">Grenache</a></li>
-            <li><a href="#">Merlot</a></li>
-            <li><a href="#">Pinot Noir</a></li>
-            <li><a href="#">Sangiovese</a></li>
-            <li><a href="#">Syrah/Shiraz</a></li>
-            <li><a href="#">Other</a></li>
+          <ul>
+            <li><a href="#">Cabernet Sauvignon</a>
+            </li>
+            <li><a href="#">Grenache</a>
+            </li>
+            <li><a href="#">Merlot</a>
+            </li>
+            <li><a href="#">Pinot Noir</a>
+            </li>
+            <li><a href="#">Sangiovese</a>
+            </li>
+            <li><a href="#">Syrah/Shiraz</a>
+            </li>
+            <li><a href="#">Other</a>
+            </li>
           </ul>
-      </li>
+        </li>
         <li><a href="#" class="m5">EXPLORE</a>
-        <ul>
-            <li><a href="#">Chardonnay</a></li>
-            <li><a href="#">Pinot Gris</a></li>
-            <li><a href="#">Riesling</a></li>
-            <li><a href="#">Sauvignon Blanc</a></li>
-            <li><a href="#">Rose</a></li>
+          <ul>
+            <li><a href="#">Chardonnay</a>
+            </li>
+            <li><a href="#">Pinot Gris</a>
+            </li>
+            <li><a href="#">Riesling</a>
+            </li>
+            <li><a href="#">Sauvignon Blanc</a>
+            </li>
+            <li><a href="#">Rose</a>
+            </li>
           </ul>
-      </li>
+        </li>
         <li><a href="#" class="m6">ACCESSORLES</a>
-        <ul>
-            <li><a href="#">Chardonnay</a></li>
-            <li><a href="#">Pinot Gris</a></li>
-            <li><a href="#">Riesling</a></li>
-            <li><a href="#">Sauvignon Blanc</a></li>
-            <li><a href="#">Rose</a></li>
+          <ul>
+            <li><a href="#">Chardonnay</a>
+            </li>
+            <li><a href="#">Pinot Gris</a>
+            </li>
+            <li><a href="#">Riesling</a>
+            </li>
+            <li><a href="#">Sauvignon Blanc</a>
+            </li>
+            <li><a href="#">Rose</a>
+            </li>
           </ul>
-      </li>
+        </li>
       </ul>
-    <div class="sc_con">
-        <div class="scc_left"><span class="scl_1">CART</span><span class="scl_2">0</span></div>
-        <div class="scc_btn"><a href="#">SETTLEMENT</a></div>
+      <div class="sc_con">
+        <div class="scc_left">
+          <span class="scl_1">CART</span>
+          <span class="scl_2">0</span>
+        </div>
+        <div class="scc_btn"><a href="#">SETTLEMENT</a>
+        </div>
       </div>
+    </div>
   </div>
-  </div>
-<div class="con_width">
-    <div class="page_current"> <span>YOUR CURRENT LOCATION：</span> <span><a href="#">HOME</a> > </span> <span class="pc_con">ABOUT US</span></div>
+  <div class="con_width">
+    <div class="page_current">
+      <span>YOUR CURRENT LOCATION：</span>
+      <span><a href="#">HOME</a> ></span>
+      <span class="pc_con">ABOUT US</span>
+    </div>
     <div class="rw_list">
-    <div class="abu_left">
+      <div class="abu_left">
         <div class="aul_tilte"></div>
         <ul class="aul_list">
-        <li><a href="#">ABOUT US</a></li>
-                <!--<li><a href="#">SHIPPING POLICIES</a></li>
+          <li><a href="#">ABOUT US</a>
+          </li>
+          <!--<li><a href="#">SHIPPING POLICIES</a></li>
         <li><a href="#">SHOPPING INFORMATION</a></li>
         <li><a href="#">FAQ</a></li>-->
-        <li><a href="#">CONTACT US</a></li>
-        <li><a href="#" class="current4">PRIVACY POLICY</a></li>
-      </ul>
+          <li><a href="#">CONTACT US</a>
+          </li>
+          <li><a href="#" class="current4">PRIVACY POLICY</a>
+          </li>
+        </ul>
         <div class="rlt_bottom"></div>
       </div>
-    <div class="abu_right">
+      <div class="abu_right">
         <div class="aur_title">ABOUT US</div>
         <div class="aur_con">
-        <p class="auc_title">Privacy Policy</p>
-        <p class="auc_con">This privacy policy (&quot;Privacy Policy&quot;) explains how Wine Plus Cellar, its affiliates and subsidiaries (collectively &quot;Wine Plus&quot;) use the information you provide to us that personally identifies you (&quot;Personal Information&quot;) as well as general, non-personal information that is automatically collected from our site (&quot;Non-Personal Information&quot;). Please read this Privacy Policy carefully. If you do not agree to our practices, please do not register, subscribe, create an account, or otherwise interact with Wine Plus at <a href="http://www.wineplus.me/">www.wineplus.me</a> (the &quot;Website&quot;). By visiting the Website, you accept the practices described in this Privacy Policy.</p>
-        <p class="auc_title">Information Collection</p>
-        <p class="auc_con">Wine Plus collects personal Information to customize the content and/or layout of the Website for each member and to contact members regarding their accounts. If a member chooses to place an order through the Website, we collect additional information including, but not limited to, the member's billing address, shipping address, date of birth, date of order, and product ordered (&quot;Transaction Information&quot;).<br /><br />
-          Wine Plus also collects Non-Personal Information or general statistics about each user that visits the Wine Plus Website. Non-Personal Information is collected and recorded to understand statistics and usage of the Wine Plus Website. Non-Personal Information includes, but is not limited to, a user’s ISP (Internet Service Provider), IP (Internet Protocol) address, the type of web browser used, which pages a user visits, and other site usage data. This information is completely anonymous and used to analyze Wine Plus's Website traffic and other statistics relating to the usage of its Website.</p>
-        <p class="auc_title">Use and Disclosure of Information, and Opt-Out Procedure</p>
-        <p class="auc_con">Wine Plus may disclose Personal Information if it is required to do so by law or if disclosing Personal Information is vital to identify, contact, or bring legal action in order to protect Wine Plus, its customers, or third parties. In addition, Personal Information that you provide to us (such as your name, address and email address) may be combined with other personally identifiable information (such as demographic information and past Transaction Information) available from our records and other sources. This information will be used to make our future marketing efforts more efficient. This information may also be shared with our third party service providers that assist us with our marketing efforts and with other marketers whose products or services we feel may be of interest to you. If you prefer that we do not share your personally identifiable information with other marketers, please email us at <a href="mailto:info@wineplus.me" class="acc_1">info@wineplus.me</a>. In the event that you choose to opt out as set forth above, please note that the following three paragraphs will still apply:<br /><br />
-          Transaction Information will be shared with the merchant from whom the purchase is made, and may be provided to other trusted third parties as necessary to process and fulfill the order, and to help enable Wine Plus to provide better member services and offerings. All such merchants and third parties are contractually obligated to keep all Transaction Information confidential, maintain the privacy of all Wine Plus members, and to use such Transaction Information only to provide services to Wine Plus for the benefit of Wine Plus and its members. Transaction Information may also be used to develop a personalized profile and shopping history for each member in order to customize promotions, updates or special offers.<br /><br />
-          From time to time, we may employ other companies and individuals to perform services, to maintain and operate the Website, and to maintain certain features on the Website. To such parties, we may disclose Non-Personal Information such as traffic patterns and Website usage data, but such information will not include Personal Information. We also may employ reputable third parties to analyze our sales data for internal analysis, during which we may disclose Personal Information such as the wines purchased, the location of shipment, and the frequency of purchases.<br /><br />
-          We additionally may enlist a third party to assist with marketing and sending member e-mails; in this case, we will provide these third party vendors only with member e-mail addresses. These third parties will not receive or be given access to other Personal Information (such as Wine Plus member home addresses, phone numbers, or date of birth) unless Wine Plus is required to do so by law or unless disclosing such Personal Information is vital to identify, contact, or bring legal action in order to protect Wine Plus, its customers, or third parties.</p>
-        <p class="auc_title">Cookies</p>
-        <p class="auc_con">When you visit the Website, our service providers may place cookies on your computers or mobile devices. A cookie is a small amount of information that a web server sends to your browser that stores information about your account, preferences and use of the Website. Cookies allow us to recognize you when you return and track and target your interests in order to provide a customized experience. They also help us to detect certain kinds of fraud. We use cookies to store a member's preferences, record session information, record member-specific information on what pages are accessed or visited, alert members to new areas that we think might be of interest to them when they return to our Website, or customize web page content based on browser type or other information that the member sends.<br /><br />
-          &quot;Session&quot; cookies are temporary cookies used for various reasons, such as managing page views and your shopping cart. Typically, your browser will erase session cookies once you exit the browser. &quot;Persistent&quot; cookies are more permanent cookies that are stored on your computer or mobile device after you exit the browser. Persistent cookies allow us to retrieve certain information that you have previously provided to us (for example, your user ID if you ask to be remembered). The Wine Plus Website uses both session and persistent cookies.</p>
-          
+          <p class="auc_title">Privacy Policy</p>
+          <p class="auc_con">This privacy policy (&quot;Privacy Policy&quot;) explains how Wine Plus Cellar, its affiliates and subsidiaries (collectively &quot;Wine Plus&quot;) use the information you provide to us that personally identifies you (&quot;Personal Information&quot;) as well as general, non-personal information that is automatically collected from our site (&quot;Non-Personal Information&quot;). Please read this Privacy Policy carefully. If you do not agree to our practices, please do not register, subscribe, create an account, or otherwise interact with Wine Plus at <a href="http://www.wineplus.me/">www.wineplus.me</a> (the &quot;Website&quot;). By visiting the Website, you accept the practices described in this Privacy Policy.</p>
+          <p class="auc_title">Information Collection</p>
+          <p class="auc_con">Wine Plus collects personal Information to customize the content and/or layout of the Website for each member and to contact members regarding their accounts. If a member chooses to place an order through the Website, we collect additional information including, but not limited to, the member's billing address, shipping address, date of birth, date of order, and product ordered (&quot;Transaction Information&quot;).
+            <br />
+            <br />Wine Plus also collects Non-Personal Information or general statistics about each user that visits the Wine Plus Website. Non-Personal Information is collected and recorded to understand statistics and usage of the Wine Plus Website. Non-Personal Information includes, but is not limited to, a user’s ISP (Internet Service Provider), IP (Internet Protocol) address, the type of web browser used, which pages a user visits, and other site usage data. This information is completely anonymous and used to analyze Wine Plus's Website traffic and other statistics relating to the usage of its Website.</p>
+          <p class="auc_title">Use and Disclosure of Information, and Opt-Out Procedure</p>
+          <p class="auc_con">Wine Plus may disclose Personal Information if it is required to do so by law or if disclosing Personal Information is vital to identify, contact, or bring legal action in order to protect Wine Plus, its customers, or third parties. In addition, Personal Information that you provide to us (such as your name, address and email address) may be combined with other personally identifiable information (such as demographic information and past Transaction Information) available from our records and other sources. This information will be used to make our future marketing efforts more efficient. This information may also be shared with our third party service providers that assist us with our marketing efforts and with other marketers whose products or services we feel may be of interest to you. If you prefer that we do not share your personally identifiable information with other marketers, please email us at <a href="mailto:info@wineplus.me" class="acc_1">info@wineplus.me</a>. In the event that you choose to opt out as set forth above, please note that the following three paragraphs will still apply:
+            <br />
+            <br />Transaction Information will be shared with the merchant from whom the purchase is made, and may be provided to other trusted third parties as necessary to process and fulfill the order, and to help enable Wine Plus to provide better member services and offerings. All such merchants and third parties are contractually obligated to keep all Transaction Information confidential, maintain the privacy of all Wine Plus members, and to use such Transaction Information only to provide services to Wine Plus for the benefit of Wine Plus and its members. Transaction Information may also be used to develop a personalized profile and shopping history for each member in order to customize promotions, updates or special offers.
+            <br />
+            <br />From time to time, we may employ other companies and individuals to perform services, to maintain and operate the Website, and to maintain certain features on the Website. To such parties, we may disclose Non-Personal Information such as traffic patterns and Website usage data, but such information will not include Personal Information. We also may employ reputable third parties to analyze our sales data for internal analysis, during which we may disclose Personal Information such as the wines purchased, the location of shipment, and the frequency of purchases.
+            <br />
+            <br />We additionally may enlist a third party to assist with marketing and sending member e-mails; in this case, we will provide these third party vendors only with member e-mail addresses. These third parties will not receive or be given access to other Personal Information (such as Wine Plus member home addresses, phone numbers, or date of birth) unless Wine Plus is required to do so by law or unless disclosing such Personal Information is vital to identify, contact, or bring legal action in order to protect Wine Plus, its customers, or third parties.</p>
+          <p class="auc_title">Cookies</p>
+          <p class="auc_con">When you visit the Website, our service providers may place cookies on your computers or mobile devices. A cookie is a small amount of information that a web server sends to your browser that stores information about your account, preferences and use of the Website. Cookies allow us to recognize you when you return and track and target your interests in order to provide a customized experience. They also help us to detect certain kinds of fraud. We use cookies to store a member's preferences, record session information, record member-specific information on what pages are accessed or visited, alert members to new areas that we think might be of interest to them when they return to our Website, or customize web page content based on browser type or other information that the member sends.
+            <br />
+            <br />&quot;Session&quot; cookies are temporary cookies used for various reasons, such as managing page views and your shopping cart. Typically, your browser will erase session cookies once you exit the browser. &quot;Persistent&quot; cookies are more permanent cookies that are stored on your computer or mobile device after you exit the browser. Persistent cookies allow us to retrieve certain information that you have previously provided to us (for example, your user ID if you ask to be remembered). The Wine Plus Website uses both session and persistent cookies.</p>
+
           <p class="auc_title">Privacy Practices of Third Parties</p>
-        <p class="auc_con">Our Website may contain links to third party websites, products, and services. These websites may include but are not limited to wineries, gourmet food websites, travel websites, or social media websites such as Sina Weibo and Tencent Weibo. Information collected by these third party websites is governed by their privacy practices and is not subject to this privacy policy. We are not responsible for how these third party websites collect, use, disclose, distribute, or maintain Personal and Non-Personal Information. If you visit a third party website listed on the Wine Plus Website, you do so at your own risk. We encourage you to learn about the privacy practices of those third parties prior to providing them with an information or taking advantage of an offer or promotion.</p>
-        
-        <p class="auc_title">Wine Plus Blog Content</p>
-        <p class="auc_con">We are not responsible for protecting any Personal Information that you post on our blog or on social media web pages associated with Wine Plus. Although we reserve the right to monitor any postings, all Personal Information that is posted on these websites is unprotected and can be seen by anyone with access to the specific website.</p>
-        
-        <p class="auc_title">Protection of Your Information</p>
-        <p class="auc_con">We take many precautions to safeguard your Personal Information, Non-Personal Information, and Transaction Information against loss, theft, and misuse, as well as against unauthorized access, disclosure, alteration, and destruction. In addition to administrative and physical protective measures, we use Secure Sockets Layer (SSL) encryption on all web pages where Personal information is collected. For this reason, in order to complete a protected transaction, you must use a SSL-enabled browser to access the Website. Safari, Firefox, and Internet Explorer are all SSL-enabled. Using these types of browsers protects the confidentiality of your Personal Information while it is being transferred over the Internet.<br />
-          We store credit card numbers in a third-party, one-way vault. When we interact directly with a credit card company, the card number is encrypted and only lives on the Website for a few seconds before it is transferred into the secure vault.<br />
-          When creating an account on our Website, you are required to establish a password. To maximize your level of protection, you should choose a password with at least 6 characters, using a combination of letters and numbers. You are solely responsible for maintaining the secrecy of your password and account information.<br />
-          While Wine Plus uses standard security procedures and practices relative to safeguarding your Information, no Internet data transaction can be guaranteed as 100% secure. Consequently, while Wine Plus strives to protect and conserve your Information, we do not guarantee or attest comprehensive security of your Information transmission. If you transmit Information to Wine Plus, you do so at your own risk.</p>
-        
-        <p class="auc_title">Collection of Information from Minors</p>
-        <p class="auc_con">We do not knowingly collect Personal Information from minors under 18, nor do we direct any of our content to minors under 18. If we learn that we collected the Personal Information of a minor, we will take steps to delete the information as soon as possible.</p>
-        
-        <p class="auc_title">Accessing and Correcting Personal Information</p>
-        <p class="auc_con">You can access, update and delete your Personal Information by logging into your account and accessing the &quot;My Account&quot; section of the Website. If you want to close your account or have questions, please contact us at <a href="mailto:info@wineplus.me" class="acc_1">info@wineplus.me</a>. While we are ready to assist you in managing your subscriptions, closing your account, and removing your active member profile, we cannot always delete all records. For example, we are required to retain records relating to previous transactions on the Website for financial reporting and compliance reasons.<br />
-          We will retain your information for as long as your account is active or as necessary to provide you services and to maintain a record of your transactions for financial reporting and compliance purposes. If you wish to cancel your account, please contact us at <a href="mailto:info@wineplus.me" class="acc_1">info@wineplus.me</a> . We will retain and use your Personal Information, Non-Personal Information, and Transaction Information only as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.</p>
-        
-        <p class="auc_title">E-mail Opt Out</p>
-        <p class="auc_con">Registered members who have elected to receive Wine Plus's daily e-mail can choose to opt-out at any time by clicking on the &quot;Unsubscribe&quot; link at the bottom of any daily e-mail. In addition, members may unsubscribe by contacting Wine Plus Member Services at (+86-21-51702312). Further questions or comments regarding privacy can be directed to <a href="mailto:info@wineplus.me" class="acc_1">info@wineplus.me</a> .</p>
-        
-        <p class="auc_title">Changes to Privacy Policy</p>
-        <p class="auc_con">From time to time, Wine Plus will, in its own discretion, update its privacy policy with or without prior notice. If our information practices change at some time in the future, we will post the policy changes to our Web site to notify you of these changes. If you are concerned about how your information is used, you should check our Website periodically. Your continued use of the Wine Plus Website amounts to your agreement to comply with and obey the terms of our most recent Privacy Policy. If you object to any of the terms, you can cease to use the Wine Plus Website.</p>
-        
-        <p class="auc_title">Contact Information</p>
-        <p class="auc_con">If you, at any point in time, have any questions or concerns with respect to the Wine Plus Privacy Policy, you can e-mail us at <a href="mailto:info@wineplus.me" class="acc_1">info@wineplus.me </a><br />
-          Room301 Bldg1, No.20 Cha-Ling-Bei Road, Shanghai China 200032</p>
-        
-        
+          <p class="auc_con">Our Website may contain links to third party websites, products, and services. These websites may include but are not limited to wineries, gourmet food websites, travel websites, or social media websites such as Sina Weibo and Tencent Weibo. Information collected by these third party websites is governed by their privacy practices and is not subject to this privacy policy. We are not responsible for how these third party websites collect, use, disclose, distribute, or maintain Personal and Non-Personal Information. If you visit a third party website listed on the Wine Plus Website, you do so at your own risk. We encourage you to learn about the privacy practices of those third parties prior to providing them with an information or taking advantage of an offer or promotion.</p>
+
+          <p class="auc_title">Wine Plus Blog Content</p>
+          <p class="auc_con">We are not responsible for protecting any Personal Information that you post on our blog or on social media web pages associated with Wine Plus. Although we reserve the right to monitor any postings, all Personal Information that is posted on these websites is unprotected and can be seen by anyone with access to the specific website.</p>
+
+          <p class="auc_title">Protection of Your Information</p>
+          <p class="auc_con">We take many precautions to safeguard your Personal Information, Non-Personal Information, and Transaction Information against loss, theft, and misuse, as well as against unauthorized access, disclosure, alteration, and destruction. In addition to administrative and physical protective measures, we use Secure Sockets Layer (SSL) encryption on all web pages where Personal information is collected. For this reason, in order to complete a protected transaction, you must use a SSL-enabled browser to access the Website. Safari, Firefox, and Internet Explorer are all SSL-enabled. Using these types of browsers protects the confidentiality of your Personal Information while it is being transferred over the Internet.
+            <br />We store credit card numbers in a third-party, one-way vault. When we interact directly with a credit card company, the card number is encrypted and only lives on the Website for a few seconds before it is transferred into the secure vault.
+            <br />When creating an account on our Website, you are required to establish a password. To maximize your level of protection, you should choose a password with at least 6 characters, using a combination of letters and numbers. You are solely responsible for maintaining the secrecy of your password and account information.
+            <br />While Wine Plus uses standard security procedures and practices relative to safeguarding your Information, no Internet data transaction can be guaranteed as 100% secure. Consequently, while Wine Plus strives to protect and conserve your Information, we do not guarantee or attest comprehensive security of your Information transmission. If you transmit Information to Wine Plus, you do so at your own risk.</p>
+
+          <p class="auc_title">Collection of Information from Minors</p>
+          <p class="auc_con">We do not knowingly collect Personal Information from minors under 18, nor do we direct any of our content to minors under 18. If we learn that we collected the Personal Information of a minor, we will take steps to delete the information as soon as possible.</p>
+
+          <p class="auc_title">Accessing and Correcting Personal Information</p>
+          <p class="auc_con">You can access, update and delete your Personal Information by logging into your account and accessing the &quot;My Account&quot; section of the Website. If you want to close your account or have questions, please contact us at <a href="mailto:info@wineplus.me" class="acc_1">info@wineplus.me</a>. While we are ready to assist you in managing your subscriptions, closing your account, and removing your active member profile, we cannot always delete all records. For example, we are required to retain records relating to previous transactions on the Website for financial reporting and compliance reasons.
+            <br />We will retain your information for as long as your account is active or as necessary to provide you services and to maintain a record of your transactions for financial reporting and compliance purposes. If you wish to cancel your account, please contact us at <a href="mailto:info@wineplus.me" class="acc_1">info@wineplus.me</a> . We will retain and use your Personal Information, Non-Personal Information, and Transaction Information only as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.</p>
+
+          <p class="auc_title">E-mail Opt Out</p>
+          <p class="auc_con">Registered members who have elected to receive Wine Plus's daily e-mail can choose to opt-out at any time by clicking on the &quot;Unsubscribe&quot; link at the bottom of any daily e-mail. In addition, members may unsubscribe by contacting Wine Plus Member Services at (+86-21-51702312). Further questions or comments regarding privacy can be directed to <a href="mailto:info@wineplus.me" class="acc_1">info@wineplus.me</a> .</p>
+
+          <p class="auc_title">Changes to Privacy Policy</p>
+          <p class="auc_con">From time to time, Wine Plus will, in its own discretion, update its privacy policy with or without prior notice. If our information practices change at some time in the future, we will post the policy changes to our Web site to notify you of these changes. If you are concerned about how your information is used, you should check our Website periodically. Your continued use of the Wine Plus Website amounts to your agreement to comply with and obey the terms of our most recent Privacy Policy. If you object to any of the terms, you can cease to use the Wine Plus Website.</p>
+
+          <p class="auc_title">Contact Information</p>
+          <p class="auc_con">If you, at any point in time, have any questions or concerns with respect to the Wine Plus Privacy Policy, you can e-mail us at <a href="mailto:info@wineplus.me" class="acc_1">info@wineplus.me </a>
+            <br />Room301 Bldg1, No.20 Cha-Ling-Bei Road, Shanghai China 200032</p>
+
+
+        </div>
+        <div class="rlt_bottom"></div>
       </div>
-        <div class="rlt_bottom"> </div>
-      </div>
+    </div>
   </div>
-  </div>
-<div class="footer_bg">
+  <div class="footer_bg">
     <div class="footer">
-    <div class="footer_left">Copyright © 2013 WinePlus Cellar | 沪ICP备12011981号-12</div>
-    <div class="footer_right"><a href="#">About us</a> | <a href="#">Privacy Policy</a> | <a href="#">Shipping Policies</a> | <a href="#">Shopping Information</a> | <a href="#">FAQ</a> | <a href="#">Contact Us</a> </div>
-  </div>
+      <div class="footer_left">Copyright © 2013 WinePlus Cellar | 沪ICP备12011981号-12</div>
+      <div class="footer_right"><a href="#">About us</a> | <a href="#">Privacy Policy</a> | <a href="#">Shipping Policies</a> | <a href="#">Shopping Information</a> | <a href="#">FAQ</a> | <a href="#">Contact Us</a> 
+      </div>
+    </div>
   </div>
 </body>
+
 </html>

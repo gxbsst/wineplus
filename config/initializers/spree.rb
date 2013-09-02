@@ -8,7 +8,7 @@
 Spree.config do |config|
       config.override_actionmailer_config = false
       config.enable_mail_delivery = true
-      config.mails_from = "weston.wei@sidways.com"
+      config.mails_from = "noreply@wineplus.me"
       config.intercept_email = "weston.wei@sidways.com"
       config.shipping_instructions = false
       # config.show_only_complete_orders_by_default = false
