@@ -2,15 +2,30 @@ require "bundler/capistrano"
 
 set :deploy_via, :remote_cache
 
-set :application, "wineplus-store"
+set :application, "wineplus.me"
 
 set :branch, "master"
-server "192.168.11.31", :web, :app, :db, primary: true
  set :repository,  "git://github.com/gxbsst/wineplus.git"
-set :user, "rails"
-set :deploy_to, "/srv/rails/wineplus-store1"
 
 set :scm, :git
+
+if ENV['RAILS_ENV'] =='production'
+  require "rvm/capistrano"
+  server "jh_web3", :web, :app, :db, primary: true
+  set :user, "root"
+  
+ elsif ENV['RAILS_ENV'] =='jh_web3'
+   set :default_environment, {
+       'PATH' => "/home/deployer/.rbenv/versions/1.9.3-p448/bin/:$PATH"
+   }
+   server "cancer", :web, :app, :db, primary: true
+   set :branch, "master"
+   # set :repository,  "git@git.sidways.com:ruby/outsourcing/cooper"
+   set :user, "deployer"
+   set :deploy_to, "/home/#{user}/apps/#{application}"
+
+end
+
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 # role :web, "aries.sidways.lab"                          # Your HTTP server, Apache/etc

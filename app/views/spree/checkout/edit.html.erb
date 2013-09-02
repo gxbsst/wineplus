@@ -5,7 +5,7 @@
     <!-- start address -->
     <div class="address_outer" data-address='<%= @ship_add_addressess.to_json(only: [:id, :is_current, :firstname, :lastname, :address1, :zipcode, :phone, :city ]) %>' >
 
-      <h2 id="shipping_address">Shipping Address <a class="edit" href="javasript:void(0)">Edit</a></h2>
+      <h2 id="shipping_address">Shipping Address <a class="edit" href="javascript:void(0)">Edit</a></h2>
 
       <div class="current_address">
         <% unless current_spree_user.current_ship_address.new_record? %>
@@ -21,7 +21,7 @@
       <td class="td3"><@= address1 @></td>
       <td class='td4'><@= zipcode @></td>
       <td class='td5'><@= phone @></td>
-      <td class='td6'><a class="delete" href="#"></a> <a class="edit" href="javasript:void(0)">Edit</a></td>
+      <td class='td6'><a class="delete" href="#"></a> <a class="edit" href="javascript:void(0)">Edit</a></td>
       </script>
 
       <% form_class_name = @order.state == 'address' ? 'show_form' : 'hide_form' %>
@@ -51,7 +51,12 @@
     <!-- start deliver -->
     <div class="deliver_outer" >
 
-      <h2 id="shipping_method_title">Shipping Method <a class="edit" href="javascript:void(0)">Edit</a></h2>
+      <h2 id="shipping_method_title">
+        Shipping Method 
+        <% if @order.state == 'payment' %>
+        <a class="edit" href="javascript:void(0)">Edit</a>
+        <% end %>
+      </h2>
         <% unless ship_mehtod_to_text(@order.shipments).blank? %>
         <div class="current_ship_methods">
           <table class="ship_method">

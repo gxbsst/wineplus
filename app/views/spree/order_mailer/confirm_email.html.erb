@@ -1,102 +1,108 @@
-<html style="padding:0;margin: 0;">
-<head>
-	<title></title>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-</head>
-<body style="padding: 0 30px; margin: 0;">
-	<table width="100%" style="padding:0;margin:0" bgcolor="#000" cellpadding='2' cellspacing="2">
-		<thead>
-			<tr >
-				<td>
-					<a href="http://www.iwine.me"><img src="http://www.wineplus.me/assets/logo.gif"></a>
-				</td>
+	<table border="0" cellspacing="0" cellpadding="0" width="100%" height="140" bgcolor="#000">
+		<tr>
+			<td style=" display:block; width:980px; margin:0px auto;padding-left:150px; padding-top:30px;">
+				<img src="http://www.wineplus.me/images/logo.gif" width="153" height="62" />
+			</td>
+		</tr>
+	</table>
+	<div class="email_con" style=" border-top:2px solid #b80000; background:#fff;">
+		<table width="850" border="0" cellspacing="0" cellpadding="0" style="width:850px; margin:0px auto;margin-top:70px; margin-bottom:30px;font-size:20px;" >
+			<tr>
+				<td align="center">THANKS FOR YOUR PURCHASE !</td>
 			</tr>
-		</thead>
+		</table>
+		<table width="850" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; margin-bottom:30px;" bordercolor="#eaeaea" align="center">
+			<tr bgcolor="#f6f6f6" align="center"  style="line-height:88px; color:#b80000 ">
+				<td width="320" bordercolordark="#009999">PRODUCTS</td>
+				<td width="130">VOLUMN (ml) </td>
+				<td width="120">UNIT PRICE</td>
+				<td width="150">QUANTITY</td>
+				<td width="100">AMOUNT</td>
+			</tr>
+
+			<% @order.line_items.each do |item| %>
+			<tr bgcolor="#f6f6f6"  align="center" style="line-height:88px; text-align:center; ">
+				<td><%= raw(item.variant.product.name) %></td>
+				<td><%= item.variant.product.property(:capacity) %> ml</td>
+				<td><%= item.single_money %></td>
+				<td><%=item.quantity%></td>
+				<td><%= item.display_amount %></td>
+			</tr>
+			<% end %>
+
+			<% @order.adjustments.eligible.each do |adjustment| %>
+			<tr bgcolor="#f6f6f6" align="center" style="line-height:50px; ">
+				<td colspan="5"><%= raw(adjustment.label) %>: <%= adjustment.display_amount %></td>
+			</tr>
+			<% end %>
+
+			<tr bgcolor="#f6f6f6" align="center"  style="line-height:50px; color:#b80000; ">
+				<td colspan="5">Order Total: <%= @order.display_total %></td>
+			</tr>
+
+
+		</table>
+
+		<table width="840" border="0" cellspacing="0" cellpadding="0" style="line-height:30px; margin-bottom:30px; padding-bottom:30px; border-bottom:1px solid #ddd;" align="center" >
+			<tr>
+				<td colspan="2" style="font-size:16px;" >Will be shipped soon to your address:</td>
+			</tr>
+			<tr>
+				<td width="67" style="color:#777;">Name:</td>
+				<td width="773"><%= @address.full_name %></td>
+			</tr>
+			<tr>
+				<td style="color:#777;">Telephone: </td>
+				<td><%= @address.phone %></td>
+			</tr>
+			<tr>
+				<td style="color:#777;">Address: </td>
+				<td><%= @address.address1 %></td>
+			</tr>
+		</table>
+		<table width="840" border="0" cellspacing="0" cellpadding="0" style="line-height:30px; margin-bottom:15px;"  align="center" >
+			<tr>
+				<td>We hope you enjoy the wines!</td>
+			</tr>
+			<tr>
+				<td>Feel Satisfied? Refer our website to your friends, please!</td>
+			</tr>
+			<tr>
+				<td>Sincerely yours,</td>
+			</tr>
+		</table>
+		<table width="840" border="0" cellspacing="0" cellpadding="0" style=" line-height:20px; padding-bottom:30px; margin-bottom:30px; font-size:12px;" align="center" >
+			<tr>
+				<td colspan="2" style="font-size:18px; color:#b80000; padding-bottom:8px;" >Wine Plus Cellar</td>
+			</tr>
+			<tr>
+				<td colspan="2" >ADD.: 2F, No.1 South Wu-Lu-Mu-Qi Road, Shanghai China 200031</td>
+			</tr>
+			<tr>
+				<td colspan="2" >TEL: +86-51702312</td>
+			</tr>
+			<tr>
+				<td colspan="2" >FAX: +86-21-51702316</td>
+			</tr>
+			<tr>
+				<td colspan="2" >E-MAIL: order@wineplus.me</td>
+			</tr>
+			<tr >
+				<td style="padding-top:10px;"width="71" >
+					<img src="http://www.wineplus.me/images/weixin.jpg" width="58" height="58" />
+				</td>
+				<td style="padding-top:10px;" width="769">Follow us on Weixin</td>
+			</tr>
+		</table>
+	</div>
+	<table width="850" border="0" cellspacing="0" cellpadding="0" style="line-height:24px;  padding-bottom:50px; font-size:12px;" align="center">
+		<tr>
+			<td align="center">©2013 Wine Plus Cellar, All Rights Reserved.</td>
+		</tr>
+		<tr>
+			<td align="center">2F, No.20 Wu-Lu-Mu-Qi Road, Shanghai China 200031</td>
+		</tr>
 	</table>
 
-	<p>Thanks for your purchase!</p>
 
-	<table bgcolor="#CCC" width="100%" cellspacing="1" cellspacing="10">
-		<tr>
-			<th colspan="5" align="left"  style="padding: 5px">
-				<font color="#FFF">Order Summary:</font>
-			</th>
-		</tr>
-		<tr>
-			<th  bgcolor="#FFF">
-				Name
-			</th>
-			<th  bgcolor="#FFF">Capacity</th>
-			<th  bgcolor="#FFF">Unit Price</th>
-			<th  bgcolor="#FFF">Quantity</th>
-			<th  bgcolor="#FFF">Amount</th>
-		</tr>
-
-		<% @order.line_items.each do |item| %>
-		
-		<tr>
-			<td bgcolor="#FFF" width="20%" align="center">
-				<%= raw(item.variant.product.name) %>
-			</td>
-			<td bgcolor="#FFF" align="center">
-				<%= item.variant.product.property(:capacity) %> ML
-			</td>
-			<td bgcolor="#FFF" align="center">
-				<%= item.single_money %>
-			</td>
-			<td bgcolor="#FFF" align="center">
-				<%=item.quantity%>
-			</td>
-			<td bgcolor="#FFF" align="center">
-				<%= item.display_amount %>
-			</td>
-		</tr>
-		<% end %>
-	
-		</table>
-
-
-		<% @order.adjustments.eligible.each do |adjustment| %>
-		<p>
-			<strong><%= raw(adjustment.label) %></strong>:
-			<%= adjustment.display_amount %>
-		</p>
-		<% end %>
-
-		<p>
-			<strong>Order Total</strong>: <%= @order.display_total %>
-			
-		</p>
-
-
-		<table  width="100%" cellspacing="0" cellspacing="0">
-			<tr>
-				<th colspan="5" align="left">
-					<font>will be shipped soon to your address:</font>
-				</th>
-			</tr>
-			<tr>
-				<td  bgcolor="#FFF" align="left">
-					<%= @address.full_name %> &nbsp;&nbsp; <%= @address.phone %>  &nbsp;&nbsp; <%= @address.address1 %>			 
-				</td>
-				
-			</tr>
-		</table>
-
-
-		<p>We hope you enjoy the wines! </p>
-
-		<p>Feel Satisfied? Refer our website to your friends, please!</p>
-
-		<p>Sincerely yours,</p>
-
-		<p><strong>Wine Plus Cellar</strong><br>
-			Addr.: 2F, No.1 South Wu-Lu-Mu-Qi Road, Shanghai China 200031 <br>
-		Tel: +86-21-51702312 <br>
-		Fax: +86-21-51702316 <br>
-		Email: order@wineplus.me <br>
-		Follow us on Weixin: [微信二维码图片]</p>
-	</body>
-	</html>
 

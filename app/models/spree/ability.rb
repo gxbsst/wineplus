@@ -37,7 +37,7 @@ module Spree
         can :manage, :all
       else
         #############################
-        can [:read,:update,:destroy], Spree.user_class, id: user.id
+        can [:read,:update,:destroy, :orders], Spree.user_class, id: user.id
         can :create, Spree.user_class
         #############################
         can :read, Order do |order, token|

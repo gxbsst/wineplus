@@ -301,6 +301,7 @@ GEM
     select2-rails (3.2.1)
       thor (~> 0.14)
     slop (3.4.5)
+    spork (1.0.0rc3)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -344,6 +345,7 @@ DEPENDENCIES
   rspec-rails (~> 2.0)
   ruby-hmac
   sass-rails (~> 3.2.3)
+  spork
   spree!
   spree_auth_devise!
   spree_comments!

@@ -1,8 +1,8 @@
 class Spree::UsersController < Spree::StoreController
   ssl_required
-  skip_before_filter :set_current_order, :only => [:show, :orders]
-  prepend_before_filter :load_object, :only => [:show, :edit, :update, :orders]
-  prepend_before_filter :authorize_actions, :only => :new
+  skip_before_filter :set_current_order, :only => [:show]
+  prepend_before_filter :load_object, :only => [:show, :edit, :update]
+  prepend_before_filter :authorize_actions, :only => [:new]
 
   include Spree::Core::ControllerHelpers
 
@@ -25,6 +25,8 @@ class Spree::UsersController < Spree::StoreController
   end
 
   def orders
+    @user ||= spree_current_user
+    authorize! params[:action].to_sym, @user
     @orders = @user.orders.complete.order('completed_at desc')
   end
 
