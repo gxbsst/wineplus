@@ -37,27 +37,17 @@
         </div>
       </div>
     <% end %>
-  </div>
 
-  <div id="empty-cart" data-hook>
-    <%= form_tag empty_cart_path, :method => :put do %>
-      <p id="clear_cart_link" data-hook>
-        <table>
-          <tr>
-            <td class="td1">
-              <%= submit_tag Spree.t(:empty_cart), :class => 'button gray' %>
-            </td>
-            <td class="td2">
-               <%= link_to Spree.t(:continue_shopping), products_path, :class => 'continue button gray' %>
-            </td>
-          </tr>
-        </table>
-       
-        <%#= Spree.t(:or) %>
-       
-      </p>
-    <% end %>
+    <div id="empty-cart" data-hook>
+      <%= form_tag empty_cart_path, :method => :put do %>
+      <%= submit_tag Spree.t(:empty_cart), :class => 'button gray' %>
+      <% end %>
+    </div>
+
   </div>
+  <div class="clear"></div>
+
+
 
 <% end %>
 

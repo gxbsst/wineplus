@@ -22,5 +22,38 @@
   <script>
   Spree.api_key = <%= raw(try_spree_current_user.try(:spree_api_key).to_s.inspect) %>;
   </script>
+
+<script id="_webengage_script_tag" type="text/javascript">
+  // Feedback for www.wineplus.com
+  var _weq = _weq || {};
+  _weq['webengage.licenseCode'] = '~99198d2c';
+  _weq['webengage.widgetVersion'] = "4.0";
+  
+  (function(d){
+    var _we = d.createElement('script');
+    _we.type = 'text/javascript';
+    _we.async = true;
+    _we.src = (d.location.protocol == 'https:' ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-4.0.js";
+    var _sNode = d.getElementById('_webengage_script_tag');
+    _sNode.parentNode.insertBefore(_we, _sNode);
+  })(document);
+</script>
+
+<script id="_webengage_script_tag" type="text/javascript">
+  // Feedback for Localhost
+  // var _weq = _weq || {};
+  // _weq['webengage.licenseCode'] = '~7168087a';
+  // _weq['webengage.widgetVersion'] = "4.0";
+  
+  // (function(d){
+  //   var _we = d.createElement('script');
+  //   _we.type = 'text/javascript';
+  //   _we.async = true;
+  //   _we.src = (d.location.protocol == 'https:' ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-4.0.js";
+  //   var _sNode = d.getElementById('_webengage_script_tag');
+  //   _sNode.parentNode.insertBefore(_we, _sNode);
+  // })(document);
+</script>
+
 </body>
 </html>

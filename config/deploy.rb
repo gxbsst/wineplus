@@ -14,7 +14,7 @@ if ENV['RAILS_ENV'] =='production'
   server "jh_web3", :web, :app, :db, primary: true
   set :user, "root"
   
- elsif ENV['RAILS_ENV'] =='jh_web3'
+ elsif ENV['RAILS_ENV'] =='cancer'
    set :default_environment, {
        'PATH' => "/home/deployer/.rbenv/versions/1.9.3-p448/bin/:$PATH"
    }

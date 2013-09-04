@@ -1,6 +1,10 @@
 @import 'store/variables';
 
 // GLOGAL
+
+.clear {
+	clear: both;
+}
 .hide_form {
 	display: none;
 }
@@ -340,7 +344,9 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 }
 
 #empty-cart {
-	margin-top: -81px;
+	margin-top: 20px;
+	margin-right: 19px;
+	float: right;
 	table {
 		tr {
 			border: 0;
@@ -400,7 +406,12 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 			margin-top: 20px;
 			.column.alpha, .columns.alpha {
 				margin-left: 0;
-			}	
+			}	#product-price {
+				.product-section-title {
+					font-weight: normal;
+					font-size: 14px;
+				}
+			}
 		}
 		#taxon-crumbs {
 			margin: 10px 0 0 0;
