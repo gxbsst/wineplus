@@ -374,7 +374,8 @@ nav#taxonomies {
   margin-bottom: 10px;
 
   &.notice {
-    background-color: $link_text_color;
+
+    background-color: $c_green;
   }
   &.success {
     background-color: $c_green;

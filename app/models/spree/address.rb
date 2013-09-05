@@ -1,7 +1,10 @@
+#encoding: utf-8
 module Spree
   class Address < ActiveRecord::Base
     belongs_to :country, class_name: "Spree::Country"
     belongs_to :state, class_name: "Spree::State"
+
+    belongs_to :user, class_name: 'Spree::User'
 
     has_many :shipments
 
@@ -22,6 +25,10 @@ module Spree
 
     scope :current, where(is_current: true)
 
+    # after_create :set_default
+    # after_update :set_default
+    # after_destroy :set_default_2
+   
     # Disconnected since there's no code to display error messages yet OR matching client-side validation
     def phone_validate
       return if phone.blank?
@@ -90,7 +97,48 @@ module Spree
       }
     end
 
+    def state_name
+      state.name
+    end
+
+    def country_name
+      country.name
+    end
+
+    def full_address
+      "#{address1}, #{city} #{state_name} #{country_name}, #{zipcode}"
+    end
+
     private
+
+      def user_ship_address
+         user.ship_address.order("created_at DESC") 
+      end
+
+      def update_to_default
+        newest_address = user_ship_address.try(:first)
+        newest_address.update_column(:is_current, true) if newest_address
+      end
+
+      def set_default
+        # 如过没有默认地址，设置最新的地址为默认
+        if user_ship_address.current.blank?
+          update_to_default
+          return true
+        end
+
+        if self.is_current == '1'
+          user_ship_address.update_all(:is_current => false)
+          update_to_default
+          return true
+        end
+      end
+
+      def set_default_2
+        if !user_ship_address.blank? && user_ship_address.current.blank?
+          update_to_default
+        end
+      end
 
       def require_phone?
         true

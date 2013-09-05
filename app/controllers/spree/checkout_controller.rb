@@ -36,6 +36,7 @@ module Spree
         params[:order][:ship_address_attributes][:user_id] = current_spree_user.id
         current_spree_user.remove_address_current
         if params[:order][:ship_address_attributes][:id].present?
+
           # @order.update_attributes(object_params)
           ship_address = Spree::Address.find(object_params[:ship_address_attributes][:id])
           ship_address.update_attributes(object_params[:ship_address_attributes])
@@ -396,6 +397,20 @@ module Spree
         helper.sign
         helper
       end
+
+      # def load_addresses
+      #   spree_current_user.ship_address.order("is_current DESC, created_at DESC")
+      # end
+
+      # def clear_default
+      #   load_addresses.update_all(:is_current => false)
+      # end
+
+      # def set_current_address
+      #   if !load_addresses.blank? && load_addresses.current.blank?
+      #     load_addresses.first.update_column(:is_current, true)
+      #   end
+      # end
 
   end
 end

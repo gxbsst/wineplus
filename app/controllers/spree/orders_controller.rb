@@ -25,6 +25,7 @@ module Spree
         return if after_update_attributes
 
         fire_event('spree.order.contents_changed')
+      
 
         # init Order address if current address exist
         if current_spree_user
@@ -43,6 +44,8 @@ module Spree
               fire_event('spree.checkout.update')
             end
         end
+
+
 
       respond_with(@order) do |format|
         format.html do
@@ -68,7 +71,7 @@ module Spree
 
     # Adds a new item to the order (creating a new order if none already exists)
     def populate
-      # binding.pry
+      
       populator = Spree::OrderPopulator.new(current_order(true), current_currency)
       if populator.populate(params.slice(:products, :variants, :quantity))
         current_order.create_proposed_shipments if current_order.shipments.any?

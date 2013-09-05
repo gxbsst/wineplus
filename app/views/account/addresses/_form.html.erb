@@ -1,0 +1,51 @@
+<%= form_for add, :url => account_address_path(add.to_param) do |f| -%>
+  <div class="cic_name">
+    <table >
+      <tr class="tr1">
+        <td class="td1"><%= f.label :firstname, Spree.t(:first_name) %><span class="required">*</span></td>
+        <td class="td2">
+          <%= f.text_field :firstname, :class => 'required' %>
+          <%= f.label :lastname, Spree.t(:last_name) %>
+          <span class="required">*</span>
+          <%= f.text_field :lastname, :class => 'required' %>
+        </td>
+      </tr>
+      <tr class="tr2">
+        <td class="td1">Address<span class="required">*</span></td>
+        <td class="td2">
+          <%= f.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'required'} %>
+          <%= f.collection_select(:state_id, add.country.states, :id, :name, {}, {:class => 'required'}) %>
+        </td>
+      </tr>
+      <tr class="tr3">
+        <td class="td1"><%= f.label :city, Spree.t(:city) %><span class="required">*</span></td>
+        <td class="td2"><%= f.text_field :city, :class => 'required' %></td>
+      </tr>
+      <tr class="tr4">
+        <td class="td1"><%= f.label :address1, Spree.t(:street_address) %><span class="required">*</span></td>
+        <td class="td2">
+          <%= f.text_field :address1, :class => 'required' %>
+        </td>
+      </tr>
+      <tr class="tr5">
+        <td class="td1"><%= f.label :zipcode, Spree.t(:zip) %><span class="required">*</span></td>
+        <td class="td2">
+          <%= f.text_field :zipcode, :class => 'required' %>
+        </td>
+      </tr>
+      <tr class="tr6">
+        <td class="td1">
+          <%= f.label :phone, Spree.t(:phone) %><span class="required">*</span>
+        </td>
+        <td class="td2">
+          <%= f.phone_field :phone, :class => 'required' %>
+        </td>
+      </tr>
+      <tr>
+        <td>Default</td>
+        <td><%= f.check_box :is_current %></td>
+      </tr>
+    </table>  
+    <p class="submit"><%= submit_tag "Confirm", :id => 'submit' %></p>
+  </div>
+<% end %>

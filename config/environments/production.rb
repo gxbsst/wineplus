@@ -15,7 +15,7 @@ Wineplus::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -64,4 +64,13 @@ Wineplus::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  # Exception Handler
+  config.middleware.use ExceptionNotifier,
+    :email_prefix => "[Exception] ",
+    :sender_address => %{"Exception Notifier" <support@wineplus.me>},
+    :exception_recipients => ["weston.wei@sidways.com"]
+
+  config.action_mailer.default_url_options = { :host => 'www.wineplus.me' }
+
 end

@@ -10,7 +10,7 @@ module Spree
 
 
     has_many :orders
-    belongs_to :ship_address, :foreign_key => 'ship_address_id', :class_name => 'Spree::Address'
+    belongs_to :ship_address, :foreign_key => 'ship_address_id', :class_name => 'Spree::Address', :include => [:state, :country]
     belongs_to :bill_address, :foreign_key => 'bill_address_id', :class_name => 'Spree::Address'
 
     before_validation :set_login

@@ -19,7 +19,6 @@ group :development, :test do
   gem 'spork'
 end
 
-
 gem 'jquery-rails'
 
 gem 'spree', :github => "spree/spree", :branch => "2-0-stable"
@@ -32,6 +31,8 @@ gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express
 
 gem 'ruby-hmac'
 gem 'activemerchant_patch_for_china'
+
+gem 'exception_notification', git: 'git://github.com/alanjds/exception_notification.git'
 
 #gem 'spree_one_page_checkout', :path => 'lib/spree_one_page_checkout-master'
 #gem 'spree_alipay', :path => 'lib/spree_alipay-master'

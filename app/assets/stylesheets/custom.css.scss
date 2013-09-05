@@ -520,3 +520,49 @@ margin-bottom: 5px;
 	line-height: 170%;
 	font-size: 16px;
 }
+
+.cic_name {
+	p.submit {
+		input {
+			margin-left: 93px;
+		}
+	}
+	table {
+		.field_with_errors {
+			input {
+				border-color: #e45353;
+			}
+		}
+		td {
+			padding: 5px;
+			line-height: 400%;
+		}
+		tbody {
+			tr {
+				border-bottom: 0;
+			}
+		}
+		.tr1 {
+			.td2 label{
+				margin: 0 0 0 10px;
+			}
+			td  input{
+				width: 60px;
+			}
+		}
+		.tr4 {
+			td input {
+				width: 300px;
+			}
+		}
+		tr td input {
+			width: 120px;
+		}
+	}
+}
+
+.add_new_address {
+	font-weight: bold;
+	color: #b80000;
+	font-size: 18px;
+}

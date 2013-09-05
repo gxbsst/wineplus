@@ -1,5 +1,7 @@
 Wineplus::Application.routes.draw do
 
+
+
   # Add your extension routes here
   match '/alipay_checkout/done' => 'spree/checkout#alipay_done', :as => :alipay_done
   match '/alipay_checkout/notify' => 'spree/checkout#alipay_notify', :as => :alipay_notify
@@ -9,9 +11,6 @@ Wineplus::Application.routes.draw do
   post 'checkout/update/:state', to: "spree/checkout#update"
   # match 'account/orders' => 'spree/users#orders', as: 'user_orders'
   get 'account/orders', :to => 'spree/users#orders', as: 'user_orders'
-
-
-  
 
   # STATIC
   statics = %w(about_us contact_us faqs privacy)
@@ -28,6 +27,11 @@ Wineplus::Application.routes.draw do
                :skip => [:unlocks, :omniauth_callbacks],
                :path_names => { :sign_out => 'logout' },
                :path_prefix => :user
+
+    namespace :account do 
+      resources :addresses
+    end
+    
   end
 
   Spree::Core::Engine.routes.prepend do
@@ -60,11 +64,7 @@ Wineplus::Application.routes.draw do
     #   resources :users
     # end
   end
-
-
-
   
-
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
@@ -81,6 +81,8 @@ Wineplus::Application.routes.draw do
       end
     end
   end
+
+
   
           # The priority is based upon order of creation:
   # first created -> highest priority.
