@@ -69,9 +69,33 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/system #{release_path}/public/system"
     run "ln -nfs #{shared_path}/system/spree #{release_path}/public/spree"
   end
+
+
+  namespace :assets do
+          task :precompile, :roles => :web, :except => { :no_release => true } do
+            from = source.next_revision(current_revision)
+            if releases.length <= 1 || capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
+              run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
+            else
+              logger.info "Skipping asset pre-compilation because there were no asset changes"
+            end
+        end
+      end
   after "deploy:finalize_update", "deploy:symlink_config"
 
 
+  namespace :assets do
+    task :precompile, :roles => :web, :except => { :no_release => true } do
+      from = source.next_revision(current_revision)
+      if releases.length <= 1 || capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
+        run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
+      else
+        logger.info "Skipping asset pre-compilation because there were no asset changes"
+      end
+    end
+  end
+
+  after "deploy:update", "deploy:assets:precompile"
 
 end
 

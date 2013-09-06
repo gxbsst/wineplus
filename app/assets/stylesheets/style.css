@@ -393,7 +393,7 @@ span.scl_1 {
 }
 .home_con1 {
 	width:982px;
-	background:url(bg_con.gif) repeat-y;
+	background:url(../bg_con.gif) repeat-y;
 	border-top:1px solid #ddd;
 	overflow:hidden;
 	margin-bottom:17px;
