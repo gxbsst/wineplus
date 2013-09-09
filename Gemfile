@@ -19,6 +19,8 @@ group :development, :test do
   gem 'spork'
 end
 
+gem 'newrelic_rpm'
+
 gem 'jquery-rails'
 
 gem 'spree', :github => "spree/spree", :branch => "2-0-stable"
