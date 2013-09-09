@@ -184,6 +184,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    dalli (2.6.4)
     debug_inspector (0.0.2)
     deface (0.9.1)
       nokogiri (~> 1.5.0)
@@ -370,6 +371,7 @@ DEPENDENCIES
   better_errors (= 0.2.0)
   binding_of_caller
   coffee-rails (~> 3.2.1)
+  dalli
   exception_notification!
   jquery-rails
   mysql2
