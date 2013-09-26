@@ -97,5 +97,9 @@ namespace :deploy do
 
   after "deploy:update", "deploy:assets:precompile"
 
+  namespace :migrate do
+    
+  end
+
 end
 

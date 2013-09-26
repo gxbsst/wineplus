@@ -22,10 +22,13 @@ products = {}
 
 def image(sku)
     attachments = []
+    # miss_image_sku = []
     image_directory = Rails.root.join('lib','tasks', 'datas/images')
     path = image_directory.join("#{sku}.png")
     if File.exist?(path)
       attachments << {:attachment => File.open(path)}
+    # else
+    #   miss_image_sku << sku
     end
 
     (1..5).to_a.each do |i|
@@ -38,6 +41,12 @@ def image(sku)
 
     end
 
+    # File.open("miss_image_sku.txt", "a+") do |io|  
+    #   miss_image_sku.each do |sku| 
+    #     io.puts "sku\n"
+    #   end
+    # end
+
     attachments    
 end
 
@@ -45,6 +54,8 @@ end
 filename = Rails.root.join('lib', 'tasks', 'datas', 'btl.csv')
 
 images = {}
+
+file =  File.open("miss_image_sku.txt", "a+") 
 
 images = CSV.open(filename, :headers => true).inject({}) do |memo,line|
   if line[0].present? && line[0].downcase == 'on' && line[21].present? && line[20].present?
@@ -54,6 +65,9 @@ images = CSV.open(filename, :headers => true).inject({}) do |memo,line|
       images.merge(memo)
     end    
   end
+
+  file.puts "#{line[9]} -  #{line[7]} \n" if !image(line[7]).present?
+
   images
 end
 

@@ -1,6 +1,6 @@
 source 'http://ruby.taobao.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.14'
 gem 'mysql2'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -15,15 +15,22 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.0'
+  gem 'childprocess'
+  gem 'rspec-rails'
+  gem 'growl'
   gem 'spork'
+  gem 'guard'
+  gem 'guard-spork'
+  gem "factory_girl_rails"
+  gem "database_cleaner"
+  gem "shoulda-matchers"
 end
 
 gem 'newrelic_rpm'
 
 gem 'jquery-rails'
 
-gem 'spree', :github => "spree/spree", :branch => "2-0-stable"
+gem 'spree', :github => "spree/spree", :branch => "c3dbeffa8dd5"
 gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git', :branch => '2-0-stable'
 gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise.git', :branch => '2-0-stable'
 gem "spree_comments", github: 'spree/spree_comments'

@@ -1,0 +1,163 @@
+G.H.Mumm de Cramant Blanc de Blancs -  1008 
+Louis Roeder Blanc de Blancs -  1009 
+Krug Grande Cuvée -  1010 
+Louis Roederer Cristal -  1011 
+Perrier Joët Belle Epoque -  1014 
+Krug Vintage -  1018 
+Salon Blanc de Blancs -  1019 
+Veuve Clicquot Rosé -  1022 
+Bollinger Rosé -  1024 
+Champagne Louis Roederer Brut Vintage Rosé -  1025 
+Dom Perignon Rosé -  1026 
+Montenisa Brut Spumante Franciacorta DOCG NV -  1038 
+Perrier Jouët Grand Brut NV -  1051 
+Philiponnat Royal Reserve Brut NV -  1052 
+Dom Perignon Andy Warhol x 3btls -  1053 
+Duval Leroy Blanc de Chardonnay Millésimé -  1054 
+Dom Perignon -  1056 
+Domaine Corinne & Jean-Pierre Grossot Chablis -  2011 
+Jean-Paul et Benoit Droin Chablis Grand Cru Les Clos -  2016 
+Domaine de la Romanee-Conti Montrachet Grand Cru -  2022 
+Pascal Joliver Sancerre Blanc -  2028 
+Le Bosq Blanc Vin de France  -  2046 
+Coffele Soave Classico -  2065 
+Villa Matilde Rocca Dei Leoni Falanghina delle Campania IGT -  2072 
+Oremus Furmint Mandolás -  2082 
+Robert Gilliard Sion Fendant Les Murettes -  2083 
+Cloudy Bay TeKoko -  2106 
+Robert Mondavi Napa Valley Fume Blanc -  2113 
+Helan Mountain, Chardonnay -  2129 
+Yarden Chandonnay -  2132 
+Chateau d'Esclans Whispering Angel Rosé -  3002 
+Canyon Road California White Zinfandel -  3005 
+Château Minuty, M de Minuty Côtes de Provence Rosé -  3006 
+Baron Philippe de Rothschild Mouton Cadet Rouge -  4003 
+Michel Lynch Reserve Médoc Red -  4009 
+Goulee, by Cos d'Estournel -  4013 
+Chateau Camensac -  4019 
+Chateau Cantemerle -  4020 
+Chateau Poujeaux -  4021 
+Chateau Grand-Puy-Ducasse -  4022 
+Chateau Haut-Batailley -  4023 
+Chateau Pontet Canet -  4024 
+Chateau Gruaud-Larose -  4026 
+Chateau Branaire-Ducru -  4027 
+Chateau Ducru-Beaucaillou -  4029 
+Chateau Haut Mayne Rouge -  4030 
+Château Barrail du Colombier Cuvée traditionelle -  4034 
+Louis Latour Bourgogne Pinot Noir -  4041 
+Laleure Piot Burgogne Pinot Noir -  4042 
+Domaine de la Romanee-Conti Echezeaux Grand Cru -  4055 
+Domaine de la Romanee-Conti Echezeaux Grand Cru -  4056 
+Domaine de la Romanee-Conti Grands Echezeaux Grand Cru -  4057 
+Domaine de la Romanee-Conti Romanee-Saint-Vivant Grand Cru -  4058 
+Domaine de la Romanee-Conti Richebourg Grand Cru -  4059 
+Domaine de la Romanee-Conti Richebourg Grand Cru -  4060 
+Domaine de la Romanee-Conti La Tâche Grand Cru Monopole -  4061 
+Domaine de la Romanee-Conti Romanee-Conti Grand Cru -  4062 
+Domaine Vincent Girardin Santeney “Vielles Vignes” -  4070 
+Paul Jaboulet Aîné Hermitage La Chapelle -  4077 
+Paul Jaboulet Aîné Hermitage La Chapelle -  4078 
+Trienne Triennes St Auguste -  4092 
+Braida Barbera d’Asti Bricco dell’Uccelone -  4098 
+Braida Barbera d’Asti Bricco dell’Uccelone -  4099 
+Poderi Colla Nebbiolo d'Alba -  4102 
+Ceretto Barolo Zonchera -  4108 
+Elio Altare Barolo -  4109 
+Gianfranco Alessandria Barolo San Giovanni -  4110 
+Paolo Scavino Barolo Carobric -  4111 
+La Spinetta Barolo Campe Vigneto -  4112 
+Bruno Giacosa Barolo Falletto -  4113 
+Giovanni Rosso Barolo Serralunga -  4114 
+Gianni Gagliardo Barolo -  4115 
+Ceretto Barolo Prapo -  4116 
+Angelo Gaja Barbaresco -  4119 
+Moccagatta Barbaresco Bric Balin -  4120 
+Moccagatta barbaresco Cole -  4121 
+Ceretto Barbaresco Bernadotte Bricco Asili -  4122 
+Fontanabianca Barbaresco Sori’ Burdin -  4123 
+Angelo Gaja Nebbiolo -  4124 
+Ceretto Barbaresco Bricco Asili -  4125 
+Antinori Tignanello -  4133 
+Castellare di Castellina Chianti Classico -  4137 
+Canalicchio di Sopra Brunello di Montalcino -  4142 
+Casanova di Neri Brunello di Montalcino Tenuta Nuova -  4144 
+Il Poggione Vigna Paganelli Brunello di Montalcino Riserva -  4146 
+Belguardo Bronzone Morellino di Scansano DOCG -  4150 
+San Guido Sassicaia -  4151 
+Coffele Valpolicella -  4154 
+Tommasi Bardolino DOC -  4158 
+Monte Schiavo Marzaiola Lacrima di Morro d'Alba -  4159 
+Villa Matilde Camarato Falerno del Massico -  4161 
+Leone de Castris Salice Salentino Riserva  -  4162 
+Selezione Fellini Cannonau di Sardegna -  4165 
+FILÃO Douro Portugal -  4182 
+Robert Gilliard Sion Dole des Monts -  4191 
+Light Castle Cabernet Sauvignon -  4192 
+Golan Heights Winery Yarden Syrah -  4194 
+Golan Heights Winery Yarden Pinot Noir -  4195 
+Golan Heights Winery Yarden Cabernet Sauvignon -  4196 
+Wynns Coonawarra Cabernet Sauvignon -  4229 
+Coldstream Hills Pinot Noir -  4236 
+Clos Henri Petit Clos Henri Pinot Noir -  4244 
+Robert Mondavi Napa Valley Cabernet Sauvignon -  4258 
+Yao Ming Napa Valley Cabernet Sauvignon -  4265 
+Yao Ming Family Reserve Napa Valley Cabernet Sauvignon -  4266 
+Clos de los Siete (Bordeaux Blend) -  4281 
+Cindy's Collection Shiraz-Pinotage -  4301 
+Helan Mountain,Cabernet Sauvignon -  4310 
+Helan Mountain,Merlot -  4311 
+Chateau Lafite, Pauillac -  4318 
+Chateau Latour, Pauillac -  4319 
+Chateau Margaux, Margaux -  4320 
+Château Haut-Brion, Pessac Léognan -  4321 
+Chateau Mouton, Pauillac -  4322 
+Château Léoville-Las Cases, St. Julien -  4323 
+Château Léoville-Poyferré, St. Julien -  4324 
+Château Léoville-Barton, St. Julien -  4325 
+Château Cos d’Estournel, St. Éstephe -  4327 
+Château Montrose, St. Éstephe -  4328 
+Château Kirwan, Margaux -  4329 
+Château d’Issan, Margaux -  4330 
+Château Lagrange, St. Julien -  4331 
+Château Giscours, Margaux -  4332 
+Château Palmer, Margaux -  4333 
+Château La Lagune, Haut-Médoc -  4334 
+Château Desmirail, Margaux -  4335 
+Château Talbot, St. Julien -  4337 
+Château Duhart-Milon, Pauillac -  4338 
+Château Lynch-Bages, Pauillac -  4340 
+Château Camensac, Haut-Médoc -  4343 
+Chateau Poujeaux -  4344 
+Chateau Poujeaux -  4345 
+Chateau Peyre-Lebade, Haut-Médoc -  4346 
+Château Haut-Bailly, Premier Cru Pessac-Léognan -  4347 
+Domaine Francois Lamarche La Grande Rue Grand Cru Monopole -  4348 
+Domaine du Pegau Chateauneuf-du-Pape Cuvée da Capo -  4349 
+San Guido Sassicaia -  4353 
+San Guido Sassicaia -  4354 
+Allegrini Amarone della Valpolicella Classico DOCG -  4355 
+Tommaso Bussola TB Vigneto Alto, Amarone della Valpolicella Classico DOCG -  4356 
+Giuseppe Quintarelli Amarone della Valpolicella Classico DOCG -  4357 
+Romano dal Forno Vigneto Monte Lodoletta, Amarone della Valpolicella DOCG -  4358 
+Terra di Lavoro, Roccamonfina IGT (1.5L) -  4359 
+Yiron Galilee -  4360 
+Torbreck RunRig -  4361 
+Two Hands Wines Bella's Garden Shiraz -  4362 
+Two Hands Wines 'Coach House Block' Single Vineyard Shiraz -  4363 
+Two Hands Wines Ares Shiraz -  4364 
+Greenock Creek Alices Block Shiraz -  4365 
+Greenock Creek Alices Block Shiraz -  4366 
+Penfolds RWT -  4367 
+d'Arenberg Dead Arm Shiraz -  4368 
+Two Hands Wines Lilys Garden Shiraz -  4369 
+Two Hands Wines Max's Garden Heathcote Shiraz -  4370 
+Newton Unfiltered Merlot -  4371 
+Chateau Rauzan-Ségla -  4372 
+Chateau Rauzan-Ségla -  4373 
+Chateau Beychevelle -  4374 
+Chateau Beychevelle -  4375 
+Château Cos d’Estournel, St. Éstephe -  4376 
+Château Carlon-Segur, St. Éstephe -  4377 
+Château Carlon-Segur, St. Éstephe -  4378 
+Recioto Della Valpolicella Classico Bussola -  5010 

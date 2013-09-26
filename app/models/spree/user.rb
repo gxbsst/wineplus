@@ -10,6 +10,7 @@ module Spree
 
 
     has_many :orders
+    # has_many :wish_list
     belongs_to :ship_address, :foreign_key => 'ship_address_id', :class_name => 'Spree::Address', :include => [:state, :country]
     belongs_to :bill_address, :foreign_key => 'bill_address_id', :class_name => 'Spree::Address'
 

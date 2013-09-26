@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130910031642) do
+ActiveRecord::Schema.define(:version => 20130911042010) do
 
   create_table "grape_varieties", :force => true do |t|
     t.integer  "product_id"
@@ -272,6 +272,7 @@ ActiveRecord::Schema.define(:version => 20130910031642) do
     t.datetime "updated_at",                                                                         :null => false
     t.string   "currency"
     t.string   "last_ip_address"
+    t.integer  "created_by_id"
   end
 
   add_index "spree_orders", ["number"], :name => "index_spree_orders_on_number"
@@ -749,8 +750,9 @@ ActiveRecord::Schema.define(:version => 20130910031642) do
   create_table "wish_list_items", :force => true do |t|
     t.integer  "user_id"
     t.integer  "product_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "wish_list_id"
   end
 
   add_index "wish_list_items", ["product_id"], :name => "index_wish_list_items_on_product_id"

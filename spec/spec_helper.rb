@@ -12,11 +12,18 @@ Spork.prefork do
   require 'rspec/rails'
   require 'rspec/autorun'
 
+  require 'spree/testing_support/url_helpers'
+  require 'spree/testing_support/controller_requests'
+
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
   RSpec.configure do |config|
+
+    config.include Spree::TestingSupport::UrlHelpers, :type => :integration
+    config.include Spree::TestingSupport::ControllerRequests, :type => :controller
+    config.include Devise::TestHelpers, :type => :controller
     # ## Mock Framework
     #
     # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
@@ -43,13 +50,45 @@ Spork.prefork do
     # the seed, which is printed after each run.
     #     --seed 1234
     config.order = "random"
+
+    config.before(:suite) do
+      DatabaseCleaner.strategy = :transaction
+    end
+
+    config.include FactoryGirl::Syntax::Methods
+
+
+    config.before(:each) do
+      DatabaseCleaner.start
+      # reset_email
+    end
+
+    config.after(:each) do
+      DatabaseCleaner.clean
+    end
+
+    def login(user)
+      controller.stub(:spree_current_user => user)
+    end
+
+    def let_wish_list!
+      let!(:wish_list) { stub_model(WishList, id: 1)}
+      # wish_list
+    end
+
+    def let_user
+      let(:user){create :user}
+      # user
+    end
+
+
   end
 
 end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-
+  FactoryGirl.reload
 end
 
 # --- Instructions ---
