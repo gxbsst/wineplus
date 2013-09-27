@@ -24,6 +24,8 @@ module Spree
         @order.create_proposed_shipments if @order.shipments.any?
         return if after_update_attributes
 
+        fire_event('spree.user.is_vip') if current_spree_user && current_spree_user.vip?
+
         fire_event('spree.order.contents_changed')
       
 
@@ -44,8 +46,6 @@ module Spree
               fire_event('spree.checkout.update')
             end
         end
-
-
 
       respond_with(@order) do |format|
         format.html do

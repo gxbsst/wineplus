@@ -33,3 +33,6 @@ ActionMailer::Base.smtp_settings = {
     :enable_starttls_auto => true
     #:tls => true # ssl
 }
+
+# add promotion rule if is vip
+Rails.application.config.spree.promotions.rules << Spree::Promotion::Rules::IsVip

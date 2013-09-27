@@ -5,7 +5,8 @@ module Spree
     self.event_names = [
       'spree.cart.add',
       'spree.order.contents_changed',
-      'spree.user.signup'
+      'spree.user.signup',
+      'spree.user.is_vip'
     ]
 
     def self.register_event_name(name)

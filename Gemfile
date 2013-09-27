@@ -30,7 +30,8 @@ gem 'newrelic_rpm'
 
 gem 'jquery-rails'
 
-gem 'spree', :github => "spree/spree", :branch => "c3dbeffa8dd5"
+# gem 'spree', :github => "spree/spree", :branch => "c3dbeffa8dd5"
+gem 'spree', :path => "lib/gems/spree"
 gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git', :branch => '2-0-stable'
 gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise.git', :branch => '2-0-stable'
 gem "spree_comments", github: 'spree/spree_comments'

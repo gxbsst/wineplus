@@ -44,6 +44,10 @@ module Spree
       has_spree_role?('admin')
     end
 
+    def vip?
+       has_spree_role?('vip')
+    end
+
     def anonymous?
       email =~ /@example.net$/ ? true : false
     end
