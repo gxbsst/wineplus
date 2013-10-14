@@ -1,0 +1,37 @@
+ <div class="pds_con">
+    <div class="psc_img">
+      <%= render :partial => 'image' %>
+    </div>
+    <div class="psc_title"><%= accurate_title %></div>
+    <div class="psc_sm">
+
+      <% if @product.style %>
+     <span>Style: <%= @product.style.name %></span>
+     <% end %>
+
+     <% if @product.region_en.present? %>
+      <span>Region: <%= link_to_region(@product.region_en)  %></span>
+      <% end %>
+
+      <% if @product.property(:vintage).present? %>
+      <span>Vinage: <%= @product.property(:vintage) %></span>
+      <% end %>
+      <% if @product.property(:capacity).present? %>
+       <span>Capacity:  <%= @product.property(:capacity) %> ML</span> 
+      <% end %>
+     </div>
+    <div class="psc_tot">
+     <span>Price:</span> 
+     <span class="pct_1"> <%= custom_display_price(@product) %></span>
+    </div>
+    
+    <div class="psc_btn">
+      <%= render :partial => 'cart_form' %>
+    </div>
+  </div>
+  <div class="rw_list">
+    <div class="rc_title">DESCRIPTION</div>
+    <div class="den_con">
+      <%= raw product_description(@product).lstrip rescue Spree.t(:product_has_no_description) %>
+    </div>
+  </div>

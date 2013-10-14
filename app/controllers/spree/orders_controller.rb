@@ -80,6 +80,7 @@ module Spree
         fire_event('spree.order.contents_changed')
         respond_with(@order) do |format|
           format.html { redirect_to cart_path }
+          format.mobile { redirect_to cart_path }
         end
       else
         flash[:error] = populator.errors.full_messages.join(" ")

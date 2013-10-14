@@ -25,6 +25,10 @@ class Spree::UserSessionsController < Devise::SessionsController
           user = resource.record
           render :json => {:ship_address => user.ship_address, :bill_address => user.bill_address}.to_json
         }
+        format.mobile {
+          flash[:success] = Spree.t(:logged_in_succesfully)
+          redirect_back_or_default(after_sign_in_path_for(spree_current_user))
+        }
       end
     else
       flash.now[:error] = t('devise.failure.invalid')

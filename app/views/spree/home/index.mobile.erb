@@ -1,1 +1,53 @@
-1111
+<div class="banner">
+	<%= image_tag '/mobile/images/banner1.jpg', :size => '320x140' %>
+</div>
+   <div class="red_con">
+     <div class="rc_title">RED WINE</div>
+     <ul class="rc_con">
+     	<% @reds.limit(3).each_with_index do |product,i| %>
+     	<li class=<%= i == 2 ? 'pro_last' : '' %> > 
+     		<span class="rcl_img">
+     			<%= link_to small_image(product, :itemprop => "image", :size => '85x96'), product, :itemprop => 'url' %>
+     		</span>
+     		<span class="rcl_name">
+     			<%= link_to truncate(product.name_with_vintage, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name_with_vintage %>
+     		</span> 
+     		<span class="rcl_tot"><%= custom_display_price(product) %></span>
+     	</li>
+     	<% end %>
+     </ul>
+   </div>
+   <div class="red_con">
+     <div class="rc_title">WHITE WINE</div>
+     <ul class="rc_con">
+     	<% @whites.limit(3).each_with_index do |product,i| %>
+     	<li class=<%= i == 2 ? 'pro_last' : '' %> > 
+     		<span class="rcl_img">
+     			<%= link_to small_image(product, :itemprop => "image", :size => '85x96'), product, :itemprop => 'url' %>
+     		</span>
+     		<span class="rcl_name">
+     			<%= link_to truncate(product.name_with_vintage, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name_with_vintage %>
+     		</span> 
+     		<span class="rcl_tot"><%= custom_display_price(product) %></span>
+     	</li>
+     	<% end %>
+
+     </ul>
+   </div>
+   <div class="red_con">
+     <div class="rc_title">SPARKLING WINE</div>
+     <ul class="rc_con">
+     	<% @sparklings.limit(3).each_with_index do |product,i| %>
+     	<li class=<%= i == 2 ? 'pro_last' : '' %> > 
+     		<span class="rcl_img">
+     			<%= link_to small_image(product, :itemprop => "image", :size => '85x96'), product, :itemprop => 'url' %>
+     		</span>
+     		<span class="rcl_name">
+     			<%= link_to truncate(product.name_with_vintage, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name_with_vintage %>
+     		</span> 
+     		<span class="rcl_tot"><%= custom_display_price(product) %></span>
+     	</li>
+     	<% end %>
+
+     </ul>
+   </div>

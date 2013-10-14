@@ -1,0 +1,27 @@
+<div class="lol_username"> 
+  <span class="lou_1">
+     <%= f.label :email, Spree.t(:email) %> *
+  </span>
+  <span class="lou_2">
+    <%= f.email_field :email, :class => 'title input7' %>
+  </span> 
+</div>
+
+<div class="lol_username"> 
+  <span class="lou_1">
+    <%= f.label :password, Spree.t(:password) %> *
+  </span> 
+  <span class="lou_2">
+     <%= f.password_field :password, :class => 'title input7' %>
+  </span> 
+</div>
+
+<div class="lol_username"> 
+  <span class="lou_1">
+    <%= f.label :password_confirmation, Spree.t(:confirm_password) %> *<br />
+  </span> 
+  <span class="lou_2">
+     <%= f.password_field :password_confirmation, :class => 'title input7' %>
+  </span> 
+</div>
+<div data-hook="signup_below_password_fields"></div>

@@ -1,0 +1,27 @@
+<div class="snp_bk">
+	<div class="sp_logo">
+		<%= image_tag '/mobile/images/logo_2.jpg', :size => '75x30' %>
+	</div>
+	<div class="sp_con">
+		<% if flash[:alert] %>
+		  <div class="flash errors"><%= flash[:alert] %></div>
+		<% end %>
+
+		<% if flash[:notice] %>
+		  <div class="flash notice"><%= flash[:notice] %></div>
+		<% end %>
+
+
+		<% if flash[:error] %>
+		  <div class="flash error"><%= flash[:error] %></div>
+		<% end %>
+		<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
+
+		<%= form_for Spree::User.new, :as => :spree_user, :url => spree.registration_path(@user) do |f| %>
+			<%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
+			<div class="ott_btn">
+			<%= f.submit 'Create an account', :class => 'button primary' %>
+			</div>
+		<% end %>
+	</div>
+</div>

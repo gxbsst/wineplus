@@ -1,0 +1,27 @@
+<%= form_for Spree::User.new, :as => :spree_user, :url => spree.create_new_session_path do |f| %>
+
+<div class="lol_username"> 
+  <span class="lou_1"> <%= f.label :email, Spree.t(:email) %> *<br /></span>
+  <span class="lou_2">
+    <%= f.email_field :email, :class => 'title input7', :tabindex => 1 %>
+  </span> 
+</div>
+
+<div class="lol_username"> 
+  <span class="lou_1">  <%= f.label :password, Spree.t(:password) %> *<br /></span> 
+  <span class="lou_2">
+    <%= f.password_field :password, :class => 'title input7', :tabindex => 2 %>
+  </span> 
+</div>
+
+<div class="lol_username"> 
+  <span class="lou_1"><%= f.check_box :remember_me %> <%= f.label :remember_me, Spree.t(:remember_me) %><br /></span> 
+  
+</div>
+
+<div class="sni_link">
+  <%= f.submit 'Login', :class => 'button primary', :tabindex => 3 %>
+  <span class="lor_lost"><%= link_to Spree.t(:forgot_password), spree.recover_password_path %></span>  
+</div>
+
+<% end %>
