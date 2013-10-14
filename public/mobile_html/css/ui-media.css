@@ -1,0 +1,24 @@
+/* CSS Document */
+@media all
+{
+	html
+	{
+		font-size:12px;
+	}
+}
+
+@media all and(min-width:140px)and(min-height:220px)
+{
+	html
+	{
+		font-size:9px;
+	}
+}
+
+@media all and(min-width:220px)and(min-height:140px)
+{
+	html
+	{
+		font-size:9px;
+	}
+}
