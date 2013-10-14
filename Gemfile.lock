@@ -48,7 +48,7 @@ GIT
       spree_frontend (~> 2.0.0)
 
 PATH
-  remote: lib/gems/spree-c3dbeffa8dd5
+  remote: lib/gems/spree
   specs:
     spree (2.0.3)
       spree_api (= 2.0.3)

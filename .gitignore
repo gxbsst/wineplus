@@ -27,3 +27,5 @@ lib/spree_one_page_checkout-master/*
 lib/tasks/datas/images
 public/spree/*
 .tags
+miss_image_sku.txt
+

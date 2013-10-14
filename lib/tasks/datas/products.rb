@@ -11,7 +11,7 @@ end
 
 
 def wine_price(line)
-  line[25].gsub(/[CN¥,]/,'').strip.try(:to_f).try(:round)  if line[25].present?
+  line[26].gsub(/[CN¥,]/,'').strip.try(:to_f).try(:round)  if line[26].present?
 end
 
 

@@ -22,13 +22,10 @@ products = {}
 
 def image(sku)
     attachments = []
-    # miss_image_sku = []
     image_directory = Rails.root.join('lib','tasks', 'datas/images')
     path = image_directory.join("#{sku}.png")
     if File.exist?(path)
       attachments << {:attachment => File.open(path)}
-    # else
-    #   miss_image_sku << sku
     end
 
     (1..5).to_a.each do |i|
@@ -58,7 +55,7 @@ images = {}
 file =  File.open("miss_image_sku.txt", "a+") 
 
 images = CSV.open(filename, :headers => true).inject({}) do |memo,line|
-  if line[0].present? && line[0].downcase == 'on' && line[21].present? && line[20].present?
+  if line[0].present? && line[0].downcase == 'on'  #&& line[21].present? && line[20].present?
     product = Spree::Product.find_by_name(line[9])
     if product.present? && image(line[7]).present?
       memo[product.master] = image(line[7])
