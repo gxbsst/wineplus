@@ -1,54 +1,62 @@
 
-<% @body_id = 'cart' %>
+<%= content_for :header do %>
+<div class="tb_left">
+  <%= link_to (image_tag '/mobile/images/top_btn2.jpg', :size => '30x30'), request.referer %>
+</div>
+<div class="tx_title">SIGN UP</div>
+<div class="tb_right">
+  <%= link_to (image_tag '/mobile/images/sp_pic1.jpg', :size => '30x30'), root_path %>
+</div>
+<% end %>
+<div class="sct_con">
+  <div class="stn_title">
+    <div class="ste_left"> 
+    </div>
+    <div class="ste_right">
+      <%= form_tag empty_cart_path, :method => :put do %>
+      <%= submit_tag Spree.t(:empty_cart), :class => 'button gray' %>
+      <% end %>
+    </div>
+  </div>
 
-<div class="shc_top">
-    <div class="sht_line"></div>
-
-<h1><%= Spree.t(:shopping_cart) %></h1>
-
-<% if @order.line_items.empty? %>
+  <% if @order.line_items.empty? %>
 
   <div data-hook="empty_cart" class="empty_cart_outer">
     <p><%= Spree.t(:your_cart_is_empty) %></p>
     <p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'button continue' %></p>
   </div>
 
-<% else %>
-  <div data-hook="outside_cart_form">
-    <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
-      <div data-hook="inside_cart_form">
-
-        <div data-hook="cart_items">
-          <%= render :partial => 'form', :locals => { :order_form => order_form } %>
-        </div>
-
-        <div id="subtotal" data-hook class="columns sixteen alpha omega">
-          <h5><%= Spree.t(:subtotal) %>: <span class="order-total"><%= @order.display_total%></span></h5>
-        </div>
-
-        <div class="links columns sixteen alpha omega" data-hook="cart_buttons">
-          <%= order_form.text_field :coupon_code, :size => 20, :placeholder => Spree.t(:coupon_code) %>
-          <%= button_tag :class => 'primary', :id => 'update-button' do %>
-            <%= Spree.t(:update) %>
-          <% end %>
-          <%= button_tag :class => 'button checkout primary', :id => 'checkout-link', :name => 'checkout' do %>
-            <%= Spree.t(:checkout) %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-
-    <div id="empty-cart" data-hook>
-      <%= form_tag empty_cart_path, :method => :put do %>
-      <%= submit_tag Spree.t(:empty_cart), :class => 'button gray' %>
+  <% else %>
+  <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
+  <%= render :partial => 'form', :locals => { :order_form => order_form } %>
+  
+  
+  <div class="stn_zs">
+    <div class="stz_left">
+      <%= order_form.text_field :coupon_code, :size => 20, :class => 'input2', :placeholder => Spree.t(:coupon_code) %>
+    </div>
+    <div class="stz_right"> 
+      <span>SUBTOTAL:</span>
+      <span class="szr_1"><%= @order.display_total%></span>
+    </div>
+  </div>
+  <div class="stn_btn">
+    <div class="stb_update">
+      <%= button_tag :class => 'primary', :id => 'update-button' do %>
+        <%= Spree.t(:update) %>
       <% end %>
     </div>
-
+    <div class="stb_set">
+      <%= button_tag :class => 'button checkout primary', :id => 'checkout-link', :name => 'checkout' do %>
+        <%= Spree.t(:checkout) %>
+      <% end %>
+    </div>
   </div>
-  <div class="clear"></div>
 
+  <% end %>
 
-
-<% end %>
+  <% end %>
 
 </div>
+
+

@@ -1,0 +1,86 @@
+  <div class="st_choose">
+    <div class="stc_con">
+      <table width=100% class="taxons" >
+        <tr class="tr1">
+          <td valign="top" class="td1">STYLE</td>
+          <td class="td2">
+            <%= style_tree %>
+          </td>
+        </tr>
+      </table>
+      <!-- end stc_con -->
+    </div>
+
+    <div class="stc_con">
+      <table width=100% class="taxons" >
+        <tr class="tr2">
+          <td class="td1" valign="top">REGION</td>
+          <td class="td2"><%= region_tree %></td>
+        </tr>
+      </table>
+      <!-- end stc_con -->
+    </div>
+
+
+    <div class="stc_con">
+      <table width=100% class="taxons" >
+        <tr  class="tr3">
+          <td valign="top" class="td1">VARIETY</td>
+          <td class="td2">
+            <%= variety_tree %>
+          </td>
+        </tr>
+      </table>
+      <!-- end stc_con -->
+    </div>
+
+    <!-- end st_choose -->
+  </div>
+
+
+  
+
+  <div class="rw_list">
+    <%
+    paginated_products = @searcher.retrieve_products if params.key?(:keywords)
+    paginated_products ||= @products
+    %>
+     <% if @products.empty? %>
+     <%= Spree.t(:no_products_found) %>
+     <% elsif params.key?(:keywords) %>
+     <h2 class="search-results-title"><%= Spree.t(:search_results, :keywords => h(params[:keywords])) %></h2>
+     <% end %>
+
+
+    <ul class="rwl_con">
+
+      <% if @products.any? %>
+      <% @products.each do |product| %>
+      <li>
+        <div class="rln_img">
+          <%= link_to small_image(product, :itemprop => "image", :size => '73x82'), product, :itemprop => 'url' %>
+        </div>
+        <div class="rln_text">
+          <span class="rnt_1">
+            <%= link_to truncate(product.name_with_vintage, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name_with_vintage %>
+          </span> 
+          <span class="rnt_3"><%= custom_display_price(product) %></span> 
+        </div>
+        <div class="rln_btn">
+          <%= link_to image_tag('/mobile/images/rw_pic2.jpg', :size => '15x23'), product %>
+        </div>
+      </li>
+      <% end %>
+      <% else %>
+       <li>No Products Found.</li>
+      <% end %>
+    </ul>
+    <div class="rwl_page">
+      <% if paginated_products.respond_to?(:num_pages) %>
+      <%= paginate paginated_products %>
+      <% end %>
+     </div>
+     <!-- end .rw_list -->
+  </div>
+
+      

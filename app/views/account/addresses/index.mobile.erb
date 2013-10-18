@@ -1,0 +1,52 @@
+
+<div class="home_con">
+  <div class="orders_con">
+    <div class="osc_sad">
+      
+      <div class="mos_title"><h1>Address Book</h1></div>
+      <div class="ast_con">
+       <% if flash[:notice] %>
+       <div class="flash notice"><%= flash[:notice] %></div>
+       <% end %>
+        <%= link_to 'Add New Address', new_account_address_path, :class => :add_new_address  %>
+      <div data-hook="account_my_orders" class="account-my-orders">
+      	<div class="dsx_con2">
+
+      <% if @addresses.present? %>
+			<% @addresses.each do |add| %>
+      		<div class="dsc_add1">
+      			<div class="dsa_title">
+      				<div class="dat_left"><%= add.state_name %></div>
+      				<div class="dat_right">
+                <% if add.is_current %>
+      					 <span class="drt_current">DEFAULT ADDRESS</span>
+                <% end %>
+      					<span><%= link_to "Delete", account_address_path(add.to_param), :method => :delete %> &nbsp;|</span>
+      					<span><%= link_to "Edit", edit_account_address_path(add) %> &nbsp;|</span>
+      				</div>
+      			</div>
+      			<%= render 'address_list', :add => add %>
+      		</div>
+      	<% end %>	
+        <% else %>
+          <h3>No Addresses!</h3>
+        <% end %>
+      	<!-- end dsx_con2 -->
+      	</div>	
+        <%#= render 'spree/users/order_list' %>        
+        <br />
+      </div>
+         <!-- end ast_con -->
+       </div>
+      <div class="rlt_bottom"> </div>
+      <!-- end .rl_right -->
+    </div>
+    <!-- end .rw_list -->
+  </div>
+  <!-- end .con_width -->
+</div>
+
+
+
+
+

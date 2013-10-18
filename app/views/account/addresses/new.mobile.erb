@@ -1,0 +1,17 @@
+
+<div class="con_width">
+	<div class="rw_list">
+		<div class="rl_left">
+			<%= render 'spree/users/sidebar' %>
+			<!-- end .rl_left -->
+		</div>
+		<div class="rl_right">
+			<div class="mos_title"><h1>New Address</h1></div>
+			<div class="ast_con">
+				<div data-hook="account_my_orders" class="account-my-orders">
+					<%= render 'form', :add => @address %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

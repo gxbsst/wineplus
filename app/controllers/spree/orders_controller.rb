@@ -13,6 +13,7 @@ module Spree
     end
 
     def update
+      
       @order = current_order
       unless @order
         flash[:error] = Spree.t(:order_not_found)
@@ -47,17 +48,27 @@ module Spree
             end
         end
 
-      respond_with(@order) do |format|
+        respond_with(@order) do |format|
+          format.mobile do
+            if params.has_key?(:checkout)
+              @order.next_transition.run_callbacks if @order.cart?
+            # redirect_to checkout_state_path(@order.checkout_steps.first)
+            redirect_to checkout_state_path(@order.state)
+          else
+            redirect_to cart_path
+          end
+        end
+
         format.html do
           if params.has_key?(:checkout)
             @order.next_transition.run_callbacks if @order.cart?
-              # redirect_to checkout_state_path(@order.checkout_steps.first)
-              redirect_to checkout_state_path(@order.state)
-            else
-              redirect_to cart_path
-            end
+            # redirect_to checkout_state_path(@order.checkout_steps.first)
+            redirect_to checkout_state_path(@order.state)
+          else
+            redirect_to cart_path
           end
         end
+      end
       else
         respond_with(@order)
       end

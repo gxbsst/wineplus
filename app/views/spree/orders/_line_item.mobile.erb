@@ -1,0 +1,34 @@
+  <li class="<%= cycle('', 'alt') %> line-item">
+
+  	<div class="snl_img">
+  		<% if variant.images.length == 0 %>
+  		<%= link_to mini_image(variant.product), variant.product %>
+  		<% else %>
+  		<%= link_to image_tag(variant.images.first.attachment.url(:mini)), variant.product %>
+  		<% end %>
+  	</div>
+  	<div class="snl_text">
+  		<div class="slt_title">
+  			<%= link_to variant.product.name_with_vintage, product_path(variant.product) %>
+
+  			<% if @order.insufficient_stock_lines.include? line_item %>
+  			<span class="out-of-stock">
+  				<%= Spree.t(:out_of_stock) %>&nbsp;&nbsp;<br />
+  			</span>
+  			<% end %>
+
+  		</div>
+  		<div class="slt_oty">
+  			<span>OTY: </span> 
+  			<span>
+  				<%= item_form.number_field :quantity, :min => 0, :class => "line_item_quantity", :size => 5 %>
+  			</span> 
+
+  			<%= link_to image_tag('icons/delete.png'), '#', :class => 'delete', :id => "delete_#{dom_id(line_item)}" %>
+  		</div>
+  		<div class="slt_tot">
+  			<span>TOTAL:</span>
+  			<span class="pct_1"><%= line_item.single_money%></span>
+  		</div>
+  	</div>
+  </li>

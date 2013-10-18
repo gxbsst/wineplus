@@ -5,46 +5,125 @@
 <meta charset="UTF-8">
 <!-- <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<%= javascript_include_tag 'mobile/all' %>
 <%= stylesheet_link_tag '/mobile/css/style', :media => 'screen' %>
 <%= stylesheet_link_tag '/mobile/css/ui-media', :media => 'media' %>
+<%= stylesheet_link_tag '/mobile/css/custom' %>
 </head>
  <body id="body" style="width: 320px; margin: 0px auto;">
-   <header>
-     <div class="top" id="top">
-       <div class="logo">
-        <%= image_tag '/mobile/images/logo.jpg', :size => '81x45' %>
-      </div>
-      <div class="top_btn"> 
-        <span>
-          <%= link_to (image_tag '/mobile/images/top_btn4.jpg', :size => '30x30'), '#' %>
-        </span>
-        <span>
-          <%= link_to (image_tag '/mobile/images/top_btn5.jpg', :size => '30x30'), '#' %>
-        </span>
-        <span>
-          <%= link_to (image_tag '/mobile/images/top_btn6.jpg', :size => '30x30'), '#' %>
-        </span> 
-      </div>
+  <% if controller_name == 'home' && action_name == 'index' %>
+    <header>
+      <div class="top" id="top">
+        <div class="logo">
+         <%= image_tag '/mobile/images/logo.jpg', :size => '81x45' %>
+       </div>
+       <div class="top_btn"> 
+         <span>
+           <%= link_to (image_tag '/mobile/images/top_btn4.jpg', :size => '30x30'), '/account' %>
+         </span>
+         <span>
+           <%= link_to (image_tag '/mobile/images/top_btn5.jpg', :size => '30x30'), spree.cart_path %>
+         </span>
+         <span>
+           <%= link_to (image_tag '/mobile/images/top_btn6.jpg', :size => '30x30'), '#', :id => "menu_button" %>
+         </span> 
+       </div>
+     </div>
+
+     <ul class="list_btn close">
+         <li class="lb_1">
+           <a href="/">
+             <span>
+               <%= image_tag '/mobile/images/top_btn3.jpg', :size => '30x23' %>
+             </span>
+             <span>HOME</span>
+           </a>
+           </li>
+         <li>
+           <a href="/cart">
+             <span>
+               <%= image_tag '/mobile/images/top_btn7.jpg', :size => '30x23' %>
+             </span>
+             <span>SHOPPING CART</span>
+           </a>
+           </li>
+         <li class="lb_2">
+           <a href="/account">
+             <span>
+                <%= image_tag '/mobile/images/top_btn8.jpg', :size => '30x23' %>
+             </span>
+             <span>MY ACCOUNT</span>
+           </a>
+           </li>
+       </ul>
+
+     <nav class="menu"> 
+       <%= link_to 'RED', link_to_taxon('Red') %> 
+       <%= link_to 'WHITE', link_to_taxon('White') %> 
+       <%= link_to 'SPARKLING', link_to_taxon('Sparkling') %> 
+       <%= link_to 'EXPLORE', products_path  %>
+       <a href="#" class="menu_last">ACCESSORIES</a>
+     </nav>
+
+     <div class="mx_line">
+       <%= image_tag '/mobile/images/home_pic1.jpg', :size => '320x5' %>
+     </div>
+     <div class="search_con">
+       <%= form_tag spree.products_path, :method => :get do %>
+       <div class="sc_left">
+         <%= text_field_tag :keywords, params[:keywords], :placeholder => Spree.t(:search), :class => 'input1' %>
+       </div>
+       <div class="sc_btn"><%= submit_tag 'SEARCH', :name => nil, :class => 'search_button' %></div>
+       <% end %>
     </div>
-    <nav class="menu"> 
-      <%= link_to 'RED', link_to_taxon('Red') %> 
-      <%= link_to 'WHITE', link_to_taxon('White') %> 
-      <%= link_to 'SPARKLING', link_to_taxon('Sparkling') %> 
-      <%= link_to 'EXPLORE', products_path  %>
-      <a href="#" class="menu_last">ACCESSORIES</a>
-    </nav>
-    <div class="mx_line">
-      <%= image_tag '/mobile/images/home_pic1.jpg', :size => '320x5' %>
-    </div>
-    <div class="search_con">
-      <%= form_tag spree.products_path, :method => :get do %>
-      <div class="sc_left">
-        <%= text_field_tag :keywords, params[:keywords], :placeholder => Spree.t(:search), :class => 'input1' %>
+
+    
+
+  </header>
+  <% else %>
+
+  <header>
+    <div class="top" id="top">
+      <div class="tb_left">
+        <%= link_to (image_tag '/mobile/images/top_btn2.jpg', :size => '30x30'), request.referer %>
       </div>
-      <div class="sc_btn"><%= submit_tag 'SEARCH', :name => nil, :class => 'search_button' %></div>
-      <% end %>
-   </div>
- </header>
+      <div class="tx_title"><%= mobile_title %></div>
+      <div class="tb_right">
+        <%= link_to (image_tag '/mobile/images/top_btn1.jpg', :size => '30x30'), "javascript:void(0)", :id => 'menu_button' %>
+      </div>
+      <%#= yield :header %>
+    </div>
+    <ul class="list_btn close">
+        <li class="lb_1">
+          <a href="/">
+            <span>
+              <%= image_tag '/mobile/images/top_btn3.jpg', :size => '30x23' %>
+            </span>
+            <span>HOME</span>
+          </a>
+          </li>
+        <li>
+          <a href="/cart">
+            <span>
+              <%= image_tag '/mobile/images/top_btn7.jpg', :size => '30x23' %>
+            </span>
+            <span>SHOPPING CART</span>
+          </a>
+          </li>
+        <li class="lb_2">
+          <a href="/account">
+            <span>
+               <%= image_tag '/mobile/images/top_btn8.jpg', :size => '30x23' %>
+            </span>
+            <span>MY ACCOUNT</span>
+          </a>
+          </li>
+      </ul>
+
+  </header>
+  <% end %>
+
+  
 
  <div class="home_con">
    <%= yield %>
@@ -52,11 +131,14 @@
  
  <footer>
    <div class="ft_top">
+    <% if !current_spree_user %>
      <div class="fp_left">
       <%= link_to 'Register', signup_path %> 
       <%= link_to 'Login', login_path %> 
     </div>
-     <div class="fp_right"><a href="#top">Top</a></div>
+    <div class="fp_right"><a href="#top">Top</a></div>
+    <% end %>
+     
    </div>
    <div class="ft_bottom">
      <div class="fb_link"> 

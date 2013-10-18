@@ -1,0 +1,10 @@
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
+
+<ul class="stn_list">
+  <%= order_form.fields_for :line_items do |item_form| %>
+    <%= render :partial => 'line_item', :locals => { :variant => item_form.object.variant, :line_item => item_form.object, :item_form => item_form } %>
+  <% end %>
+  
+</ul>
+
+<%= render "spree/orders/adjustments" unless @order.adjustments.eligible.blank? %>

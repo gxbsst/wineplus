@@ -84,4 +84,14 @@ module ApplicationHelper
   def custom_display_price(product_or_variant)
     product_or_variant.price_in(current_currency).display_price
   end
+
+  def mobile_title
+    title_string = @title.present? ? @title : accurate_title
+    if title_string.present?
+      title_string
+    else
+      default_title
+    end
+  end
+  
 end

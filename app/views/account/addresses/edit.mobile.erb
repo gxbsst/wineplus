@@ -1,0 +1,51 @@
+
+<div class="orders_con">
+  <div class="osc_sad">
+
+    <div class="mos_title"><h1>Edit Address</h1></div>
+    <div class="ast_con">
+      <div data-hook="account_my_orders" class="account-my-orders">
+
+        <div class="dsc_add1">
+          <div class="dsa_title">
+            <div class="dat_left"><%= @address.state_name %></div>
+            <div class="dat_right">
+              <% if @address.is_current %>
+              <span class="drt_current">DEFAULT ADDRESS</span>
+              <% end %>
+              <span><%= link_to "Delete", account_address_path(@address.to_param), :method => :delete %> &nbsp; |</span>
+            </div>
+          </div>
+
+          <%= render 'form', :add => @address %>
+
+        </div>
+
+        <% @addresses.each do |add| %>
+
+        <div class="dsx_con2">
+
+          <div class="dsc_add1">
+           <div class="dsa_title">
+            <div class="dat_left"><%= add.state_name %></div>
+            <div class="dat_right">
+              <% if add.is_current %>
+              <span class="drt_current">DEFAULT ADDRESS</span>
+              <% end %>
+              <span><%= link_to "Delete", account_address_path(add.to_param), :method => :delete %> &nbsp;|</span>
+              <span><%= link_to "Edit", edit_account_address_path(add) %> &nbsp;|</span>
+            </div>
+          </div>
+          <%= render 'address_list', :add => add %>
+
+        </div>
+        <!-- end dsx_con2 -->
+      </div>  
+      <% end %>	
+
+      <!-- end ast_con -->
+    </div>
+  </div>
+</div>
+
+

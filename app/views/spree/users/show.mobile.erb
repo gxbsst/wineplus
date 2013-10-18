@@ -1,0 +1,46 @@
+<div class="sas_con">
+  <div class="asc_top">
+    <div class="act_left">
+      <!-- <img src="images/acc_pic1.jpg" width="70" height="70"> -->
+    </div>
+    <div class="act_right">
+      <span>Welcome,</span>
+      <span class="atr_1"><%= @user.email %></span>
+    </div>
+  </div>
+
+  <ul class="asc_bottom">
+      <li>
+        <span class="acb_1">
+          <%= image_tag '/mobile/images/acc_pic2.jpg', :size => '8x8' %>
+        </span>
+        <span class="acb_2">Account Setting</span>
+        <span class="acb_3">
+          <%= link_to (image_tag '/mobile/images/acc_pic4.jpg', :size => '9x11'), spree.edit_account_path %>
+        </span>
+      </li>
+
+      <li>
+        <span class="acb_1">
+          <%= image_tag '/mobile/images/acc_pic2.jpg', :size => '8x8' %>
+        </span>
+        <span class="acb_2">My Orders</span>
+        <span class="acb_3">
+          <%= link_to (image_tag '/mobile/images/acc_pic4.jpg', :size => '9x11'), '/account/orders' %>
+        </span>
+      </li>
+
+      <li>
+        <span class="acb_1">
+          <%= image_tag '/mobile/images/acc_pic2.jpg', :size => '8x8' %>
+        </span>
+        <span class="acb_2">Address Book</span>
+        <span class="acb_3">
+          <%= link_to (image_tag '/mobile/images/acc_pic4.jpg', :size => '9x11'), account_addresses_path %>
+        </span>
+      </li>
+
+  </ul>
+
+
+</div>

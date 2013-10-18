@@ -1,0 +1,88 @@
+<% address_id = address_type.chars.first %>
+<div class="inner" data-hook=<%="#{address_type}_inner" %>>
+
+  <table class="name">
+    <tr class="tr1">
+      <td class="td1">
+        <p class="field" id=<%="#{address_id}firstname" %>>
+          <%= form.label :firstname, Spree.t(:first_name) %>
+          <span class="required">*</span>
+          <%= form.text_field :firstname, :class => 'required' %>
+        </p>     
+       </td>
+    </tr>
+    <tr>
+      <td class="td2">
+        <p class="field" id=<%="#{address_id}lastname" %>>
+          <%= form.label :lastname, Spree.t(:last_name) %>
+          <span class="required">*</span>
+          <%= form.text_field :lastname, :class => 'required' %>
+        </p>
+      </td>
+    </tr>
+  </table>
+  <!-- end .name -->
+
+  <table class="address">
+    <tr class="tr1" >
+      <td class="td1">
+       <p class="field" id=<%="#{address_id}country" %>>
+        <%= form.label :country_id, Spree.t(:country) %>
+        <span class="required">*</span>
+        <br/>
+        <span id=<%="#{address_id}country-selection" %>>
+          <%= form.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'required'} %>
+        </span>
+      </p>
+    </td>
+    <td class="td2">
+      <p class="field" id=<%="#{address_id}state" %>>
+        <%= form.label :state, Spree.t(:state) %>
+        <span class="required">*</span>
+        <br />
+        <span>
+          <%= form.collection_select(:state_id, address.country.states, :id, :name, {}, {:class => 'required'}) %>
+        </span>
+      </td>
+      <td class="td3">
+        <p class="field" id=<%="#{address_id}city" %>>
+          <%= form.label :city, Spree.t(:city) %>
+          <span class="required">*</span>
+          <br />
+          <%= form.text_field :city, :class => 'required' %>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="td4" colspan="3">
+        <p class="field" id=<%="#{address_id}address1" %>>
+          <%= form.label :address1, Spree.t(:street_address) %>
+          <span class="required">*</span>
+          <%= form.text_field :address1, :class => 'required' %>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="td5" colspan="3">
+        <p class="field" id=<%="#{address_id}zipcode" %>>
+          <%= form.label :zipcode, Spree.t(:zip) %>
+          <span class="required">*</span>
+          <%= form.text_field :zipcode, :class => 'required' %>
+        </p>
+      </td>
+    </tr>
+    <tr class="tr2">
+      <td colspan="3" class="td1">
+        <p class="field" id=<%="#{address_id}phone" %>>
+          <%= form.label :phone, Spree.t(:phone) %>
+          <span class="required">*</span>
+          <%= form.phone_field :phone, :class => 'required' %>
+        </p>
+      </td>
+
+    </tr>
+  </table>
+
+  <%= hidden_field_tag 'order[ship_address_attributes][is_current]', 1 %>
+  <%= hidden_field_tag 'order[ship_address_attributes][is_ship_address]', 1 %>
+</div>
