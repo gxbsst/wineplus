@@ -33,15 +33,15 @@ namespace :app do
     Pathname.new(Rails.root.join('lib', 'tasks', 'datas'))
   end
 
-  desc 'Init Products Data'
+  desc '请先执行rake app:init'
   task :init_products => :environment do
-    # load_sample("products") # DONE
-   # load_sample("taxons") # DONE
-    # load_sample("product_properties") #DONE
-   #load_sample("prototypes") #DONE
-   # load_sample("stock") #NOT DONE
-    # load_sample("variants")
-  load_sample("assets")
+     # load_sample("products") # DONE
+  # load_sample("taxons") # DONE
+     # load_sample("product_properties") #DONE
+    # load_sample("prototypes") #DONE
+     # load_sample("stock") #NOT DONE
+       # load_sample("variants")
+   load_sample("assets")
   end
 
   desc "TODO"

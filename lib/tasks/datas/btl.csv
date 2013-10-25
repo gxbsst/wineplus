@@ -1,4 +1,94 @@
 Status,Bar Category,wine_style,Country,Region,Sub_region,3th_region,serial No.,vintage,name_en,name_zh,capacity_mL,alcoholicity,variety,rating,rating_rp,rating_ws,rating_jr,rating_am,info,image_id,enoteca_price,Source,trade_price,real_cost,,cellar_price,年份,期初存货,购入数量汇总,销售量汇总by bottle,销售数量汇总by glass,销售数量汇总tasting flights,内部调货数量汇总-兕维,损耗数量汇总,库存数量,实盘数量,存储位置,送货单单价,供应商供货总价,内部调货金额汇总兕维,销售成本,存货,AL+AM,Total real_cost,Total enoteca_price,销售单价  by bottle,销售单价 by glass,销售单价tasting flights,损耗金额汇总表,销售额汇总表,备注,购货价比对,库存比对,,盘存状态,
+ON,by_glass,Sparkling,France,Champagne,,,101,NV,Louis Roederer Brut Premium,路易王妃香槟,125,12.00%,"Pinot Noir/40%
+Chardonnay/40% 
+Pinot Meunier/20%",4.5,,91,16,,"路易王妃香槟NV融合了来自40个葡萄园中6个不同的年份的黑比诺,霞多丽,皮诺莫尼耶葡萄。储於橡木桶36个月，是上乘的香槟。色泽呈淡金色，果香优雅怡人，酒质丰满，有结构感，复杂多变化。
+Brut Premier embodies the Louis Roederer house style, gracefully blending the old and new. Made from reserve wines, it allies the freshness of youth the roundness and vinosity of mature wine. This is structured, expansive Champagne with a smooth attack and a modern, powerful style with no loss of finesse.",Louis_Roederer_brut_nv.png,¥128.00,LKS,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,Sparkling,Spain,Cava,,,102,NV,Freixenet Cava Carta Nevada,菲斯奈特金牌起泡葡萄酒                              ,125,,"Parellada /33%, 
+Macabeo/ 33%, 
+Xarello/ 33%
+
+",,,87,,,"Straw yellow in color; clean and brilliant with medium-sized bubbles producing a persistent mousse. Light floral aromas on the nose, with a cleansing palate due to medium ageing. The dosage is made with wine from the same coupage aged for 12 mouths in oak barrels.
+Best served at a temperature of 6-7ºC.
+清雅的稻黄色酒体，酒体晶莹剔透，泡沫丰富持久，大小适中。淡淡的花香味，适度的陈酿令其口味清爽怡人。后添加的酒液是同批酒液经过12个月在橡木桶中的陈酿精心制成。
+适宜在6至7摄氏度条件下饮用。
+
+",freixenet_carta_nevada_bs.png,¥55.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,Sparkling,Spain,Cava,,,103,NV,Freixenet Cordon Negro Cava Brut,菲斯奈特黑牌起泡葡萄酒                              ,125,,"Parellada /40%
+Macabeo/35%
+Xarello /25%
+",,,90,,,"
+Brilliant pale yellow in color. Fine, intense and fruity aromas with persistent mousse. Clean and light on the palate with elegant length.
+Best served at a temperature of 6-7ºC.
+晶莹剔透的浅黄色酒体。香气精致，浓郁，果香十足，汽泡丰富。口味清新淡雅，回味持久，怡人。
+适宜在6至7摄氏度条件下饮用。",Freixenet_cordon_negro_bs.png,¥60.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+ON,by_glass,Sparkling Rosé,Australia,,,,104,NV,Chandon Brut NV rosé,香桐粉红起泡葡萄酒,125,12.50%,"Chardonnay
+Pinot noir",,,,,,"Chandon Rosé NV
+Fresh ripe black cherries, citrus and stone fruit notes dominate the nose, complimented by freshly baked pie crust aromas from 18 months of yeast age. The gentle and creamy mouth feel reveals stone fruits, raspberry and vanilla ice-cream characters. Soft citrus tones keep the palate fresh, balanced and focused.
+香桐粉红起泡葡萄酒
+新鲜成熟的黑樱桃，柑橘，核果的味道十分明显，此外18个月的酵母沉淀陈年赋予新鲜如烤馅饼起酥的芳香。入口柔和，质地如奶油般幼滑，核果，覆盆子，香草冰激凌的特征十分明显；柔美的柑橘的味道令口感十分清新且均衡。",Chandon_Brut_Rose_NV_beautyshot.png,¥80.00,MHD,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,White,France,Alsace,,,105,2009,Trimbach Riesling AOC,婷芭克世家阿尔萨斯雷司令法定产区干白葡萄酒                              ,125,,Riesling/100% ,,86,,,,"Light golden color. Nose of sweet apples, peaches, flowers. Palate of same with some citrus, petrol, minerals. Very balanced. Essentially dry. Great wine.
+此酒呈淡淡的金色。有着甜甜的苹果，桃子以及花的香气。还带有一些柑橘香及汽油和矿石的气息。平衡较好、质地干洌。是一款佳酿",Trimbach_riesling.png,¥80.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,White,France,Languedoc-Roissillon,VDF,,106,2010,Le Bosq Blanc Vin de France ,博斯克白葡萄酒 ,125,12%,"Colmbard/50%
+Ugri Blanc/40%
+Sauvignon/10%",,,,,,"此酒有新鲜柑橘味，绿色和白色的清新的桃子味道。
+Fresh flavours of green citrus and white peaches with a refreshing and well-balanced palate.",,¥45.00,LKS,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,White,Italy,Trentino-Alto Adige,,,107,2011,Alois Lageder Riff Pinot Grigio IGT,拉格德酒园白云石灰皮诺干白葡萄酒                              ,125,,Pinot Grigio/100%,,,,,,"Produced from vineyards around the Dolomites, this Pinot Grigio is very fresh and vital, showing spicy, melony fruit, a lees character and intense minerality. It is very refreshing and an outstanding value
+ 产自葡萄园周围的白云石土质，新鲜而具有生命力，口感略显辛辣，具有甜瓜香气, 具备酒香的特制并伴随强烈的矿物质气息。这是一款令人喜欢且物有所值的酒。
+
+",Riff_Pinot_Grigio_2009.png,¥60.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,White,Italy,Sicilia,,,108,2011,Donnafugata Anthilia Sicilia IGT,多娜佳塔酒园阿塞丽干白葡萄酒                              ,125,,"Ansonica/50%
+Cataratto/ 50%
+
+",,,,,,"Aromas of yellow peaches and plums. On the palate, it is soft with a pleasant mouth feel.  Very enjoyable served with lightly smoked fish, seafood and lighter dishes.  
+ 黄桃与李子的芬芳沁人心脾，口感柔和怡人。
+与微熏的鱼类或海鲜及口味清淡的菜肴搭配鲜美可口。",anthilia_donnafugata_nv.png,¥70.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,White,New Zealand,South Island,Marlborough,,109,2011,Cloudy Bay Sauvignon Blanc,云雾之湾苏维浓白葡萄酒,125,13.50%,Sauvignon Blanc ,5,-,91,-,,"Cloudy Bay Sauvignon Blanc
+Cloudy Bay Sauvignon Blanc is reminiscent of a fresh summer fruit salsa – ripe peach, passion fruit, mango and juicy citrus – sprinkled with fresh fennel and a dash of Pastis. The palate is rich and succulent, with a zesty citrus and apple-sherbet acidity.
+云雾之湾苏维浓白葡萄酒
+云雾之湾苏维浓白葡萄酒让您回想起新鲜可口的夏日水果果酱－成熟的桃子，西番莲，芒果，还有可口的橘子汁，期间透出新鲜的茴香和法国香料的气息。该酒口感丰富可口，让人联想到多汁的水果，有柑桔，冰冻苹果露的酸甜。",Cloudy_Bay_SB.png,¥98.00,MHD,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,White,Chile,Central Valley,Maipo,,110,2011,Santa Rita Medalla Real Chardonnay,桑塔丽塔真实勋章霞多丽干白葡萄酒                              ,125,,Chardonnay/100% ,,,,,,"Attractive greenish-yellow colored wine. Lively, brilliant, with good varietal intensity. Tropical fruits tones, with fine wood, vanilla and dry fruits.  On the palate it is creamy, with elegant complexity. Ideal for long ageing.
+White meats, fish and raw or cooked shellfish. Pastas with sea food. 黄绿色酒体淡雅迷人。酒质活跃而出众，带有葡萄品种典型的醇郁特质。热带果香与精致的木香、香草及干果的芬芳交织融合。有着乳脂般的质感，酒体优雅而复杂，适于久藏。
+搭配白肉、鱼肉、生鲜或烹熟的贝类及海鲜意面味道鲜美无比。
+",santa_rita_medalla_real_chardonnay_2008.png,¥60.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,Red,France,Languedoc-Roissillon,VDF,,111,2011,Le Bosq Rouge Vin de France,博斯克红葡萄酒 ,125,12.50%,"Carignan/63%
+Grenache/25%
+Syrah/12%",,,,,,"此酒色泽鲜红，配合柔软和圆滑口感和水果的味道。
+Red color shows a ripe fruit character overlaid with spicy notes of aromatic hers and a soft, round and fruity flavour.",Le_Bosq_vdf_rouge.png,¥45.00,LKS,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,Red,Australia,Coonawarra,,,112,2011,Penfolds Bin 128 Coonawarra Shiraz,奔富酒园BIN128库纳瓦拉设拉子干红葡萄酒                              ,125,,Shiraz,,,,,,,,¥160.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,Red,New Zealand,South Island,Marlborough,,113,2010,Clos Henri Petit Clos Henri Pinot Noir,亨利葡萄园小亨利黑皮诺,125,,,,,,,,,,¥60.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,Red,Argentina,Cuyo,Mendoza,,114,2011,Doña Paula Malbec,褒莱夫人宝拉系列马尔白克红葡萄酒                              ,125,,Malbec/100% ,,,,,,"Our Paula Malbec 2008 presents a typical violet-red color. Its aromas of fresh red and black fruits, berries, spices and cigar box announce a smooth and round wine in mouth.
+我们2008年的这款宝拉系列马尔白克呈现出典型的紫罗兰红色。他的芳香中有新鲜红色和黑色水果的香气，并伴随着梅子、香料及雪茄盒的气息，口感顺滑圆润。
+
+",dona_paula_malbec_nv.png,¥50.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,Red,Chile,Central Valley,Maipo,,115,2012,Carmen Cabernet Sauvignon,卡门探索加本力苏维翁红葡萄酒,125,,Cabernet Sauvignon,,,,,,,,¥45.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+OFF,by_glass,Red,Chile,Central Valley,Maipo,,116,2011,Santa Rita Gran Hacienda Merlot,桑塔丽塔古园梅洛红葡萄酒                              ,125,,Merlot/100%,,,,,,"Deep, red color, with violet and ruby hues. Fragrant
+aromas of fresh strawberry, plum and vanilla are complemented by a hint of dried
+herbs. Its sweet, well-rounded flavor, rich in fruity undertones, is enhanced by soft tannins and a pleasing note of oak. A treat to be enjoyed on all occasions.
+
+Food Pairing: Ideal for informal ""home style"" foods, mild cheeses and pastas。 深红宝石色，带有紫罗兰的色晕，新鲜草莓，李子和香草的芳香由干药草的清香得到加强。入口甘甜，圆润，果味十足，并由柔软的丹宁和橡木桶的芳香得到提升。能适合任意场合的饮用。
+搭配非正式场合的家居用餐，清淡芝士和意大利面食。
+",Santa_rita_gran_hacienda_merlot_2007.png,¥45.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+ON,by_glass,Fortified,Portugal,Duoro,,,117,NV,Taylors Fine Ruby,泰来钵酒（利口葡萄酒）                              ,125,,Touriga Nacional,,,,,,"Deep ruby-red in color with a garnet rim. A firm, vigorous, full-bodied palate, with powerful fruit flavors and a long finish.
+It is an excellent dessert wine, particularly with ripe, blue cheese.
+ 红宝石般的酒体，边缘泛着石榴红色泽。此酒质地紧凑，酒体饱满而丰厚，果香馥郁，令人回味悠长。
+最适宜与甜点相搭配饮用，特别是与成熟的绿奶酪相配。
+
+",taylors_ruby_port.png,¥80.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+ON,by_glass,Fortified,Spain,Andalucia,Jerez,,118,NV,Emilio Lustau Puerto Fino Solera,卢士涛菩托干型雪莉葡萄酒（产膜葡萄酒）                              ,125,,Palomino Fino,,,,,,"A dry and elegant sherry that is light, smooth and fresh, with attractive fruit and just a hint of tangy yeast and the sea.
+Food Suggestion: Ideal as an apéritif or with food. Delicious with shellfish and other seafood.
+ 一款高雅的干型雪莉酒，轻柔，顺滑且清新，带有诱人的水果和一丝咸酵母的香气，展现出大海的气息。
+配餐建议：理想的开胃酒，可与贝类或其他海鲜搭配。
+
+",lustau_puerto_fino_sherry.png,¥80.00,ASC,,,,¥0.00,,0,0,0,0,0,0,0,0,,,,0,0,0,0,0,¥0.00,,,,,0,0,,,,,,
+ON,by_glass,Sparkling,Australia,,,,119,NV,Chandon Brut NV,香桐起泡葡萄酒,125,,,,,,,,,,¥60.00,MHD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,by_glass,White,Australia,South Australia,,,120,2011,Peter Lehmann Weighbridge Unoaked Chardonnay,乐民酒园维桥莎当妮白葡萄酒                              ,125,,,,,,,,,,¥50.00,ASC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,by_glass,White,France,Bourgogne,Chablis,,121,2010,Jean-Paul et Benoit Droin Chablis,朵林夏布利白葡萄酒,125,,,,,,,,,,¥88.00,ASC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,by_glass,White,France,Bourgogne,,,122,2011,Louis Jadot Bourgogne Chardonnay,路易亚都世家勃根蒂莎当妮法定产区干白葡萄酒 ,125,,,,,,,,,,¥78.00,ASC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,by_glass,White,US,California,Monterey,,123,2010,Hess Select Chardonnay Monterey,赫斯精选蒙特里莎当妮白葡萄酒                              ,125,,,,,,,,,,¥78.00,ASC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,by_glass,Red,Italy,Trentino-Alto Adige,,,124,2010,Alois Lageder Pinot Noir DOC,拉格德酒园黑皮诺干红葡萄酒                              ,125,,,,,,,,,,¥95.00,ASC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,by_glass,Red,Italy,Piedmont,Barbera d'Asti,,125,2010,Michele Chiarlo Barbera d'Asti DOC Sup,迈克基阿罗酒庄精选阿斯蒂巴贝拉奥秘法定产区干红葡萄酒                              ,125,,,,,,,,,,¥68.00,ASC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,by_glass,Red,Italy,Tuscana,IGT Rosso,,126,2010,Tenuta dell'Ornellaia Le Volte Toscana IGT,乐福特红葡萄酒                              ,125,,,,,,,,,,¥98.00,ASC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,by_glass,Red,Italy,Sicilia,,,127,2010,Donnafugata Sedara Nero d'Avola Sicilia IGT,多娜佳塔酒园塞拉塔干红葡萄酒,125,,,,,,,,,,¥78.00,ASC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ON,by_btl,Sparkling,France,Champagne,,,1001,NV,Champagne Louis Roederer Brut Premium,路易王妃香槟,750,12.00%,"Pinot Noir/40%
 Chardonnay/40% 
 Pinot Meunier/20%",4.5,,91,16,,"路易王妃香槟NV融合了来自40个葡萄园中6个不同的年份的黑比诺,霞多丽,皮诺莫尼耶葡萄。储於橡木桶36个月，是上乘的香槟。色泽呈淡金色，果香优雅怡人，酒质丰满，有结构感，复杂多变化。
@@ -1959,3 +2049,66 @@ Food Suggestion: Ideal as an apéritif or with food. Delicious with shellfish an
 配餐建议：理想的开胃酒，可与贝类或其他海鲜搭配。
 
 ",lustau_puerto_fino_sherry.png,¥390.00,ASC,,¥151.00,,¥188.75,,0,2,0,0,0,0,0,2,,冰箱1,151,302,0,0,302,302,¥302,¥0,0,0,0,0,0,,T,F,F,Y,
+ON,Food,,,,,,7003,,Nespresso,Nespresso咖啡,,,,,,,,,,,¥30.00,,,,,¥0.00,,0,0,0,5,0,0,0,-1,,,,0,0,0,0,0,¥0,0,0,120,0,0,150,,T,F,F,,
+ON,Food,,,,,,7004,,5J Jamón Ibérico/Iberia Ham Plate,5J伊比利亚橡果饲黑脚猪火腿拼盘（36个月酿造）,,,,,,,,,,,¥280.00,JR,,,,¥0.00,,0,0,45,4,0,0,0,-45.8,,,,0,0,0,0,0,0,0,1120,240,0,0,13080,,T,F,F,,
+ON,Food,,,,,,7007,,Olive “Monzanilla”,西班牙橄欖,,,,,,,,,,,¥30.00,JR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,Gave de lugny bourgongne piont noir,,,,,,,,,,,,,,,,,,,,0,0,2,0,0,0,-0.4,,,,0,0,0,0,0,0,0,0,180,0,0,120,,,F,F,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,2,0,0,0,-0.4,,,,0,0,0,0,0,0,0,0,120,0,0,60,,,F,T,,
+,,,,,,,,2010,Mannenberg Pinotage,曼恩博格皮特吉红葡萄酒,,,,,,,,,,,,JBS,,¥53.00,,¥66.25,2010,0,6,0,4,0,0,3,2,,H3,53,318,0,10.6,137.8,318,¥318,0,0,200,0,169.6,200,,T,F,F,,
+,,,,,,,,,Musigny Grand Cru,,,,,,,,,,,,"¥8,000.00",SM,,"¥1,800.00",,"¥2,250.00",1996,0,1,1,0,0,0,0,0,,,1800,1800,0,1800,0,1800,"¥1,800",0,24000,0,0,0,8000,,T,T,F,,
+,,,,,,,,,Moët & Chandon Rosé,礼盒装,1500,,,,,,,,,,,,,,,¥0.00,,0,3,0,0,0,2,0,1,,兕维,,738,492,0,738,738,¥0,0,0,0,0,0,0,,F,F,F,Y,
+,,,,,,,,,D.V.C Champagne,,,,,,,,,,,,,,,,,¥0.00,,0,3,0,0,0,0,0,3,,,,738,0,0,738,738,¥0,0,0,0,0,0,0,,F,F,F,Y,
+,,,,,,,,,Le Volti,,,,,,,,,,,,,,,,,¥0.00,,0,0,0,2,0,0,0,-0.4,,,,0,0,0,0,0,¥0,0,0,392,0,0,196,,T,F,F,,
+,,,,,,,,,"Pol Roger Brut Reserve ,Champagne AOC",,,,,,,,,,,,,SMG,,502,,¥627.50,NV,0,1,0,0,0,0,0,1,,,502,502,0,0,502,502,¥502,0,0,0,0,0,0,,T,F,F,,
+,,,,,,,,,Magenta Hill Chardonnay,,,,,,,,,,,,,TWR,,,,¥0.00,2010,0,6,0,0,0,0,0,6,,P8,0,0,0,0,0,0,¥0,0,0,0,0,0,0,,T,F,T,,
+,,,,,,,,,Magenta Hill Cabernet Sauvignon,,,,,,,,,,,,,TWR,,,,¥0.00,2009,0,6,0,0,0,0,0,6,,兕维,0,0,0,0,0,0,¥0,0,0,0,0,0,0,,T,F,F,,
+,,,,,,,,,Joseph Drou Puli Montr,,,,,,,,,,,,,Torres,,467,,¥583.75,,0,1,0,0,0,0,0,1,,P4,467,467,0,0,467,467,¥467,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Zonin Sparkling rose,,,,,,,,,,,,,Torres,,83,,¥103.75,,0,2,0,0,0,0,0,2,,,83,166,0,0,166,166,¥166,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,,百筏庄园筏日升吉朗黑品乐红葡萄酒,,,,,,,,,,,,Waston,,449,,¥561.25,2008,0,2,0,0,0,0,0,2,,"s1,2",449,898,0,0,898,898,¥898,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Chateau Naudeau.AOC Bordeaux,,,,,,,,,,,,,KER,,70,,¥87.50,2010,0,2,0,0,0,0,0,2,,O,70,140,0,0,140,140,¥140,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Holick the Nectar,,,,,,,,,,,,,RR,,,,¥0.00,2011,0,3,0,0,0,0,0,3,,P11,0,0,0,0,0,0,¥0,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Durbanville Hills Pinotage,德本山品乐葡萄酒,,,,,,,,,,,,,,,,¥0.00,,0,1,0,0,0,0,0,1,,O,0,0,0,0,0,0,¥0,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Wyndham Estate founder's Reserve,乔治云咸创始人珍藏加本内梅洛干红葡萄酒,,,,,,,,,,,,PRC,,184,,¥230.00,NV,0,2,0,0,0,0,0,2,,丙1,184,368,0,0,368,368,¥368,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,,新西兰圣山白壁马尔堡长相思,,,,,,,,,,,,JBS,,99,,¥123.75,2012,0,6,0,0,0,0,0,6,,P8，4号箱,99,594,0,0,594,594,¥594,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Legende Red,,1500,,,,,,,,,,,ASC,,,,¥0.00,2010,0,1,0,0,0,0,0,1,,,0,0,0,0,0,0,¥0,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Freixenet Carta Nevarda,,1500,,,,,,,,,,,ASC,,,,¥0.00,,0,1,0,0,0,0,0,1,,,0,0,0,0,0,0,¥0,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Beringer Napa Valley Chardonnay,,,,,,,,,,,,,ASC,,170,,¥212.50,2010,0,12,0,0,0,6,0,6,,,170,2040,1020,0,2040,2040,"¥2,040",0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Beringer Knighet Valley Cabernet Sauvignon,,,,,,,,,,,,,ASC,,246,,¥307.50,2010,0,8,0,0,0,6,0,2,,,246,1968,1476,0,1968,1968,"¥1,968",0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Penfold Rawson's Retreat,,,,,,,,,,,,,SM,,1,,¥1.25,2009,0,1,0,0,0,0,0,1,,兕维,1,1,0,0,1,1,¥1,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,2000,Chateau Poujeaux,,,,,,,,,,,,,SM,,300,,¥375.00,2000,0,1,0,0,0,0,0,1,,Q10,300,300,0,0,300,300,¥300,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,,贺兰山赤霞珠干红（经典系列）,,,,,,,,,,,,PRC,,54,,¥67.50,,0,2,0,0,0,0,0,2,,,54,108,0,0,108,108,¥108,0,0,0,0,0,0,,T,F,F,Y,
+,,,,,,,,,Tenuta S.Anna lison bianco DOC,圣安娜.礼尚白葡萄酒,,,,,,,,,,,,HY,,50,,¥62.50,,0,12,0,0,0,0,0,12,,,50,600,0,0,600,600,¥600,0,0,0,0,0,0,,T,F,F,,
+,,,,,,,,2011,达利佳庄园珍藏白,,,,,,,,,,,,,,,,,,,0,3,0,0,0,0,0,3,,,,0,0,0,0,0,¥312,0,0,0,0,0,0,,,,T,,
+OFF,flights,,,,,,,,White Assenblage,,,,,,,,,,,,,,,,,¥0.00,,0,0,14,0,0,0,0,-14,,,,0,0,0,0,0,¥0,0,672,0,0,0,2352,,T,F,T,,
+OFF,flights,,,,,,,,Charm of the Varietal Whites,,,,,,,,,,,,,,,,,,,0,0,3,2,0,0,0,-3.4,,,,0,0,0,0,0,¥0,0,474,178,0,0,830,,,F,F,,
+OFF,flights,,,,,,,,Charm of the Varietal Reds,,,,,,,,,,,,,,,,,,,0,0,3,0,0,0,0,-3,,,,0,0,0,0,0,¥0,0,594,0,0,0,594,,,F,T,,
+OFF,flights,,,,,,,,A bite of Reds,,,,,,,,,,,,,,,,,¥0.00,,0,0,10,0,0,0,0,-10,,,,0,0,0,0,0,¥0,0,632,0,0,0,1580,,T,F,T,,
+ON,MonthlySpecial,,,,,,MS001,NV,Freixenet Cordon Negro Brut NV,菲斯奈特黑牌起泡葡萄酒                              ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,MonthlySpecial,,,,,,MS002,2009,Trimbach Riesling AOC,婷芭克世家阿爾薩斯雷司令法定產區乾白葡萄酒                              ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,MonthlySpecial,,,,,,MS003,2009,E. Guigal Cotes du Rhone,吉佳樂世家羅納山麓法定產區乾紅葡萄酒 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,MonthlySpecial,,,,,,MS004,2010,Tenuta dell'Ornellaia Le Volte Toscana IGT,樂福特紅葡萄酒                              ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,MonthlySpecial,,,,,,MS005,2011,Penfolds Bin 128 Coonawarra Shiraz,奔富酒園BIN128庫納瓦拉設拉子乾紅葡萄酒                              ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,MonthlySpecial,,,,,,MS006,2008,Enrico Serafino Barolo DOCG,賽拉菲諾-皮爾蒙特巴羅洛乾紅葡萄酒,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,flights,,,,,,TF001,,Chardonnay in Colourful,百变霞多丽,,,,,,,,,,,¥128.00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,flights,,,,,,TF002,,Italian Reds,斑斓意大利红,,,,,,,,,,,¥138.00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,flights,,,,,,TF003,,Selection of 3,随心配三款,,,,,,,,,,,¥118.00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,flights,,,,,,TF004,,Selection of 4,随心配四款,,,,,,,,,,,¥148.00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,flights,,,,,,TF005,,Selection of 5,随心配五款,,,,,,,,,,,¥178.00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ON,Food,,,,,,7005,,Cheese Plate,法国奶酪拼盘,,,,,,,,,,,¥120.00,,,,,¥0.00,,0,0,17,0,0,0,0,-17,,,,0,0,0,0,0,0,0,480,0,0,0,2040,,T,F,T,,
+ON,Food,,,,,,7110,,和风西点,,,,,,,,,,,,,,,,,,,0,0,5,0,0,0,0,-5,,,,0,0,0,0,0,0,0,300,0,0,0,500,,,F,T,,
+ON,Food,,,,,,7109,,roased bread,,,,,,,,,,,,,,,,,¥0.00,,0,0,1,0,0,0,0,-1,,,,0,0,0,0,0,0,0,240,0,0,0,60,,T,F,T,,
+ON,Food,,,,,,7006,,Toasted Bread plate,烘烤面包拼盘,,,,,,,,,,,¥80.00,,,,,,,0,0,4,0,0,0,0,-4,,,,0,0,0,0,0,0,0,240,0,0,0,320,,,F,T,,
+ON,Food,,,,,,7108,,sandwich,三明治,,,,,,,,,,,,,,,,¥0.00,,0,0,1,0,0,0,0,-1,,,,0,0,0,0,0,0,0,240,0,0,0,60,,T,F,T,,
+ON,Food,,,,,,7111,,Zhong Nan Hai Cig,中南海,,,,,,,,,,,,,,,,,,0,0,10,0,0,0,0,-10,,,,0,0,0,0,0,0,0,80,0,0,0,200,,,F,T,,
+ON,Food,,,,,,8001,,montecristo no2,,,,,,,,,,,,,,,,,,,0,0,1,0,0,0,0,-1,,,,0,0,0,0,0,0,0,400,0,0,0,200,,T,,F,,
+ON,Food,,,,,,8002,,montecristo no4,,,,,,,,,,,,,,,,,,,0,0,3,0,0,0,0,-3,,,,0,0,0,0,0,0,0,200,0,0,0,300,,T,,F,,
+ON,Food,,,,,,8003,,partagas no4,,,,,,,,,,,,,,,,,,,0,0,1,0,0,0,0,-1,,,,0,0,0,0,0,0,0,400,0,0,0,200,,T,,F,,
+,,,,,,,,,LA CALA,,,,,,,,,,,,,,,,,,,0,0,2,0,0,0,0,-2,,,,0,0,0,0,0,0,0,760,0,0,0,760,,T,,F,,
+ON,Food,,,,,,7001,,San Pellegrino Sparkling Natural Mineral Water,圣培露,1000,,,,,,,,,,¥60.00,ASC,,,,¥0.00,,0,420,39,0,0,0,0,381,,,,0,0,0,0,0,0,0,240,0,0,0,2340,,T,F,T,,
+ON,Food,,,,,,7002,,Acqua Panna Natural Mineral Water,普娜,1000,,,,,,,,,,¥60.00,ASC,,,,¥0.00,,0,180,9,0,0,0,0,171,,,,0,0,0,0,0,0,0,240,0,0,0,540,,T,F,T,,
+,,,,,,,,,,,,,,,,,,,,,,,"¥266,714.38","¥370,238.13",,"¥462,660.16",,,"2,973.00",556.00,333.00,51.00,587.00,111.60,"1,648.40",0.00,0.00,"326,299.93","863,956.13","176,400.00","98,880.32","748,364.23","861,592.93","849,010.52","243,956.00","455,625.00","10,403.00",436.00,"16,872.38","304,447.00",0.00,,F,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2967,556,333,51,587,111.6,7776.26666666667,0,0,1315638.72,863956.13,176400,98880.324,748364.226,861592.93,813096.26,102496,226399,5153,80,16872.38,304447,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,58.6,2,,,,,,,,,,,,,,,,,,,,,,,,

@@ -6,7 +6,7 @@ module Spree
     def index
       @red = Taxon.find_by_permalink!('style/red')
       @white = Taxon.find_by_permalink!('style/white')
-      @sparkling = Taxon.find_by_permalink!('style/white')
+      @sparkling = Taxon.find_by_permalink!('style/sparkling')
 
       @red_searcher = Spree::Config.searcher_class.new(params.merge(:taxon => @red.id))
       @reds = @red_searcher.retrieve_products.limit(10)

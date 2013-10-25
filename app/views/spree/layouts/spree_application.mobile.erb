@@ -131,13 +131,16 @@
  
  <footer>
    <div class="ft_top">
-    <% if !current_spree_user %>
+   <% if !current_spree_user %>
      <div class="fp_left">
-      <%= link_to 'Register', signup_path %> 
-      <%= link_to 'Login', login_path %> 
+        <%= link_to 'Register', signup_path %> 
+        <%= link_to 'Login', login_path %>      
     </div>
-    <div class="fp_right"><a href="#top">Top</a></div>
+    <% else %>
+     <span>Welcome, <%= link_to current_spree_user.email,  spree.account_path %>. </span>
     <% end %>
+
+    <div class="fp_right"><a class="scrollup" href="#top">Top</a></div>
      
    </div>
    <div class="ft_bottom">

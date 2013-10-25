@@ -33,7 +33,7 @@ filename = Rails.root.join('lib', 'tasks', 'datas', 'btl.csv')
 products = []
 
 CSV.open(filename, :headers => true).each do |line|
-  if line[0].present? && line[0].downcase == 'on' && line[25].present?
+  if line[0].present? && line[0].downcase == 'on' && line[1].downcase == 'by_btl' && line[26].present?
     style_id = Spree::Taxon.find_by_name(line[2]).try(:id)
     products << { name: line[9], 
       tax_category: style, 
@@ -69,4 +69,4 @@ products.each do |product_attrs|
   end
 end
 
-# Spree::Config[:currency] = "CNY"
+Spree::Config[:currency] = "CNY"

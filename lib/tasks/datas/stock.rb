@@ -35,7 +35,7 @@ end
 Spree::Variant.all.each do |variant|
   variant.stock_items.each do |stock_item|
   	puts variants[variant.sku]
-    Spree::StockMovement.create!(:quantity => variants[variant.sku] || 0, :stock_item => stock_item)
-    stock_item.adjust_count_on_hand(variants[variant.sku] || 0)
+    Spree::StockMovement.create!(:quantity => 1000, :stock_item => stock_item)
+    stock_item.adjust_count_on_hand(1000 || 0)
   end
 end

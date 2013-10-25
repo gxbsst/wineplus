@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	var menu = $("header .list_btn");
 	var newHeight = menu.css('height', 'auto').height();
 	$("#menu_button").click(function(){
@@ -11,6 +12,11 @@ $(document).ready(function(){
 			});
 			// menu.addClass('close', 2000);
 		}
+	});
+
+	$('.scrollup').click(function(){
+		$("html, body").animate({ scrollTop: 0 }, 600);
+		return false;
 	});
 });
 
